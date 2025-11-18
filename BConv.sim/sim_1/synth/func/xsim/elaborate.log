@@ -1,0 +1,42 @@
+Vivado Simulator v2023.2
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: /tools/Xilinx/Vivado/2023.2/bin/unwrapped/lnx64.o/xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L uvm -L unisims_ver -L secureip --snapshot ModMul_tb_func_synth xil_defaultlib.ModMul_tb xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module unisims_ver.FDCE_default
+Compiling module unisims_ver.FDRE_default
+Compiling module unisims_ver.x_lut2_mux4
+Compiling module unisims_ver.LUT2
+Compiling module unisims_ver.LUT4
+Compiling module unisims_ver.CARRY8
+Compiling module unisims_ver.SRL16E_default
+Compiling module xil_defaultlib.delay__parameterized9
+Compiling module unisims_ver.LUT5
+Compiling module unisims_ver.x_lut1_mux2
+Compiling module unisims_ver.LUT1
+Compiling module xil_defaultlib.delay__parameterized7
+Compiling module xil_defaultlib.delay__parameterized5
+Compiling module xil_defaultlib.delay__parameterized6
+Compiling module unisims_ver.x_lut3_mux8
+Compiling module unisims_ver.LUT3
+Compiling module xil_defaultlib.delay__parameterized6_0
+Compiling module xil_defaultlib.delay__parameterized5_1
+Compiling module xil_defaultlib.delay__parameterized6_2
+Compiling module unisims_ver.DSP48E2(ACASCREG=0,ALUMODEREG=0,...
+Compiling module unisims_ver.LUT6
+Compiling module xil_defaultlib.dsp_mul
+Compiling module xil_defaultlib.dsp_mul__parameterized0
+Compiling module xil_defaultlib.dsp_mul_3
+Compiling module xil_defaultlib.dsp_mul__parameterized0_4
+Compiling module xil_defaultlib.dsp_mul_5
+Compiling module xil_defaultlib.dsp_mul__parameterized0_6
+Compiling module xil_defaultlib.ModMul
+Compiling module xil_defaultlib.ModMul_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot ModMul_tb_func_synth

@@ -1,0 +1,41 @@
+Time resolution is 1 ps
+Test 1: FAIL | q=0xfffffffa0001 | A=0x12153524 | B=0xffffc0895e81 | M=0x0 | Expected=0xxxxxxxxxxxxx | Diff=x
+Test 2: FAIL | q=0x800001d00001 | A=0x7fff82b4d608 | B=0x7fffb0205662 | M=0x0 | Expected=0xd33c6851ce7c | Diff=49218575020420
+Test 3: FAIL | q=0x7ffffef40001 | A=0x6b97b0d | B=0x46df998d | M=0x0 | Expected=0x4f7e563b218a | Diff=194070945521270
+Test 4: FAIL | q=0x800001840001 | A=0x7fffb13e8464 | B=0x7fff87b35211 | M=0x0 | Expected=0x174432b28770 | Diff=255893300934800
+Test 5: FAIL | q=0x7fffff000001 | A=0xf3e301 | B=0x6d7cd0d | M=0x0 | Expected=0x45f812acafcc | Diff=204543209197620
+Test 6: FAIL | q=0x8000017c0001 | A=0x3b23f176 | B=0x1e8dcd3d | M=0x0 | Expected=0x4e912015400 | Diff=276075900742656
+Test 7: FAIL | q=0x7fffff060001 | A=0x76d457ed | B=0x462df78c | M=0x0 | Expected=0x786cbeddf901 | Diff=149066522691327
+Test 8: FAIL | q=0x800001480001 | A=0x7cfde9f9 | B=0x7fffe1ef24c5 | M=0x0 | Expected=0x6685beba7f76 | Diff=168750360133770
+Test 9: FAIL | q=0x7fffff860001 | A=0x7fffe37184c4 | B=0x7fffd58dd2a9 | M=0x0 | Expected=0x5e7f21e54541 | Diff=177574854179519
+Test 10: FAIL | q=0x800001420001 | A=0x72aff7e5 | B=0x7fffba907276 | M=0x0 | Expected=0x91cc0e0cc3 | Diff=280848782979901
+Test 11: FAIL | q=0x7fffff9c0001 | A=0x7fff8996d611 | B=0x47ecdb8f | M=0x0 | Expected=0x577378468501 | Diff=185321525967615
+Test 12: FAIL | q=0x800001360001 | A=0x793069f2 | B=0x7fffe64096cd | M=0x0 | Expected=0x5f4986f58542 | Diff=176705575221950
+Test 13: FAIL | q=0x7fffffae0001 | A=0x7ffff4527ae7 | B=0x7fffe31c4ec4 | M=0x0 | Expected=0x68397796525f | Diff=166878947945889
+Test 14: FAIL | q=0x800001180001 | A=0x2e58495c | B=0x7fffdd7628bc | M=0x0 | Expected=0x7943071faeaa | Diff=148146187424086
+Test 15: FAIL | q=0x7fffffbc0001 | A=0x7fff96ef582c | B=0x7fffb2eb2664 | M=0x0 | Expected=0x2187c264031b | Diff=244608011074789
+Test 16: FAIL | q=0x800000f80001 | A=0x7fffb0f76262 | B=0x573870a | M=0x0 | Expected=0x41420d663bbd | Diff=209723028259907
+Test 17: FAIL | q=0x7fffffc80001 | A=0x7fffc073227f | B=0x10642120 | M=0x0 | Expected=0x6274f1260233 | Diff=173220575182285
+Test 18: FAIL | q=0x800000aa0001 | A=0x557845aa | B=0x7fffce22cc9c | M=0x0 | Expected=0x6ccdb7b695dd | Diff=161844170418723
+Test 19: FAIL | q=0x7fffffda0001 | A=0x7fffcb463e95 | B=0x7fff89a9b812 | M=0x0 | Expected=0x5ee5c931c7ac | Diff=177133960706132
+Test 20: FAIL | q=0x800000520001 | A=0x7fff866a380c | B=0x7fffa955d652 | M=0x0 | Expected=0x5a9519e5748 | Diff=275250199767224
+Test 21: FAIL | q=0x7fffffe40001 | A=0x359fdd6b | B=0x7fffeac22ad4 | M=0x987a0b0e3d8d | Expected=0x71140ec59aa4 | Diff=43318977798889
+Test 22: FAIL | q=0x800000280001 | A=0x7fff80ef4a01 | B=0x7fffd72e3ead | M=0x46ddf3721e7e | Expected=0x4c9245ed160c | Diff=275202940668018
+Test 23: FAIL | q=0x7ffffff00001 | A=0xeffe91d | B=0x7fffe7d572ce | M=0x28bb5122a2c9 | Expected=0x7aa628e98f47 | Diff=191405892375426
+Test 24: FAIL | q=0x800000020001 | A=0x11844923 | B=0x509650a | M=0x5d81772e7adb | Expected=0x73e17d6d990d | Diff=256873299239374
+Test 25: FAIL | q=0xfffffff00001 | A=0xffffe5730aca | B=0xffff9e314c3c | M=0xd20a0f9c3f8f | Expected=0x39fe1fe0a9ae | Diff=167177034110433
+Test 26: FAIL | q=0xffffffde0001 | A=0x7968bdf2 | B=0x452e618a | M=0x1117053cf92f | Expected=0x144239401e36 | Diff=277990885612281
+Test 27: FAIL | q=0xffffff6a0001 | A=0x20c4b341 | B=0xffffec4b34d8 | M=0xaa5c799985d3 | Expected=0x3a4ad968f5a5 | Diff=123221004292142
+Test 28: FAIL | q=0xffffff280001 | A=0x3c20f378 | B=0xffffc48a1289 | M=0xd6e84faaaedf | Expected=0x75a2825ac20a | Diff=106952425204949
+Test 29: FAIL | q=0xffffff060001 | A=0x75c50deb | B=0x5b0265b6 | M=0xa0adf8b7eb97 | Expected=0x70cf3057d585 | Diff=52633890985490
+Test 30: FAIL | q=0xfffffed60001 | A=0x634bf9c6 | B=0x571513ae | M=0x645ed56e7e79 | Expected=0x267000377234 | Diff=68095988665413
+Test 31: FAIL | q=0xfffffebc0001 | A=0xffffde7502bc | B=0x150fdd2a | M=0xa26e6089fbd7 | Expected=0xfee738e754ce | Diff=179800880883465
+Test 32: FAIL | q=0xfffffe8e0001 | A=0xffff85d79a0b | B=0xffffb897be71 | M=0xef173be8ea9b | Expected=0x2d2a8f0ae456 | Diff=213222256674373
+
+=== TEST SUMMARY ===
+Total tests: 32
+Passed: 0
+Failed: 32
+Success rate: 0.0%
+??  32 TESTS FAILED
+$finish called at time : 330 ns : File "/home/moginh/Projects/BConv/BConv.srcs/sim_1/new/ModMul_tb.sv" Line 156

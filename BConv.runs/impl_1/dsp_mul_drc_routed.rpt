@@ -1,0 +1,66 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2023.2 (lin64) Build 4029153 Fri Oct 13 20:13:54 MDT 2023
+| Date         : Tue Nov 18 09:53:53 2025
+| Host         : dis-lab-SYS-7049GP-TRT running 64-bit Ubuntu 24.04.3 LTS
+| Command      : report_drc -file dsp_mul_drc_routed.rpt -pb dsp_mul_drc_routed.pb -rpx dsp_mul_drc_routed.rpx
+| Design       : dsp_mul
+| Device       : xcu280-fsvh2892-2L-e
+| Speed File   : -2L
+| Design State : Fully Routed
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Report DRC
+
+Table of Contents
+-----------------
+1. REPORT SUMMARY
+2. REPORT DETAILS
+
+1. REPORT SUMMARY
+-----------------
+            Netlist: netlist
+          Floorplan: design_1
+      Design limits: <entire design considered>
+           Ruledeck: default
+             Max violations: <unlimited>
+             Violations found: 5
++-----------+----------+------------------------+------------+
+| Rule      | Severity | Description            | Violations |
++-----------+----------+------------------------+------------+
+| DPIP-2    | Warning  | Input pipelining       | 3          |
+| DPOP-4    | Warning  | MREG Output pipelining | 1          |
+| RTSTAT-10 | Warning  | No routable loads      | 1          |
++-----------+----------+------------------------+------------+
+
+2. REPORT DETAILS
+-----------------
+DPIP-2#1 Warning
+Input pipelining  
+DSP out_reg input out_reg/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#2 Warning
+Input pipelining  
+DSP out_reg input out_reg/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#3 Warning
+Input pipelining  
+DSP out_reg input out_reg/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPOP-4#1 Warning
+MREG Output pipelining  
+DSP out_reg multiplier stage out_reg/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+RTSTAT-10#1 Warning
+No routable loads  
+44 net(s) have no routable loads. The problem bus(es) and/or net(s) are out_reg/P[0], out_reg/P[10], out_reg/P[11], out_reg/P[12], out_reg/P[13],
+out_reg/P[14], out_reg/P[1], out_reg/P[2], out_reg/P[3], out_reg/P[4],
+out_reg/P[5], out_reg/P[6], out_reg/P[7], out_reg/P[8], out_reg/P[9]
+ (the first 15 of 44 listed nets/buses).
+Related violations: <none>
+
+

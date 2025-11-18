@@ -1,0 +1,29 @@
+Vivado Simulator v2023.2
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: /tools/Xilinx/Vivado/2023.2/bin/unwrapped/lnx64.o/xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L uvm -L unisims_ver -L unimacro_ver -L secureip --snapshot ModMul_tb_behav xil_defaultlib.ModMul_tb xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.dsp_mul(A_WIDTH=16,B_WIDTH=16,OU...
+Compiling module xil_defaultlib.dsp_mul(A_WIDTH=17,B_WIDTH=17,OU...
+Compiling module xil_defaultlib.delay(BW=32)
+Compiling module xil_defaultlib.delay(BW=34)
+Compiling module xil_defaultlib.delay(N=2,BW=17)
+Compiling module xil_defaultlib.dsp_mul(A_WIDTH=18,OUT_WIDTH=36)
+Compiling module xil_defaultlib.delay(BW=36)
+Compiling module xil_defaultlib.delay(BW=98)
+Compiling module xil_defaultlib.delay(N=5,BW=16)
+Compiling module xil_defaultlib.delay(N=7,BW=32)
+Compiling module xil_defaultlib.delay(N=6,BW=35)
+Compiling module xil_defaultlib.delay(BW=96)
+Compiling module xil_defaultlib.delay(N=2,BW=96)
+Compiling module xil_defaultlib.delay(N=9)
+Compiling module xil_defaultlib.ModMul_default
+Compiling module xil_defaultlib.ModMul_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot ModMul_tb_behav
