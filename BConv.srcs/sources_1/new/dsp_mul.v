@@ -22,15 +22,15 @@
 
 (* use_dsp = "yes" *)
 module dsp_mul #(
-    parameter A_WIDTH = 26,
-    parameter B_WIDTH = 18,
-    parameter OUT_WIDTH = A_WIDTH + B_WIDTH
-)(
-    input                       clk,
-    input       [A_WIDTH-1:0]   in1,
-    input       [B_WIDTH-1:0]   in2,
-    output reg  [OUT_WIDTH-1:0] out
-);
+        parameter A_WIDTH = 26,
+        parameter B_WIDTH = 18,
+        parameter OUT_WIDTH = A_WIDTH + B_WIDTH
+    )(
+        input                       clk,
+        input       [A_WIDTH-1:0]   in1,
+        input       [B_WIDTH-1:0]   in2,
+        output reg  [OUT_WIDTH-1:0] out
+    );
 
     always @(posedge clk) begin
         out <= in1 * in2;

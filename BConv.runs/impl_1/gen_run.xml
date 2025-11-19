@@ -1,91 +1,105 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="impl_1" LaunchPart="xcu280-fsvh2892-2L-e" LaunchTime="1763426888">
+<GenRun Id="impl_1" LaunchPart="xcu280-fsvh2892-2L-e" LaunchTime="1763549003">
   <File Type="ROUTE-RQS-RPT" Name="route_report_qor_suggestions_0.rpt"/>
-  <File Type="POSTROUTE-PHYSOPT-RQS" Name="dsp_mul_postroute_physopted.rqs"/>
-  <File Type="ROUTE-RQS" Name="dsp_mul_routed.rqs"/>
+  <File Type="POSTROUTE-PHYSOPT-RQS" Name="ModMul_postroute_physopted.rqs"/>
+  <File Type="ROUTE-RQS" Name="ModMul_routed.rqs"/>
   <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
-  <File Type="BG-BGN" Name="dsp_mul.bgn"/>
-  <File Type="BITSTR-SYSDEF" Name="dsp_mul.sysdef"/>
+  <File Type="BG-BGN" Name="ModMul.bgn"/>
+  <File Type="BITSTR-SYSDEF" Name="ModMul.sysdef"/>
   <File Type="BITSTR-LTX" Name="debug_nets.ltx"/>
-  <File Type="BITSTR-LTX" Name="dsp_mul.ltx"/>
-  <File Type="RBD_FILE" Name="dsp_mul.rbd"/>
-  <File Type="NPI_FILE" Name="dsp_mul.npi"/>
-  <File Type="RNPI_FILE" Name="dsp_mul.rnpi"/>
-  <File Type="CFI_FILE" Name="dsp_mul.cfi"/>
-  <File Type="RCFI_FILE" Name="dsp_mul.rcfi"/>
-  <File Type="PL-PDI-FILE" Name="dsp_mul_pld.pdi"/>
-  <File Type="BOOT-PDI-FILE" Name="dsp_mul_boot.pdi"/>
-  <File Type="RDI-RDI" Name="dsp_mul.vdi"/>
-  <File Type="PDI-FILE" Name="dsp_mul.pdi"/>
-  <File Type="BITSTR-MMI" Name="dsp_mul.mmi"/>
-  <File Type="BITSTR-BMM" Name="dsp_mul_bd.bmm"/>
-  <File Type="BITSTR-NKY" Name="dsp_mul.nky"/>
-  <File Type="BITSTR-RBT" Name="dsp_mul.rbt"/>
-  <File Type="BITSTR-MSK" Name="dsp_mul.msk"/>
-  <File Type="BG-BIN" Name="dsp_mul.bin"/>
+  <File Type="BITSTR-LTX" Name="ModMul.ltx"/>
+  <File Type="RBD_FILE" Name="ModMul.rbd"/>
+  <File Type="NPI_FILE" Name="ModMul.npi"/>
+  <File Type="RNPI_FILE" Name="ModMul.rnpi"/>
+  <File Type="CFI_FILE" Name="ModMul.cfi"/>
+  <File Type="RCFI_FILE" Name="ModMul.rcfi"/>
+  <File Type="PL-PDI-FILE" Name="ModMul_pld.pdi"/>
+  <File Type="BOOT-PDI-FILE" Name="ModMul_boot.pdi"/>
+  <File Type="RDI-RDI" Name="ModMul.vdi"/>
+  <File Type="PDI-FILE" Name="ModMul.pdi"/>
+  <File Type="BITSTR-MMI" Name="ModMul.mmi"/>
+  <File Type="BITSTR-BMM" Name="ModMul_bd.bmm"/>
+  <File Type="BITSTR-NKY" Name="ModMul.nky"/>
+  <File Type="BITSTR-RBT" Name="ModMul.rbt"/>
+  <File Type="BITSTR-MSK" Name="ModMul.msk"/>
+  <File Type="BG-BIN" Name="ModMul.bin"/>
   <File Type="POSTROUTE-PHYSOPT-RQS-RPT" Name="postroute_physopt_report_qor_suggestions_0.rpt"/>
-  <File Type="BG-BIT" Name="dsp_mul.bit"/>
+  <File Type="BG-BIT" Name="ModMul.bit"/>
   <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-RPX" Name="ModMul_bus_skew_postroute_physopted.rpx"/>
   <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-PB" Name="ModMul_bus_skew_postroute_physopted.pb"/>
   <File Type="POSTROUTE-PHYSOPT-BUS-SKEW" Name="ModMul_bus_skew_postroute_physopted.rpt"/>
   <File Type="POSTROUTE-PHYSOPT-TIMING-RPX" Name="ModMul_timing_summary_postroute_physopted.rpx"/>
   <File Type="POSTROUTE-PHYSOPT-TIMING-PB" Name="ModMul_timing_summary_postroute_physopted.pb"/>
   <File Type="POSTROUTE-PHYSOPT-TIMING" Name="ModMul_timing_summary_postroute_physopted.rpt"/>
-  <File Type="POSTROUTE-PHYSOPT-BLACKBOX-DCP" Name="dsp_mul_postroute_physopt_bb.dcp"/>
-  <File Type="POSTROUTE-PHYSOPT-DCP" Name="dsp_mul_postroute_physopt.dcp"/>
-  <File Type="BG-DRC" Name="dsp_mul.drc"/>
-  <File Type="ROUTE-RQS-PB" Name="dsp_mul_rqs_routed.pb"/>
-  <File Type="ROUTE-BUS-SKEW-RPX" Name="dsp_mul_bus_skew_routed.rpx"/>
-  <File Type="ROUTE-BUS-SKEW-PB" Name="dsp_mul_bus_skew_routed.pb"/>
-  <File Type="ROUTE-BUS-SKEW" Name="dsp_mul_bus_skew_routed.rpt"/>
-  <File Type="ROUTE-CLK" Name="dsp_mul_clock_utilization_routed.rpt"/>
-  <File Type="ROUTE-SIMILARITY" Name="dsp_mul_incremental_reuse_routed.rpt"/>
-  <File Type="ROUTE-TIMING-RPX" Name="dsp_mul_timing_summary_routed.rpx"/>
-  <File Type="ROUTE-TIMING-PB" Name="dsp_mul_timing_summary_routed.pb"/>
-  <File Type="ROUTE-TIMINGSUMMARY" Name="dsp_mul_timing_summary_routed.rpt"/>
-  <File Type="ROUTE-STATUS-PB" Name="dsp_mul_route_status.pb"/>
-  <File Type="ROUTE-STATUS" Name="dsp_mul_route_status.rpt"/>
-  <File Type="ROUTE-PWR-RPX" Name="dsp_mul_power_routed.rpx"/>
-  <File Type="ROUTE-PWR-SUM" Name="dsp_mul_power_summary_routed.pb"/>
-  <File Type="ROUTE-PWR" Name="dsp_mul_power_routed.rpt"/>
-  <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="dsp_mul_methodology_drc_routed.pb"/>
-  <File Type="ROUTE-METHODOLOGY-DRC-RPX" Name="dsp_mul_methodology_drc_routed.rpx"/>
-  <File Type="ROUTE-METHODOLOGY-DRC" Name="dsp_mul_methodology_drc_routed.rpt"/>
-  <File Type="ROUTE-DRC-RPX" Name="dsp_mul_drc_routed.rpx"/>
-  <File Type="ROUTE-DRC-PB" Name="dsp_mul_drc_routed.pb"/>
-  <File Type="ROUTE-DRC" Name="dsp_mul_drc_routed.rpt"/>
-  <File Type="ROUTE-BLACKBOX-DCP" Name="dsp_mul_routed_bb.dcp"/>
-  <File Type="ROUTE-DCP" Name="dsp_mul_routed.dcp"/>
-  <File Type="ROUTE-ERROR-DCP" Name="dsp_mul_routed_error.dcp"/>
-  <File Type="PHYSOPT-TIMING" Name="dsp_mul_timing_summary_physopted.rpt"/>
-  <File Type="PHYSOPT-DRC" Name="dsp_mul_drc_physopted.rpt"/>
-  <File Type="PHYSOPT-DCP" Name="dsp_mul_physopt.dcp"/>
-  <File Type="POSTPLACE-PWROPT-TIMING" Name="dsp_mul_timing_summary_postplace_pwropted.rpt"/>
-  <File Type="POSTPLACE-PWROPT-DCP" Name="dsp_mul_postplace_pwropt.dcp"/>
-  <File Type="PLACE-RQA-PB" Name="dsp_mul_rqa_placed.pb"/>
-  <File Type="PLACE-TIMING" Name="dsp_mul_timing_summary_placed.rpt"/>
-  <File Type="PLACE-PRE-SIMILARITY" Name="dsp_mul_incremental_reuse_pre_placed.rpt"/>
-  <File Type="PLACE-SIMILARITY" Name="dsp_mul_incremental_reuse_placed.rpt"/>
-  <File Type="PLACE-CTRL" Name="dsp_mul_control_sets_placed.rpt"/>
-  <File Type="PLACE-UTIL-PB" Name="dsp_mul_utilization_placed.pb"/>
-  <File Type="PLACE-UTIL" Name="dsp_mul_utilization_placed.rpt"/>
-  <File Type="PLACE-CLK" Name="dsp_mul_clock_utilization_placed.rpt"/>
-  <File Type="PLACE-IO" Name="dsp_mul_io_placed.rpt"/>
-  <File Type="PLACE-DCP" Name="dsp_mul_placed.dcp"/>
-  <File Type="PWROPT-TIMING" Name="dsp_mul_timing_summary_pwropted.rpt"/>
-  <File Type="PWROPT-DRC" Name="dsp_mul_drc_pwropted.rpt"/>
-  <File Type="PWROPT-DCP" Name="dsp_mul_pwropt.dcp"/>
-  <File Type="OPT-RQA-PB" Name="dsp_mul_rqa_opted.pb"/>
-  <File Type="OPT-HWDEF" Name="dsp_mul.hwdef"/>
-  <File Type="OPT-METHODOLOGY-DRC" Name="dsp_mul_methodology_drc_opted.rpt"/>
-  <File Type="OPT-DRC" Name="dsp_mul_drc_opted.rpt"/>
-  <File Type="OPT-DCP" Name="dsp_mul_opt.dcp"/>
-  <File Type="OPT-TIMING" Name="dsp_mul_timing_summary_opted.rpt"/>
-  <File Type="REPORTS-TCL" Name="dsp_mul_reports.tcl"/>
-  <File Type="INIT-TIMING" Name="dsp_mul_timing_summary_init.rpt"/>
-  <File Type="PA-TCL" Name="dsp_mul.tcl"/>
+  <File Type="POSTROUTE-PHYSOPT-BLACKBOX-DCP" Name="ModMul_postroute_physopt_bb.dcp"/>
+  <File Type="POSTROUTE-PHYSOPT-DCP" Name="ModMul_postroute_physopt.dcp"/>
+  <File Type="BG-DRC" Name="ModMul.drc"/>
+  <File Type="ROUTE-RQS-PB" Name="ModMul_rqs_routed.pb"/>
+  <File Type="ROUTE-BUS-SKEW-RPX" Name="ModMul_bus_skew_routed.rpx"/>
+  <File Type="ROUTE-BUS-SKEW-PB" Name="ModMul_bus_skew_routed.pb"/>
+  <File Type="ROUTE-BUS-SKEW" Name="ModMul_bus_skew_routed.rpt"/>
+  <File Type="ROUTE-CLK" Name="ModMul_clock_utilization_routed.rpt"/>
+  <File Type="ROUTE-SIMILARITY" Name="ModMul_incremental_reuse_routed.rpt"/>
+  <File Type="ROUTE-TIMING-RPX" Name="ModMul_timing_summary_routed.rpx"/>
+  <File Type="ROUTE-TIMING-PB" Name="ModMul_timing_summary_routed.pb"/>
+  <File Type="ROUTE-TIMINGSUMMARY" Name="ModMul_timing_summary_routed.rpt"/>
+  <File Type="ROUTE-STATUS-PB" Name="ModMul_route_status.pb"/>
+  <File Type="ROUTE-STATUS" Name="ModMul_route_status.rpt"/>
+  <File Type="ROUTE-PWR-RPX" Name="ModMul_power_routed.rpx"/>
+  <File Type="ROUTE-PWR-SUM" Name="ModMul_power_summary_routed.pb"/>
+  <File Type="ROUTE-PWR" Name="ModMul_power_routed.rpt"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="ModMul_methodology_drc_routed.pb"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-RPX" Name="ModMul_methodology_drc_routed.rpx"/>
+  <File Type="ROUTE-METHODOLOGY-DRC" Name="ModMul_methodology_drc_routed.rpt"/>
+  <File Type="ROUTE-DRC-RPX" Name="ModMul_drc_routed.rpx"/>
+  <File Type="ROUTE-DRC-PB" Name="ModMul_drc_routed.pb"/>
+  <File Type="ROUTE-DRC" Name="ModMul_drc_routed.rpt"/>
+  <File Type="ROUTE-BLACKBOX-DCP" Name="ModMul_routed_bb.dcp"/>
+  <File Type="ROUTE-DCP" Name="ModMul_routed.dcp"/>
+  <File Type="ROUTE-ERROR-DCP" Name="ModMul_routed_error.dcp"/>
+  <File Type="PHYSOPT-TIMING" Name="ModMul_timing_summary_physopted.rpt"/>
+  <File Type="PHYSOPT-DRC" Name="ModMul_drc_physopted.rpt"/>
+  <File Type="PHYSOPT-DCP" Name="ModMul_physopt.dcp"/>
+  <File Type="POSTPLACE-PWROPT-TIMING" Name="ModMul_timing_summary_postplace_pwropted.rpt"/>
+  <File Type="POSTPLACE-PWROPT-DCP" Name="ModMul_postplace_pwropt.dcp"/>
+  <File Type="PLACE-RQA-PB" Name="ModMul_rqa_placed.pb"/>
+  <File Type="PLACE-TIMING" Name="ModMul_timing_summary_placed.rpt"/>
+  <File Type="PLACE-PRE-SIMILARITY" Name="ModMul_incremental_reuse_pre_placed.rpt"/>
+  <File Type="PLACE-SIMILARITY" Name="ModMul_incremental_reuse_placed.rpt"/>
+  <File Type="PLACE-CTRL" Name="ModMul_control_sets_placed.rpt"/>
+  <File Type="PLACE-UTIL-PB" Name="ModMul_utilization_placed.pb"/>
+  <File Type="PLACE-UTIL" Name="ModMul_utilization_placed.rpt"/>
+  <File Type="PLACE-CLK" Name="ModMul_clock_utilization_placed.rpt"/>
+  <File Type="PLACE-IO" Name="ModMul_io_placed.rpt"/>
+  <File Type="PLACE-DCP" Name="ModMul_placed.dcp"/>
+  <File Type="PWROPT-TIMING" Name="ModMul_timing_summary_pwropted.rpt"/>
+  <File Type="PWROPT-DRC" Name="ModMul_drc_pwropted.rpt"/>
+  <File Type="PWROPT-DCP" Name="ModMul_pwropt.dcp"/>
+  <File Type="OPT-RQA-PB" Name="ModMul_rqa_opted.pb"/>
+  <File Type="OPT-HWDEF" Name="ModMul.hwdef"/>
+  <File Type="OPT-METHODOLOGY-DRC" Name="ModMul_methodology_drc_opted.rpt"/>
+  <File Type="OPT-DRC" Name="ModMul_drc_opted.rpt"/>
+  <File Type="OPT-DCP" Name="ModMul_opt.dcp"/>
+  <File Type="OPT-TIMING" Name="ModMul_timing_summary_opted.rpt"/>
+  <File Type="REPORTS-TCL" Name="ModMul_reports.tcl"/>
+  <File Type="INIT-TIMING" Name="ModMul_timing_summary_init.rpt"/>
+  <File Type="PA-TCL" Name="ModMul.tcl"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
     <Filter Type="Srcs"/>
+    <File Path="$PSRCDIR/sources_1/new/delay.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/dsp_mac.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
     <File Path="$PSRCDIR/sources_1/new/dsp_mul.v">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
@@ -93,9 +107,15 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PSRCDIR/sources_1/new/delay.v">
+    <File Path="$PSRCDIR/sources_1/new/dsp_preadder.v">
       <FileInfo>
-        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/pipeline.v">
+      <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -103,7 +123,6 @@
     </File>
     <File Path="$PSRCDIR/sources_1/new/ModMul.v">
       <FileInfo>
-        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -117,11 +136,41 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
+    <File Path="$PSRCDIR/sources_1/new/BConv.sv">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/RBU.v">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/systolic.sv">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/ModSub.v">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
     <Config>
       <Option Name="DesignMode" Val="RTL"/>
-      <Option Name="TopModule" Val="dsp_mul"/>
-      <Option Name="TopLib" Val="xil_defaultlib"/>
-      <Option Name="TopRTLFile" Val="$PSRCDIR/sources_1/new/dsp_mul.v"/>
+      <Option Name="TopModule" Val="ModMul"/>
     </Config>
   </FileSet>
   <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1" RelGenDir="$PGENDIR/constrs_1">

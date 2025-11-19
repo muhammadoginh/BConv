@@ -2,5 +2,5 @@
 2020.2
 Oct 13 2023
 20:21:30
-/home/moginh/Projects/BConv/BConv.sim/sim_1/synth/func/xsim/ModMul_tb_func_synth.v,1763423096,verilog,,,,ModMul;delay__parameterized5;delay__parameterized5_1;delay__parameterized6;delay__parameterized6_0;delay__parameterized6_2;delay__parameterized7;delay__parameterized9;dsp_mul;dsp_mul_3;dsp_mul_5;dsp_mul__parameterized0;dsp_mul__parameterized0_4;dsp_mul__parameterized0_6;glbl,,uvm,,,,,,
-/home/moginh/Projects/BConv/BConv.srcs/sim_1/new/ModMul_tb.sv,1759101258,systemVerilog,,,,ModMul_tb,,uvm,,,,,,
+/home/moginh/Projects/BConv/BConv.sim/sim_1/synth/func/xsim/ModMul_tb_func_synth.v,1763521918,verilog,,,,ModMul;delay__parameterized0;delay__parameterized1;delay__parameterized2;delay__parameterized3;dsp_mac;dsp_mac_11;dsp_mac_13;dsp_mac_5;dsp_mac_7;dsp_mac_9;dsp_mac__parameterized0;dsp_mac__parameterized0_0;dsp_mac__parameterized0_1;dsp_mul;dsp_mul_10;dsp_mul_12;dsp_mul_4;dsp_mul_6;dsp_mul_8;dsp_mul__parameterized0;dsp_mul__parameterized0_2;dsp_mul__parameterized0_3;glbl,,uvm,,,,,,
+/home/moginh/Projects/BConv/BConv.srcs/sim_1/new/ModMul_tb.sv,1763518776,systemVerilog,,,,ModMul_tb,,uvm,,,,,,

@@ -12,14 +12,14 @@
    </db_ref_list>
    <zoom_setting>
       <ZoomStartTime time="0.000 ns"></ZoomStartTime>
-      <ZoomEndTime time="140.801 ns"></ZoomEndTime>
-      <Cursor1Time time="13.400 ns"></Cursor1Time>
+      <ZoomEndTime time="181.001 ns"></ZoomEndTime>
+      <Cursor1Time time="84.668 ns"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
       <NameColumnWidth column_width="153"></NameColumnWidth>
-      <ValueColumnWidth column_width="168"></ValueColumnWidth>
+      <ValueColumnWidth column_width="152"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="47" />
+   <WVObjectSize size="44" />
    <wvobject type="logic" fp_name="/ModMul_tb/correct">
       <obj_property name="ElementShortName">correct</obj_property>
       <obj_property name="ObjectShortName">correct</obj_property>
@@ -27,14 +27,17 @@
    <wvobject type="array" fp_name="/ModMul_tb/total_correct">
       <obj_property name="ElementShortName">total_correct[5:0]</obj_property>
       <obj_property name="ObjectShortName">total_correct[5:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
    </wvobject>
    <wvobject type="array" fp_name="/ModMul_tb/test_no">
       <obj_property name="ElementShortName">test_no[5:0]</obj_property>
       <obj_property name="ObjectShortName">test_no[5:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
    </wvobject>
    <wvobject type="array" fp_name="/ModMul_tb/fail_count">
       <obj_property name="ElementShortName">fail_count[5:0]</obj_property>
       <obj_property name="ObjectShortName">fail_count[5:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
    </wvobject>
    <wvobject type="array" fp_name="/ModMul_tb/q_array">
       <obj_property name="ElementShortName">q_array[0:31][47:0]</obj_property>
@@ -79,141 +82,143 @@
       <obj_property name="ObjectShortName">M[47:0]</obj_property>
       <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
    </wvobject>
-   <wvobject type="array" fp_name="/ModMul_tb/uut/r">
-      <obj_property name="ElementShortName">r[95:0]</obj_property>
-      <obj_property name="ObjectShortName">r[95:0]</obj_property>
-   </wvobject>
-   <wvobject type="array" fp_name="/ModMul_tb/uut/xq_d">
-      <obj_property name="ElementShortName">xq_d[95:0]</obj_property>
-      <obj_property name="ObjectShortName">xq_d[95:0]</obj_property>
-   </wvobject>
-   <wvobject type="array" fp_name="/ModMul_tb/product">
-      <obj_property name="ElementShortName">product[95:0]</obj_property>
-      <obj_property name="ObjectShortName">product[95:0]</obj_property>
-   </wvobject>
    <wvobject type="array" fp_name="/ModMul_tb/expected">
       <obj_property name="ElementShortName">expected[47:0]</obj_property>
       <obj_property name="ObjectShortName">expected[47:0]</obj_property>
       <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
    </wvobject>
+   <wvobject type="array" fp_name="/ModMul_tb/uut/r">
+      <obj_property name="ElementShortName">r[95:0]</obj_property>
+      <obj_property name="ObjectShortName">r[95:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/ModMul_tb/uut/z_d">
+      <obj_property name="ElementShortName">z_d[95:0]</obj_property>
+      <obj_property name="ObjectShortName">z_d[95:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/ModMul_tb/uut/t">
+      <obj_property name="ElementShortName">t[48:0]</obj_property>
+      <obj_property name="ObjectShortName">t[48:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/ModMul_tb/uut/z">
+      <obj_property name="ElementShortName">z[95:0]</obj_property>
+      <obj_property name="ObjectShortName">z[95:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/ModMul_tb/uut/m1">
+      <obj_property name="ElementShortName">m1[50:0]</obj_property>
+      <obj_property name="ObjectShortName">m1[50:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/ModMul_tb/uut/m3">
+      <obj_property name="ElementShortName">m3[47:0]</obj_property>
+      <obj_property name="ObjectShortName">m3[47:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/ModMul_tb/product">
+      <obj_property name="ElementShortName">product[95:0]</obj_property>
+      <obj_property name="ObjectShortName">product[95:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/ModMul_tb/uut/m1_0">
+      <obj_property name="ElementShortName">m1_0[16:0]</obj_property>
+      <obj_property name="ObjectShortName">m1_0[16:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/ModMul_tb/uut/m1_1">
+      <obj_property name="ElementShortName">m1_1[16:0]</obj_property>
+      <obj_property name="ObjectShortName">m1_1[16:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/ModMul_tb/uut/m1_2">
+      <obj_property name="ElementShortName">m1_2[16:0]</obj_property>
+      <obj_property name="ObjectShortName">m1_2[16:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/ModMul_tb/uut/mu_2">
+      <obj_property name="ElementShortName">mu_2[16:0]</obj_property>
+      <obj_property name="ObjectShortName">mu_2[16:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/ModMul_tb/uut/mu_1">
+      <obj_property name="ElementShortName">mu_1[16:0]</obj_property>
+      <obj_property name="ObjectShortName">mu_1[16:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/ModMul_tb/uut/mu_0">
+      <obj_property name="ElementShortName">mu_0[16:0]</obj_property>
+      <obj_property name="ObjectShortName">mu_0[16:0]</obj_property>
+   </wvobject>
    <wvobject type="array" fp_name="/ModMul_tb/BW">
       <obj_property name="ElementShortName">BW[31:0]</obj_property>
       <obj_property name="ObjectShortName">BW[31:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
    </wvobject>
    <wvobject type="array" fp_name="/ModMul_tb/n_tests">
       <obj_property name="ElementShortName">n_tests[31:0]</obj_property>
       <obj_property name="ObjectShortName">n_tests[31:0]</obj_property>
-   </wvobject>
-   <wvobject type="array" fp_name="/ModMul_tb/uut/z0">
-      <obj_property name="ElementShortName">z0[31:0]</obj_property>
-      <obj_property name="ObjectShortName">z0[31:0]</obj_property>
-   </wvobject>
-   <wvobject type="array" fp_name="/ModMul_tb/uut/z2">
-      <obj_property name="ElementShortName">z2[31:0]</obj_property>
-      <obj_property name="ObjectShortName">z2[31:0]</obj_property>
-   </wvobject>
-   <wvobject type="array" fp_name="/ModMul_tb/uut/z4">
-      <obj_property name="ElementShortName">z4[31:0]</obj_property>
-      <obj_property name="ObjectShortName">z4[31:0]</obj_property>
-   </wvobject>
-   <wvobject type="array" fp_name="/ModMul_tb/uut/z1">
-      <obj_property name="ElementShortName">z1[33:0]</obj_property>
-      <obj_property name="ObjectShortName">z1[33:0]</obj_property>
-   </wvobject>
-   <wvobject type="array" fp_name="/ModMul_tb/uut/z3">
-      <obj_property name="ElementShortName">z3[33:0]</obj_property>
-      <obj_property name="ObjectShortName">z3[33:0]</obj_property>
-   </wvobject>
-   <wvobject type="array" fp_name="/ModMul_tb/uut/z5">
-      <obj_property name="ElementShortName">z5[33:0]</obj_property>
-      <obj_property name="ObjectShortName">z5[33:0]</obj_property>
-   </wvobject>
-   <wvobject type="array" fp_name="/ModMul_tb/uut/z1_sub">
-      <obj_property name="ElementShortName">z1_sub[34:0]</obj_property>
-      <obj_property name="ObjectShortName">z1_sub[34:0]</obj_property>
-   </wvobject>
-   <wvobject type="array" fp_name="/ModMul_tb/uut/z3_sub">
-      <obj_property name="ElementShortName">z3_sub[34:0]</obj_property>
-      <obj_property name="ObjectShortName">z3_sub[34:0]</obj_property>
-   </wvobject>
-   <wvobject type="array" fp_name="/ModMul_tb/uut/z5_sub">
-      <obj_property name="ElementShortName">z5_sub[34:0]</obj_property>
-      <obj_property name="ObjectShortName">z5_sub[34:0]</obj_property>
-   </wvobject>
-   <wvobject type="array" fp_name="/ModMul_tb/uut/q1_0">
-      <obj_property name="ElementShortName">q1_0[16:0]</obj_property>
-      <obj_property name="ObjectShortName">q1_0[16:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
    </wvobject>
    <wvobject type="array" fp_name="/ModMul_tb/uut/w0">
-      <obj_property name="ElementShortName">w0[33:0]</obj_property>
-      <obj_property name="ObjectShortName">w0[33:0]</obj_property>
+      <obj_property name="ElementShortName">w0[31:0]</obj_property>
+      <obj_property name="ObjectShortName">w0[31:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
    </wvobject>
    <wvobject type="array" fp_name="/ModMul_tb/uut/w2">
-      <obj_property name="ElementShortName">w2[33:0]</obj_property>
-      <obj_property name="ObjectShortName">w2[33:0]</obj_property>
+      <obj_property name="ElementShortName">w2[31:0]</obj_property>
+      <obj_property name="ObjectShortName">w2[31:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
    </wvobject>
    <wvobject type="array" fp_name="/ModMul_tb/uut/w4">
-      <obj_property name="ElementShortName">w4[33:0]</obj_property>
-      <obj_property name="ObjectShortName">w4[33:0]</obj_property>
+      <obj_property name="ElementShortName">w4[31:0]</obj_property>
+      <obj_property name="ObjectShortName">w4[31:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
    </wvobject>
    <wvobject type="array" fp_name="/ModMul_tb/uut/w1">
-      <obj_property name="ElementShortName">w1[35:0]</obj_property>
-      <obj_property name="ObjectShortName">w1[35:0]</obj_property>
+      <obj_property name="ElementShortName">w1[33:0]</obj_property>
+      <obj_property name="ObjectShortName">w1[33:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
    </wvobject>
    <wvobject type="array" fp_name="/ModMul_tb/uut/w3">
-      <obj_property name="ElementShortName">w3[35:0]</obj_property>
-      <obj_property name="ObjectShortName">w3[35:0]</obj_property>
+      <obj_property name="ElementShortName">w3[33:0]</obj_property>
+      <obj_property name="ObjectShortName">w3[33:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
    </wvobject>
    <wvobject type="array" fp_name="/ModMul_tb/uut/w5">
-      <obj_property name="ElementShortName">w5[35:0]</obj_property>
-      <obj_property name="ObjectShortName">w5[35:0]</obj_property>
+      <obj_property name="ElementShortName">w5[33:0]</obj_property>
+      <obj_property name="ObjectShortName">w5[33:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/ModMul_tb/uut/w0_pipe">
+      <obj_property name="ElementShortName">w0_pipe[31:0]</obj_property>
+      <obj_property name="ObjectShortName">w0_pipe[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/ModMul_tb/uut/w4_pipe">
+      <obj_property name="ElementShortName">w4_pipe[31:0]</obj_property>
+      <obj_property name="ObjectShortName">w4_pipe[31:0]</obj_property>
    </wvobject>
    <wvobject type="array" fp_name="/ModMul_tb/uut/w1_sub">
-      <obj_property name="ElementShortName">w1_sub[36:0]</obj_property>
-      <obj_property name="ObjectShortName">w1_sub[36:0]</obj_property>
+      <obj_property name="ElementShortName">w1_sub[34:0]</obj_property>
+      <obj_property name="ObjectShortName">w1_sub[34:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
    </wvobject>
    <wvobject type="array" fp_name="/ModMul_tb/uut/w3_sub">
-      <obj_property name="ElementShortName">w3_sub[36:0]</obj_property>
-      <obj_property name="ObjectShortName">w3_sub[36:0]</obj_property>
+      <obj_property name="ElementShortName">w3_sub[34:0]</obj_property>
+      <obj_property name="ObjectShortName">w3_sub[34:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
    </wvobject>
    <wvobject type="array" fp_name="/ModMul_tb/uut/w5_sub">
-      <obj_property name="ElementShortName">w5_sub[36:0]</obj_property>
-      <obj_property name="ObjectShortName">w5_sub[36:0]</obj_property>
+      <obj_property name="ElementShortName">w5_sub[34:0]</obj_property>
+      <obj_property name="ObjectShortName">w5_sub[34:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
    </wvobject>
-   <wvobject type="array" fp_name="/ModMul_tb/uut/y0">
-      <obj_property name="ElementShortName">y0[31:0]</obj_property>
-      <obj_property name="ObjectShortName">y0[31:0]</obj_property>
+   <wvobject type="array" fp_name="/ModMul_tb/uut/m3_d">
+      <obj_property name="ElementShortName">m3_d[47:0]</obj_property>
+      <obj_property name="ObjectShortName">m3_d[47:0]</obj_property>
    </wvobject>
-   <wvobject type="array" fp_name="/ModMul_tb/uut/y2">
-      <obj_property name="ElementShortName">y2[31:0]</obj_property>
-      <obj_property name="ObjectShortName">y2[31:0]</obj_property>
+   <wvobject type="array" fp_name="/ModMul_tb/uut/q_d">
+      <obj_property name="ElementShortName">q_d[47:0]</obj_property>
+      <obj_property name="ObjectShortName">q_d[47:0]</obj_property>
    </wvobject>
-   <wvobject type="array" fp_name="/ModMul_tb/uut/y4">
-      <obj_property name="ElementShortName">y4[31:0]</obj_property>
-      <obj_property name="ObjectShortName">y4[31:0]</obj_property>
+   <wvobject type="array" fp_name="/ModMul_tb/uut/q_d2">
+      <obj_property name="ElementShortName">q_d2[47:0]</obj_property>
+      <obj_property name="ObjectShortName">q_d2[47:0]</obj_property>
    </wvobject>
-   <wvobject type="array" fp_name="/ModMul_tb/uut/y1">
-      <obj_property name="ElementShortName">y1[33:0]</obj_property>
-      <obj_property name="ObjectShortName">y1[33:0]</obj_property>
-   </wvobject>
-   <wvobject type="array" fp_name="/ModMul_tb/uut/y3">
-      <obj_property name="ElementShortName">y3[33:0]</obj_property>
-      <obj_property name="ObjectShortName">y3[33:0]</obj_property>
-   </wvobject>
-   <wvobject type="array" fp_name="/ModMul_tb/uut/y5">
-      <obj_property name="ElementShortName">y5[33:0]</obj_property>
-      <obj_property name="ObjectShortName">y5[33:0]</obj_property>
-   </wvobject>
-   <wvobject type="array" fp_name="/ModMul_tb/uut/y1_sub">
-      <obj_property name="ElementShortName">y1_sub[34:0]</obj_property>
-      <obj_property name="ObjectShortName">y1_sub[34:0]</obj_property>
-   </wvobject>
-   <wvobject type="array" fp_name="/ModMul_tb/uut/y3_sub">
-      <obj_property name="ElementShortName">y3_sub[34:0]</obj_property>
-      <obj_property name="ObjectShortName">y3_sub[34:0]</obj_property>
-   </wvobject>
-   <wvobject type="array" fp_name="/ModMul_tb/uut/y5_sub">
-      <obj_property name="ElementShortName">y5_sub[34:0]</obj_property>
-      <obj_property name="ObjectShortName">y5_sub[34:0]</obj_property>
+   <wvobject type="array" fp_name="/ModMul_tb/uut/M_reg">
+      <obj_property name="ElementShortName">M_reg[47:0]</obj_property>
+      <obj_property name="ObjectShortName">M_reg[47:0]</obj_property>
    </wvobject>
 </wave_config>
