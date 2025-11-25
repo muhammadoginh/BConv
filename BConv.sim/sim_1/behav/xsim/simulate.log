@@ -1,66 +1,34 @@
 Time resolution is 1 ps
-Test Case: time =                    0, clk = 1, A =       303379748, B = 281473912364672, M =               x
-Test Case: time =                    2, clk = 0, A =       303379748, B = 281473912364672, M =               x
-Test Case: time =                    4, clk = 1, A = 140735386277384, B = 140736148297314, M =      1367332517
-Test Case: time =                    6, clk = 0, A = 140735386277384, B = 140736148297314, M =      1367332517
-Test Case: time =                    8, clk = 1, A =       112818957, B =      1189058957, M = 140736756744103
-Test Case: time =                   10, clk = 0, A =       112818957, B =      1189058957, M = 140736756744103
-Test Case: time =                   12, clk = 1, A = 140736167052388, B = 140735470064145, M = 140736394551681
-Test Case: time =                   14, clk = 0, A = 140736167052388, B = 140735470064145, M = 140736394551681
-Test Case: time =                   16, clk = 1, A =        15983361, B =       114806029, M =       696988243
-Test Case: time =                   18, clk = 0, A =        15983361, B =       114806029, M =       696988243
-Test Case: time =                   20, clk = 1, A =       992211318, B =       512609597, M = 140737372755445
-Test Case: time =                   22, clk = 0, A =       992211318, B =       512609597, M = 140737372755445
-Test Case: time =                   24, clk = 1, A =      1993627629, B =      1177417612, M =       479601721
-Test Case: time =                   26, clk = 0, A =      1993627629, B =      1177417612, M =       479601721
-Test Case: time =                   28, clk = 1, A =      2097015289, B = 140736983934149, M =       816210017
-Test Case: time =                   30, clk = 0, A =      2097015289, B = 140736983934149, M =       816210017
-Test Case: time =                   32, clk = 1, A = 140737025246402, B = 140736792220327, M =      2622932277
-Test Case: time =                   34, clk = 0, A = 140737025246402, B = 140736792220327, M =      2622932277
-Test Case: time =                   36, clk = 1, A =      1924134885, B = 140736323416694, M =       233026075
-Test Case: time =                   38, clk = 0, A =      1924134885, B = 140736323416694, M =       233026075
-Test Case: time =                   40, clk = 1, A = 140735514859023, B =      1206705039, M =      3110176112
-Test Case: time =                   42, clk = 0, A = 140735514859023, B =      1206705039, M =      3110176112
-Test Case: time =                   44, clk = 1, A =      2033215986, B = 140737056380621, M = 140734308153984
-Test Case: time =                   46, clk = 0, A =      2033215986, B = 140737056380621, M = 140734308153984
-Test Case: time =                   48, clk = 1, A = 140737303182053, B = 140737014419138, M =      2485506854
-Test Case: time =                   50, clk = 0, A = 140737303182053, B = 140737014419138, M =      2485506854
-Test Case: time =                   52, clk = 1, A =       777537884, B = 140736908896444, M =       288762915
-Test Case: time =                   54, clk = 0, A =       777537884, B = 140736908896444, M =       288762915
-Test Case: time =                   56, clk = 1, A = 140735734569002, B = 140736204056162, M =      1375346849
-Test Case: time =                   58, clk = 0, A = 140735734569002, B = 140736204056162, M =      1375346849
-Test Case: time =                   60, clk = 1, A = 140736162390626, B =        91457290, M = 140737014411721
-Test Case: time =                   62, clk = 0, A = 140736162390626, B =        91457290, M = 140737014411721
-Test Case: time =                   64, clk = 1, A = 140736429499005, B =       274997536, M = 140736070933336
-Test Case: time =                   66, clk = 0, A = 140736429499005, B =       274997536, M = 140736070933336
-Test Case: time =                   68, clk = 1, A =      1433945514, B = 140736651775132, M = 140736154501469
-Test Case: time =                   70, clk = 0, A =      1433945514, B = 140736651775132, M = 140736154501469
-Test Case: time =                   72, clk = 1, A = 140736608747155, B = 140735507970064, M =      2281666831
-Test Case: time =                   74, clk = 0, A = 140736608747155, B = 140735507970064, M =      2281666831
-Test Case: time =                   76, clk = 1, A = 140735448496140, B = 140736034362962, M =      1100777091
-Test Case: time =                   78, clk = 0, A = 140735448496140, B = 140736034362962, M =      1100777091
-Test Case: time =                   80, clk = 1, A =       899669355, B = 140737135651538, M = 140736907862459
-Test Case: time =                   82, clk = 0, A =       899669355, B = 140737135651538, M = 140736907862459
-Test Case: time =                   84, clk = 1, A = 140735356553729, B = 140736803520173, M =      1250538138
-Test Case: time =                   86, clk = 0, A = 140735356553729, B = 140736803520173, M =      1250538138
-Test Case: time =                   88, clk = 1, A =       251652381, B = 140737085010636, M = 140736044010325
-Test Case: time =                   90, clk = 0, A =       251652381, B = 140737085010636, M = 140736044010325
-Test Case: time =                   92, clk = 1, A =       293882147, B =        84501770, M =       653948498
-Test Case: time =                   94, clk = 0, A =       293882147, B =        84501770, M =       653948498
-Test Case: time =                   96, clk = 1, A = 281474532313801, B = 281473336822843, M =       209380377
-Test Case: time =                   98, clk = 0, A = 281474532313801, B = 281473336822843, M =       209380377
-Test Case: time =                  100, clk = 1, A =      2036907506, B =      1160667530, M =      1195490958
-Test Case: time =                  102, clk = 0, A =      2036907506, B =      1160667530, M =      1195490958
-Test Case: time =                  104, clk = 1, A =       549761857, B = 281474655925463, M =       876239976
-Test Case: time =                  106, clk = 0, A =       549761857, B = 281474655925463, M =       876239976
-Test Case: time =                  108, clk = 1, A =      1008792440, B = 281473993282184, M =       860716651
-Test Case: time =                  110, clk = 0, A =      1008792440, B = 281473993282184, M =       860716651
-Test Case: time =                  112, clk = 1, A =      1975848427, B =      1526883766, M =      1978065137
-Test Case: time =                  114, clk = 0, A =      1975848427, B =      1526883766, M =      1978065137
-Test Case: time =                  116, clk = 1, A =      1665923526, B =      1460999086, M =       448964661
-Test Case: time =                  118, clk = 0, A =      1665923526, B =      1460999086, M =       448964661
-Test Case: time =                  120, clk = 1, A = 281474435187387, B =       353361194, M =       204924440
-Test Case: time =                  122, clk = 0, A = 281474435187387, B =       353361194, M =       204924440
-Test Case: time =                  124, clk = 1, A = 281472951491082, B = 281473802944112, M = 281474081826193
-Test Case: time =                  126, clk = 0, A = 281472951491082, B = 281473802944112, M = 281474081826193
-$finish called at time : 128 ns : File "/home/moginh/Projects/BConv/BConv.srcs/sim_1/new/ModSub_tb.v" Line 123
+Modular Subtracter Mode: B0 = 000000000000, B1 = 000000000000
+Modular Subtracter Mode: B0 = 000000000000, B1 = 000000000000
+Modular Subtracter Mode: B0 = ffffd2a493a4, B1 = 0000517fd6a5
+Modular Subtracter Mode: B0 = xxxxxxxxxxxx, B1 = xxxxxxxxxxxx
+Modular Subtracter Mode: B0 = xxxxxxxxxxxx, B1 = xxxxxxxxxxxx
+Modular Subtracter Mode: B0 = xxxxxxxxxxxx, B1 = xxxxxxxxxxxx
+Modular Subtracter Mode: B0 = xxxxxxxxxxxx, B1 = xxxxxxxxxxxx
+Modular Subtracter Mode: B0 = xxxxxxxxxxxx, B1 = xxxxxxxxxxxx
+Modular Subtracter Mode: B0 = xxxxxxxxxxxx, B1 = xxxxxxxxxxxx
+Modular Subtracter Mode: B0 = xxxxxxxxxxxx, B1 = xxxxxxxxxxxx
+Modular Subtracter Mode: B0 = xxxxxxxxxxxx, B1 = xxxxxxxxxxxx
+Modular Subtracter Mode: B0 = xxxxxxxxxxxx, B1 = xxxxxxxxxxxx
+Modular Subtracter Mode: B0 = 000000000000, B1 = 000000000000
+Modular Subtracter Mode: B0 = 8cfbac27a8f9, B1 = 730477fcc150
+Modular Subtracter Mode: B0 = 7391fed5a517, B1 = 0c6d04c406f8
+Modular Subtracter Mode: B0 = 7f9898a8ea47, B1 = 006773be0bd4
+Modular Subtracter Mode: B0 = 018ba74fffc0, B1 = 7e73b9a90907
+Modular Subtracter Mode: B0 = 0e2443fbca95, B1 = 71dbbcebfb6e
+Modular Subtracter Mode: B0 = 6f3dd2a41b28, B1 = 10c2a51fc7c5
+Modular Subtracter Mode: B0 = 19e2a625cefc, B1 = 661e4688e0df
+Modular Subtracter Mode: B0 = 4e537e6d5b25, B1 = 31ad7cd678ce
+Modular Subtracter Mode: B0 = 35835b2a440e, B1 = 4a7c6e1ac575
+Modular Subtracter Mode: B0 = 7855bc1d59a5, B1 = 07ab2a849626
+Modular Subtracter Mode: B0 = 536521d18b06, B1 = 2c99f3502117
+Modular Subtracter Mode: B0 = 23f22147ba06, B1 = 5c0ed24f19df
+Modular Subtracter Mode: B0 = 39e3c31045a4, B1 = 461c272eb025
+Modular Subtracter Mode: B0 = 25e5e8297316, B1 = 5a1a759f1fa3
+Modular Subtracter Mode: B0 = 480d11c2d6bf, B1 = 37f21d6fd994
+Modular Subtracter Mode: B0 = 7ffee2dd9d34, B1 = 00007e19278f
+Modular Subtracter Mode: B0 = 43f3125541e7, B1 = 3c0c6fa90312
+Modular Subtracter Mode: B0 = 4e63eeefcbb2, B1 = 319cbcaabfa3
+Modular Subtracter Mode: B0 = 765276f1964c, B1 = 09ad2058e6d9
+$finish called at time : 172 ns : File "/home/moginh/Projects/BConv/BConv.srcs/sim_1/new/RBU_tb.v" Line 244

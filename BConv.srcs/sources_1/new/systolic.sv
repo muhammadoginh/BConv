@@ -20,7 +20,20 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module systolic(
-
+module systolic #(
+        parameter BW = 48
+    )(
+        input               clk,
+        input               rstn,
+        input   [2:0]       mode,
+        input   [BW - 1:0]  A0,
+        input   [BW - 1:0]  A1,
+        input   [BW - 1:0]  q,
+        input   [BW + 1:0]  mu,
+        input   [BW - 1:0]  C,   // psi, psi_inv, in_for_mul
+        output  [BW - 1:0]  B0,
+        output  [BW - 1:0]  B1,
+        output  [BW - 1:0]  M
     );
+    
 endmodule

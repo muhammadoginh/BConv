@@ -40,6 +40,7 @@ module ModAdd #(
     reg [BW - 1:0] B_reg;
     reg [BW - 1:0] q_reg;
     
+    // asynchronous reset
     always @(posedge clk or negedge rstn) begin
         if (~rstn) begin
             A_reg <= 0;
