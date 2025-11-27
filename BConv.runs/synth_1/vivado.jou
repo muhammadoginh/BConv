@@ -3,12 +3,12 @@
 # SW Build 4029153 on Fri Oct 13 20:13:54 MDT 2023
 # IP Build 4028589 on Sat Oct 14 00:45:43 MDT 2023
 # SharedData Build 4025554 on Tue Oct 10 17:18:54 MDT 2023
-# Start of session at: Tue Nov 25 10:27:40 2025
-# Process ID: 1674868
+# Start of session at: Wed Nov 26 19:42:47 2025
+# Process ID: 1799639
 # Current directory: /home/moginh/Projects/BConv/BConv.runs/synth_1
 # Command line: vivado -log RBU.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source RBU.tcl
 # Log file: /home/moginh/Projects/BConv/BConv.runs/synth_1/RBU.vds
 # Journal file: /home/moginh/Projects/BConv/BConv.runs/synth_1/vivado.jou
-# Running On: dis-lab-SYS-7049GP-TRT, OS: Linux, CPU Frequency: 3200.626 MHz, CPU Physical cores: 16, Host memory: 134797 MB
+# Running On: dis-lab-SYS-7049GP-TRT, OS: Linux, CPU Frequency: 1000.063 MHz, CPU Physical cores: 16, Host memory: 134797 MB
 #-----------------------------------------------------------
 source RBU.tcl -notrace

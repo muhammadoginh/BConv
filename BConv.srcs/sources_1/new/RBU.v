@@ -143,9 +143,13 @@ module RBU #(
                 mux_sel[3] = 0; // NOT USED
                 mux_sel[4] = 1;
                 
+                mux_lat_sel[0] = 0;
+                mux_lat_sel[1] = 0;
                 mux_lat_sel[2] = 0;
                 mux_lat_sel[3] = 1;
                 mux_lat_sel[4] = 1;
+                
+                mux_lat_sel_mu = 0;
             end
             5: begin // CT (Latency: 13)
                 mux_sel[0] = 1;

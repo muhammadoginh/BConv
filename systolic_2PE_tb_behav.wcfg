@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="systolic_2PE_tb_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="glbl" />
+            <top_module name="systolic_2PE_tb" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="0.000 ns"></ZoomStartTime>
+      <ZoomEndTime time="181.401 ns"></ZoomEndTime>
+      <Cursor1Time time="8.000 ns"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="153"></NameColumnWidth>
+      <ValueColumnWidth column_width="132"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="23" />
+   <wvobject type="logic" fp_name="/systolic_2PE_tb/clk">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/systolic_2PE_tb/rstn">
+      <obj_property name="ElementShortName">rstn</obj_property>
+      <obj_property name="ObjectShortName">rstn</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/systolic_2PE_tb/en">
+      <obj_property name="ElementShortName">en</obj_property>
+      <obj_property name="ObjectShortName">en</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/systolic_2PE_tb/clr">
+      <obj_property name="ElementShortName">clr</obj_property>
+      <obj_property name="ObjectShortName">clr</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/systolic_2PE_tb/in_valid">
+      <obj_property name="ElementShortName">in_valid</obj_property>
+      <obj_property name="ObjectShortName">in_valid</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/systolic_2PE_tb/q">
+      <obj_property name="ElementShortName">q[47:0]</obj_property>
+      <obj_property name="ObjectShortName">q[47:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/systolic_2PE_tb/mu">
+      <obj_property name="ElementShortName">mu[49:0]</obj_property>
+      <obj_property name="ObjectShortName">mu[49:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/systolic_2PE_tb/x0">
+      <obj_property name="ElementShortName">x0[47:0]</obj_property>
+      <obj_property name="ObjectShortName">x0[47:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/systolic_2PE_tb/x1">
+      <obj_property name="ElementShortName">x1[47:0]</obj_property>
+      <obj_property name="ObjectShortName">x1[47:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/systolic_2PE_tb/qHat0">
+      <obj_property name="ElementShortName">qHat0[47:0]</obj_property>
+      <obj_property name="ObjectShortName">qHat0[47:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/systolic_2PE_tb/qHat1">
+      <obj_property name="ElementShortName">qHat1[47:0]</obj_property>
+      <obj_property name="ObjectShortName">qHat1[47:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/systolic_2PE_tb/uut/p00_out">
+      <obj_property name="ElementShortName">p00_out[47:0]</obj_property>
+      <obj_property name="ObjectShortName">p00_out[47:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/systolic_2PE_tb/uut/pe01/A0">
+      <obj_property name="ElementShortName">A0[47:0]</obj_property>
+      <obj_property name="ObjectShortName">A0[47:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/systolic_2PE_tb/uut/pe01/A1">
+      <obj_property name="ElementShortName">A1[47:0]</obj_property>
+      <obj_property name="ObjectShortName">A1[47:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/systolic_2PE_tb/uut/pe01/C">
+      <obj_property name="ElementShortName">C[47:0]</obj_property>
+      <obj_property name="ObjectShortName">C[47:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/systolic_2PE_tb/a">
+      <obj_property name="ElementShortName">a[47:0]</obj_property>
+      <obj_property name="ObjectShortName">a[47:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/systolic_2PE_tb/out_valid">
+      <obj_property name="ElementShortName">out_valid</obj_property>
+      <obj_property name="ObjectShortName">out_valid</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/systolic_2PE_tb/BW">
+      <obj_property name="ElementShortName">BW[31:0]</obj_property>
+      <obj_property name="ObjectShortName">BW[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/systolic_2PE_tb/uut/pe01/A0">
+      <obj_property name="ElementShortName">A0[47:0]</obj_property>
+      <obj_property name="ObjectShortName">A0[47:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/systolic_2PE_tb/uut/pe01/A1">
+      <obj_property name="ElementShortName">A1[47:0]</obj_property>
+      <obj_property name="ObjectShortName">A1[47:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/systolic_2PE_tb/uut/pe01/q">
+      <obj_property name="ElementShortName">q[47:0]</obj_property>
+      <obj_property name="ObjectShortName">q[47:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/systolic_2PE_tb/uut/pe01/mu">
+      <obj_property name="ElementShortName">mu[49:0]</obj_property>
+      <obj_property name="ObjectShortName">mu[49:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/systolic_2PE_tb/uut/pe01/C">
+      <obj_property name="ElementShortName">C[47:0]</obj_property>
+      <obj_property name="ObjectShortName">C[47:0]</obj_property>
+   </wvobject>
+</wave_config>
