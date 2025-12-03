@@ -37,4 +37,4 @@ EAStep()
      fi
 }
 
-EAStep vivado -log RBU.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source RBU.tcl
+EAStep vivado -log systolic.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source systolic.tcl

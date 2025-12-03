@@ -7,4 +7,4 @@
 # Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 #
 
-vivado -log RBU.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source RBU.tcl
+vivado -log systolic.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source systolic.tcl

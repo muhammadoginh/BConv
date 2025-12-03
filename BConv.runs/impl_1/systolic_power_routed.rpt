@@ -1,0 +1,442 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+-------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version     : Vivado v.2023.2 (lin64) Build 4029153 Fri Oct 13 20:13:54 MDT 2023
+| Date             : Tue Dec  2 22:56:12 2025
+| Host             : dis-lab-SYS-7049GP-TRT running 64-bit Ubuntu 24.04.3 LTS
+| Command          : report_power -file systolic_power_routed.rpt -pb systolic_power_summary_routed.pb -rpx systolic_power_routed.rpx
+| Design           : systolic
+| Device           : xcu280-fsvh2892-2L-e
+| Design State     : routed
+| Grade            : extended
+| Process          : typical
+| Characterization : Production
+-------------------------------------------------------------------------------------------------------------------------------------------------
+
+Power Report
+
+Table of Contents
+-----------------
+1. Summary
+1.1 On-Chip Components
+1.2 Power Supply Summary
+1.3 Confidence Level
+2. Settings
+2.1 Environment
+2.2 Clock Constraints
+3. Detailed Reports
+3.1 By Hierarchy
+
+1. Summary
+----------
+
++--------------------------+---------------+
+| Total On-Chip Power (W)  | 7.186         |
+|   FPGA Power (W)         | 6.833         |
+|   HBM Power (W)          | 0.354         |
+| Design Power Budget (W)  | 160.000       |
+| Power Budget Margin (W)  | 152.814 (MET) |
+| Dynamic (W)              | 1.410         |
+| Device Static (W)        | 5.776         |
+| Effective TJA (C/W)      | 0.8           |
+| Max Ambient (C)          | 94.6          |
+| Junction Temperature (C) | 60.4          |
+| Confidence Level         | Medium        |
+| Setting File             | ---           |
+| Simulation Activity File | ---           |
+| Design Nets Matched      | NA            |
++--------------------------+---------------+
+
+
+1.1 On-Chip Components
+----------------------
+
++-------------------------+-----------+----------+-----------+-----------------+
+| On-Chip                 | Power (W) | Used     | Available | Utilization (%) |
++-------------------------+-----------+----------+-----------+-----------------+
+| Clocks                  |     0.264 |        3 |       --- |             --- |
+| CLB Logic               |     0.455 |    30099 |       --- |             --- |
+|   LUT as Logic          |     0.304 |     8869 |   1303680 |            0.68 |
+|   LUT as Shift Register |     0.100 |     2526 |    600960 |            0.42 |
+|   CARRY8                |     0.026 |     1144 |    162960 |            0.70 |
+|   Register              |     0.025 |    12082 |   2607360 |            0.46 |
+|   Others                |     0.000 |      694 |       --- |             --- |
+| Signals                 |     0.420 |    28807 |       --- |             --- |
+| DSPs                    |     0.272 |      144 |      9024 |            1.60 |
+| Static Power            |     5.776 |          |           |                 |
+| Total                   |     7.186 |          |           |                 |
++-------------------------+-----------+----------+-----------+-----------------+
+
+
+1.2 Power Supply Summary
+------------------------
+
++------------+-------------+-----------+-------------+------------+-------------+-------------+---------------+
+| Source     | Voltage (V) | Total (A) | Dynamic (A) | Static (A) | Powerup (A) | Budget (A)  | Margin (A)    |
++------------+-------------+-----------+-------------+------------+-------------+-------------+---------------+
+| Vccint     |       0.850 |     5.736 |       1.659 |      4.077 |       NA    |     150.000 | 144.264 (MET) |
+| Vccint_io  |       0.850 |     0.489 |       0.000 |      0.489 |       NA    |       5.000 | 4.511 (MET)   |
+| Vccbram    |       0.850 |     0.106 |       0.000 |      0.106 |       NA    |       3.000 | 2.894 (MET)   |
+| Vccaux     |       1.800 |     0.743 |       0.000 |      0.743 |       NA    |       4.000 | 3.257 (MET)   |
+| Vccaux_io  |       1.800 |     0.035 |       0.000 |      0.035 |       NA    |       3.000 | 2.965 (MET)   |
+| Vcco33     |       3.300 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA            |
+| Vcco25     |       2.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA            |
+| Vcco18     |       1.800 |     0.000 |       0.000 |      0.000 |       NA    |       0.500 | 0.500 (MET)   |
+| Vcco15     |       1.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA            |
+| Vcco135    |       1.350 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA            |
+| Vcco12     |       1.200 |     0.000 |       0.000 |      0.000 |       NA    |       2.000 | 2.000 (MET)   |
+| Vcco10     |       1.000 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA            |
+| Vccadc     |       1.800 |     0.024 |       0.000 |      0.024 |       NA    |       0.025 | 0.001 (MET)   |
+| VCC_IO_HBM |       1.200 |     0.115 |       0.000 |      0.115 |       NA    |       6.000 | 5.885 (MET)   |
+| VCC_HBM    |       1.200 |     0.136 |       0.000 |      0.136 |       NA    |      12.000 | 11.864 (MET)  |
+| VCCAUX_HBM |       2.500 |     0.023 |       0.000 |      0.023 |       NA    |       4.000 | 3.977 (MET)   |
+| MGTYAVcc   |       0.900 |     0.000 |       0.000 |      0.000 |       NA    |       4.000 | 4.000 (MET)   |
+| MGTYAVtt   |       1.200 |     0.000 |       0.000 |      0.000 |       NA    |       8.000 | 8.000 (MET)   |
+| MGTYVccaux |       1.800 |     0.000 |       0.000 |      0.000 |       NA    |       0.500 | 0.500 (MET)   |
++------------+-------------+-----------+-------------+------------+-------------+-------------+---------------+
+
+
+1.3 Confidence Level
+--------------------
+
++-----------------------------+------------+------------------------------------------------+------------------------------------------------------------------------------------------------------------+
+| User Input Data             | Confidence | Details                                        | Action                                                                                                     |
++-----------------------------+------------+------------------------------------------------+------------------------------------------------------------------------------------------------------------+
+| Design implementation state | High       | Design is routed                               |                                                                                                            |
+| Clock nodes activity        | High       | User specified more than 95% of clocks         |                                                                                                            |
+| I/O nodes activity          | High       | User specified more than 95% of inputs         |                                                                                                            |
+| Internal nodes activity     | Medium     | User specified less than 25% of internal nodes | Provide missing internal nodes activity with simulation results or by editing the "By Resource Type" views |
+| Device models               | High       | Device models are Production                   |                                                                                                            |
+|                             |            |                                                |                                                                                                            |
+| Overall confidence level    | Medium     |                                                |                                                                                                            |
++-----------------------------+------------+------------------------------------------------+------------------------------------------------------------------------------------------------------------+
+
+
+2. Settings
+-----------
+
+2.1 Environment
+---------------
+
++-----------------------+--------------------------+
+| Ambient Temp (C)      | 55.0                     |
+| ThetaJA (C/W)         | 0.8                      |
+| Airflow (LFM)         | 250                      |
+| Heat Sink             | medium (Medium Profile)  |
+| ThetaSA (C/W)         | 0.5                      |
+| Board Selection       | medium (10"x10")         |
+| # of Board Layers     | 12to15 (12 to 15 Layers) |
+| Board Temperature (C) | 25.0                     |
++-----------------------+--------------------------+
+
+
+2.2 Clock Constraints
+---------------------
+
++-------+--------+-----------------+
+| Clock | Domain | Constraint (ns) |
++-------+--------+-----------------+
+| clk   | clk    |             3.3 |
++-------+--------+-----------------+
+
+
+3. Detailed Reports
+-------------------
+
+3.1 By Hierarchy
+----------------
+
++---------------------+-----------+
+| Name                | Power (W) |
++---------------------+-----------+
+| systolic            |     1.410 |
+|   delay_pipe_0      |     0.002 |
+|   mu_delay1         |     0.003 |
+|   mu_delay2         |     0.003 |
+|   mu_delay3         |     0.003 |
+|   mu_delay4         |     0.003 |
+|   mu_delay5         |     0.003 |
+|   mu_delay6         |     0.003 |
+|   mu_delay7         |     0.002 |
+|   pe00              |     0.151 |
+|     ModAdd_0        |     0.003 |
+|     ModMul_0        |     0.143 |
+|       delay_m1      |     0.004 |
+|       delay_m3      |     0.003 |
+|       delay_mu      |     0.004 |
+|       delay_q       |     0.004 |
+|       delay_q_final |     0.004 |
+|       delay_z       |     0.008 |
+|       mul_w1        |     0.007 |
+|       mul_w3        |     0.007 |
+|       mul_w5        |     0.005 |
+|       mul_w_mu_0    |     0.005 |
+|       mul_w_mu_2    |     0.011 |
+|       mul_w_mu_4    |     0.007 |
+|       mul_y0        |     0.006 |
+|       mul_y2        |     0.005 |
+|       mul_y4        |     0.003 |
+|       mul_z0        |     0.008 |
+|       mul_z2        |     0.009 |
+|       mul_z4        |     0.007 |
+|       pipe_r        |     0.003 |
+|       pipe_t        |     0.009 |
+|       pipe_w0_sub   |     0.001 |
+|       pipe_w1       |     0.003 |
+|       pipe_w3       |     0.002 |
+|       pipe_w5       |     0.002 |
+|       pipe_z1       |     0.002 |
+|       pipe_z3       |     0.002 |
+|       pipe_z5       |     0.002 |
+|     ModSub_0        |     0.005 |
+|   pe01              |     0.156 |
+|     A0_delay_2      |     0.005 |
+|     ModAdd_0        |     0.005 |
+|     ModMul_0        |     0.138 |
+|       delay_m1      |     0.003 |
+|       delay_m3      |     0.003 |
+|       delay_mu      |     0.004 |
+|       delay_q       |     0.004 |
+|       delay_q_final |     0.004 |
+|       delay_z       |     0.008 |
+|       mul_w1        |     0.007 |
+|       mul_w3        |     0.007 |
+|       mul_w5        |     0.005 |
+|       mul_w_mu_0    |     0.005 |
+|       mul_w_mu_2    |     0.013 |
+|       mul_w_mu_4    |     0.006 |
+|       mul_y0        |     0.007 |
+|       mul_y2        |     0.006 |
+|       mul_y4        |     0.003 |
+|       mul_z0        |     0.006 |
+|       mul_z2        |     0.008 |
+|       mul_z4        |     0.006 |
+|       pipe_r        |     0.003 |
+|       pipe_t        |     0.010 |
+|       pipe_w0_sub   |     0.001 |
+|       pipe_w1       |     0.002 |
+|       pipe_w3       |     0.002 |
+|       pipe_w5       |     0.002 |
+|       pipe_z1       |     0.002 |
+|       pipe_z3       |     0.002 |
+|       pipe_z5       |     0.003 |
+|     ModSub_0        |     0.008 |
+|   pe02              |     0.177 |
+|     A0_delay_2      |     0.005 |
+|     ModAdd_0        |     0.005 |
+|     ModMul_0        |     0.160 |
+|       delay_m1      |     0.004 |
+|       delay_m3      |     0.003 |
+|       delay_mu      |     0.005 |
+|       delay_q       |     0.004 |
+|       delay_q_final |     0.004 |
+|       delay_z       |     0.009 |
+|       mul_w1        |     0.009 |
+|       mul_w3        |     0.007 |
+|       mul_w5        |     0.006 |
+|       mul_w_mu_0    |     0.006 |
+|       mul_w_mu_2    |     0.016 |
+|       mul_w_mu_4    |     0.006 |
+|       mul_y0        |     0.007 |
+|       mul_y2        |     0.005 |
+|       mul_y4        |     0.003 |
+|       mul_z0        |     0.010 |
+|       mul_z2        |     0.011 |
+|       mul_z4        |     0.007 |
+|       pipe_r        |     0.003 |
+|       pipe_t        |     0.010 |
+|       pipe_w0_sub   |     0.001 |
+|       pipe_w1       |     0.002 |
+|       pipe_w3       |     0.002 |
+|       pipe_w5       |     0.002 |
+|       pipe_z1       |     0.003 |
+|       pipe_z3       |     0.003 |
+|       pipe_z5       |     0.002 |
+|     ModSub_0        |     0.008 |
+|   pe03              |     0.160 |
+|     A0_delay_2      |     0.005 |
+|     ModAdd_0        |     0.005 |
+|     ModMul_0        |     0.143 |
+|       delay_m1      |     0.003 |
+|       delay_m3      |     0.003 |
+|       delay_mu      |     0.004 |
+|       delay_q       |     0.004 |
+|       delay_q_final |     0.004 |
+|       delay_z       |     0.008 |
+|       mul_w1        |     0.008 |
+|       mul_w3        |     0.007 |
+|       mul_w5        |     0.005 |
+|       mul_w_mu_0    |     0.006 |
+|       mul_w_mu_2    |     0.012 |
+|       mul_w_mu_4    |     0.007 |
+|       mul_y0        |     0.007 |
+|       mul_y2        |     0.005 |
+|       mul_y4        |     0.003 |
+|       mul_z0        |     0.008 |
+|       mul_z2        |     0.008 |
+|       mul_z4        |     0.006 |
+|       pipe_r        |     0.003 |
+|       pipe_t        |     0.010 |
+|       pipe_w0_sub   |     0.001 |
+|       pipe_w1       |     0.002 |
+|       pipe_w3       |     0.002 |
+|       pipe_w5       |     0.002 |
+|       pipe_z1       |     0.002 |
+|       pipe_z3       |     0.002 |
+|       pipe_z5       |     0.003 |
+|     ModSub_0        |     0.008 |
+|   pe04              |     0.162 |
+|     A0_delay_2      |     0.005 |
+|     ModAdd_0        |     0.005 |
+|     ModMul_0        |     0.144 |
+|       delay_m1      |     0.004 |
+|       delay_m3      |     0.003 |
+|       delay_mu      |     0.005 |
+|       delay_q       |     0.004 |
+|       delay_q_final |     0.004 |
+|       delay_z       |     0.008 |
+|       mul_w1        |     0.008 |
+|       mul_w3        |     0.008 |
+|       mul_w5        |     0.005 |
+|       mul_w_mu_0    |     0.006 |
+|       mul_w_mu_2    |     0.011 |
+|       mul_w_mu_4    |     0.007 |
+|       mul_y0        |     0.007 |
+|       mul_y2        |     0.005 |
+|       mul_y4        |     0.003 |
+|       mul_z0        |     0.008 |
+|       mul_z2        |     0.008 |
+|       mul_z4        |     0.007 |
+|       pipe_r        |     0.003 |
+|       pipe_t        |     0.009 |
+|       pipe_w0_sub   |     0.001 |
+|       pipe_w1       |     0.002 |
+|       pipe_w3       |     0.002 |
+|       pipe_w5       |     0.002 |
+|       pipe_z1       |     0.002 |
+|       pipe_z3       |     0.002 |
+|       pipe_z5       |     0.003 |
+|     ModSub_0        |     0.008 |
+|   pe05              |     0.160 |
+|     A0_delay_2      |     0.005 |
+|     ModAdd_0        |     0.005 |
+|     ModMul_0        |     0.143 |
+|       delay_m1      |     0.004 |
+|       delay_m3      |     0.003 |
+|       delay_mu      |     0.004 |
+|       delay_q       |     0.004 |
+|       delay_q_final |     0.004 |
+|       delay_z       |     0.008 |
+|       mul_w1        |     0.007 |
+|       mul_w3        |     0.007 |
+|       mul_w5        |     0.005 |
+|       mul_w_mu_0    |     0.005 |
+|       mul_w_mu_2    |     0.011 |
+|       mul_w_mu_4    |     0.007 |
+|       mul_y0        |     0.006 |
+|       mul_y2        |     0.006 |
+|       mul_y4        |     0.002 |
+|       mul_z0        |     0.007 |
+|       mul_z2        |     0.009 |
+|       mul_z4        |     0.007 |
+|       pipe_r        |     0.003 |
+|       pipe_t        |     0.010 |
+|       pipe_w0_sub   |     0.001 |
+|       pipe_w1       |     0.002 |
+|       pipe_w3       |     0.002 |
+|       pipe_w5       |     0.002 |
+|       pipe_z1       |     0.002 |
+|       pipe_z3       |     0.003 |
+|       pipe_z5       |     0.003 |
+|     ModSub_0        |     0.008 |
+|   pe06              |     0.158 |
+|     A0_delay_2      |     0.005 |
+|     ModAdd_0        |     0.005 |
+|     ModMul_0        |     0.140 |
+|       delay_m1      |     0.004 |
+|       delay_m3      |     0.003 |
+|       delay_mu      |     0.004 |
+|       delay_q       |     0.004 |
+|       delay_q_final |     0.004 |
+|       delay_z       |     0.008 |
+|       mul_w1        |     0.007 |
+|       mul_w3        |     0.007 |
+|       mul_w5        |     0.005 |
+|       mul_w_mu_0    |     0.004 |
+|       mul_w_mu_2    |     0.013 |
+|       mul_w_mu_4    |     0.006 |
+|       mul_y0        |     0.007 |
+|       mul_y2        |     0.005 |
+|       mul_y4        |     0.003 |
+|       mul_z0        |     0.006 |
+|       mul_z2        |     0.009 |
+|       mul_z4        |     0.007 |
+|       pipe_r        |     0.003 |
+|       pipe_t        |     0.009 |
+|       pipe_w0_sub   |     0.001 |
+|       pipe_w1       |     0.002 |
+|       pipe_w3       |     0.002 |
+|       pipe_w5       |     0.002 |
+|       pipe_z1       |     0.002 |
+|       pipe_z3       |     0.002 |
+|       pipe_z5       |     0.003 |
+|     ModSub_0        |     0.008 |
+|   pe07              |     0.159 |
+|     A0_delay_2      |     0.005 |
+|     ModAdd_0        |     0.004 |
+|     ModMul_0        |     0.140 |
+|       delay_m1      |     0.004 |
+|       delay_m3      |     0.003 |
+|       delay_mu      |     0.004 |
+|       delay_q       |     0.004 |
+|       delay_q_final |     0.004 |
+|       delay_z       |     0.007 |
+|       mul_w1        |     0.007 |
+|       mul_w3        |     0.007 |
+|       mul_w5        |     0.005 |
+|       mul_w_mu_0    |     0.005 |
+|       mul_w_mu_2    |     0.013 |
+|       mul_w_mu_4    |     0.006 |
+|       mul_y0        |     0.007 |
+|       mul_y2        |     0.005 |
+|       mul_y4        |     0.003 |
+|       mul_z0        |     0.007 |
+|       mul_z2        |     0.009 |
+|       mul_z4        |     0.007 |
+|       pipe_r        |     0.003 |
+|       pipe_t        |     0.010 |
+|       pipe_w0_sub   |     0.001 |
+|       pipe_w1       |     0.002 |
+|       pipe_w3       |     0.002 |
+|       pipe_w5       |     0.002 |
+|       pipe_z1       |     0.002 |
+|       pipe_z3       |     0.002 |
+|       pipe_z5       |     0.003 |
+|     ModSub_0        |     0.008 |
+|     q_delay_3       |     0.002 |
+|   qHat1_delay       |     0.002 |
+|   qHat2_delay       |     0.002 |
+|   qHat3_delay       |     0.003 |
+|   qHat4_delay       |     0.004 |
+|   qHat5_delay       |     0.005 |
+|   qHat6_delay       |     0.005 |
+|   qHat7_delay       |     0.005 |
+|   q_delay1          |     0.005 |
+|   q_delay2          |     0.005 |
+|   q_delay3          |     0.005 |
+|   q_delay4          |     0.005 |
+|   q_delay5          |     0.005 |
+|   q_delay6          |     0.005 |
+|   q_delay7          |     0.005 |
+|   r_mu              |     0.002 |
+|   r_q               |     0.001 |
+|   r_qHat2           |     0.001 |
+|   x1_delay          |     0.002 |
+|   x2_delay          |     0.002 |
+|   x3_delay          |     0.003 |
+|   x4_delay          |     0.004 |
+|   x5_delay          |     0.005 |
+|   x6_delay          |     0.005 |
+|   x7_delay          |     0.005 |
++---------------------+-----------+
+
+
