@@ -1,0 +1,19 @@
+List of CLB Tiles
+CLEM_X105Y560
+CLEL_R_X105Y560
+CLEM_X104Y657
+CLEL_R_X104Y657
+CLEM_X103Y622
+CLEM_X101Y654
+CLEL_R_X101Y654
+CLEM_X97Y636
+CLEL_R_X97Y636
+CLEM_X96Y580
+CLEL_R_X96Y580
+
+List of Congested Nets
+MM1/ModMul_0/mul_w_mu_4/out_reg/P[22]
+MM1/ModMul_0/mul_w_mu_2/out_reg/P[22]
+MM2/ModMul_0/mul_w5/mul_0/out_reg/P[7]
+MM2/ModMul_0/mul_w_mu_2/out_reg_i_175__1_n_0
+

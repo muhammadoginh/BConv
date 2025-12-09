@@ -37,4 +37,4 @@ EAStep()
      fi
 }
 
-EAStep vivado -log systolic.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source systolic.tcl
+EAStep vivado -log BConvEngine.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source BConvEngine.tcl

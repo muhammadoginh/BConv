@@ -1,10 +1,38 @@
 -------------------------------------
 | Tool Version : Vivado v.2023.2
-| Date         : Tue Dec  2 22:46:24 2025
+| Date         : Wed Dec  3 13:35:22 2025
 | Host         : dis-lab-SYS-7049GP-TRT
 | Design       : design_1
 | Device       : xcu280-fsvh2892-2L-E-
 -------------------------------------
 
 For more information on clockInfo.txt clock routing debug file see https://support.xilinx.com/s/article/000035660?language=en_US
+
+***********************
+Running Pre-CRP Checker
+***********************
+Number of global clocks: 1
+	Number of BUFGCE: 1
+	Number of BUFGCE_HDIO: 0
+	Number of BUFG_CTRL: 0
+	Number of BUFGCE_DIV: 0
+	Number of BUFG_GT: 0
+	Number of BUFG_PS: 0
+	Number of BUFG_FABRIC: 0
+********************************
+Clock Net Route Info (CRP Input)
+********************************
+Clock 1: systolic_0/r_q/SR[0]_bufg_place
+	Clock source type: BUFGCE
+	Clock source region: X4Y11
+	Clock regions with locked loads: (4, 10) (5, 9) (5, 10) (5, 11) (6, 9) (6, 10) (6, 11) (7, 10) 
+	initial rect ((4, 9), (7, 11))
+
+
+
+*****************
+User Constraints:
+*****************
+No user constraints found
+
 

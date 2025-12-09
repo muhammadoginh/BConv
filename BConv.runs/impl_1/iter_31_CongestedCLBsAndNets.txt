@@ -1,0 +1,37 @@
+List of CLB Tiles
+CLEM_X117Y611
+CLEM_X105Y568
+CLEL_R_X105Y568
+CLEM_X104Y658
+CLEL_R_X104Y658
+CLEM_X126Y650
+CLEL_R_X126Y650
+CLEM_X123Y627
+CLEL_R_X123Y627
+CLEL_L_X121Y569
+CLEL_R_X121Y569
+CLEL_L_X121Y632
+CLEL_R_X121Y632
+CLEM_X120Y568
+CLEL_R_X120Y568
+CLEL_R_X118Y600
+CLEM_X117Y613
+
+List of Congested Nets
+MM1/ModMul_0/mul_w_mu_2/out_reg_i_149__0_n_0
+MM1/ModMul_0/mul_w5/mul_0/out_reg/P[31]
+MM0/ModMul_0/mul_z4/out_reg/P[30]
+MM0/ModMul_0/mul_z2/out_reg_i_77_n_0
+systolic_0/pe00/ModMul_0/mul_z2/P[13]_alias
+systolic_0/pe00/ModMul_0/mul_z2/i___7_i_35__7_n_0
+MM3/ModMul_0/mul_w_mu_2/out_reg/P[20]
+MM3/ModMul_0/mul_w_mu_4/out_reg/P[20]
+systolic_0/pe03/ModMul_0/mul_w_mu_2/out_reg/P[21]
+systolic_0/pe03/ModMul_0/mul_w_mu_2/out_reg/P[20]
+systolic_0/pe03/ModMul_0/mul_w_mu_2/out_reg/P[2]
+systolic_0/pe03/ModMul_0/mul_w_mu_0/out_reg/P[2]
+systolic_0/pe03/ModMul_0/mul_z0/P[12]_alias
+systolic_0/pe03/ModMul_0/mul_z0/out_reg/P[12]
+MM5/ModMul_0/mul_w_mu_0/out_reg/P[12]
+MM5/ModMul_0/mul_w_mu_0/out_reg/P[13]
+

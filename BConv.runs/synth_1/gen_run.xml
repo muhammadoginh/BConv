@@ -1,14 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xcu280-fsvh2892-2L-e" LaunchTime="1764682976" LaunchIncrCheckpoint="$PSRCDIR/utils_1/imports/synth_1/delay.dcp">
-  <File Type="VDS-TIMINGSUMMARY" Name="systolic_timing_summary_synth.rpt"/>
-  <File Type="RDS-DCP" Name="systolic.dcp"/>
+<GenRun Id="synth_1" LaunchPart="xcu280-fsvh2892-2L-e" LaunchTime="1764736257" LaunchIncrCheckpoint="$PSRCDIR/utils_1/imports/synth_1/delay.dcp">
+  <File Type="RDS-DCP" Name="BConvEngine.dcp"/>
   <File Type="RDS-UTIL-PB" Name="systolic_utilization_synth.pb"/>
+  <File Type="PA-TCL" Name="BConvEngine.tcl"/>
   <File Type="RDS-UTIL" Name="systolic_utilization_synth.rpt"/>
-  <File Type="RDS-PROPCONSTRS" Name="systolic_drc_synth.rpt"/>
-  <File Type="RDS-RDS" Name="systolic.vds"/>
-  <File Type="REPORTS-TCL" Name="systolic_reports.tcl"/>
-  <File Type="VDS-TIMING-PB" Name="systolic_timing_summary_synth.pb"/>
-  <File Type="PA-TCL" Name="systolic.tcl"/>
+  <File Type="REPORTS-TCL" Name="BConvEngine_reports.tcl"/>
+  <File Type="RDS-RDS" Name="BConvEngine.vds"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
     <Filter Type="Srcs"/>
     <File Path="$PSRCDIR/sources_1/new/DIV2.v">
@@ -40,6 +37,13 @@
       </FileInfo>
     </File>
     <File Path="$PSRCDIR/sources_1/new/RBU.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/RBU_V2.v">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
@@ -111,7 +115,6 @@
     </File>
     <File Path="$PSRCDIR/sources_1/new/BConvEngine.v">
       <FileInfo>
-        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -191,7 +194,7 @@
     </File>
     <Config>
       <Option Name="DesignMode" Val="RTL"/>
-      <Option Name="TopModule" Val="systolic"/>
+      <Option Name="TopModule" Val="BConvEngine"/>
     </Config>
   </FileSet>
   <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1" RelGenDir="$PGENDIR/constrs_1">
