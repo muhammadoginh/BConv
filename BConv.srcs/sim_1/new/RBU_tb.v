@@ -201,8 +201,8 @@ module RBU_tb();
             A1 = $random % q;  //random       
             
             // Test 1: Modular Multiplication Mode
-//            mode = 3'b000;
-//            $display("Modular Multiplication Mode: B0 = %h, B1 = %h", B0, B1);
+            mode = 3'b000;
+            $display("Modular Multiplication Mode: B0 = %h, B1 = %h", B0, B1);
         
             // Test 2: Modular Addition Mode
 //            mode = 3'b001;
@@ -217,8 +217,8 @@ module RBU_tb();
 //            $display("Modular Subtracter Mode: B0 = %h, B1 = %h", B0, B1);   
 
             // Test 5: Modular Mul Add Mode
-            mode = 3'b100;
-            $display("Modular Subtracter Mode: B0 = %h, B1 = %h", B0, B1);  
+//            mode = 3'b100;
+//            $display("Modular Subtracter Mode: B0 = %h, B1 = %h", B0, B1);  
 
             // Test 6: NTT Mode (Cooley-Tukey Butterfly)
 //            mode = 3'b101;

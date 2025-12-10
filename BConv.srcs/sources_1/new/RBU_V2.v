@@ -147,7 +147,7 @@ module RBU_V2 #(
                 mux_lat_sel[1] = 0;
                 mux_lat_sel[2] = 0;
                 mux_lat_sel[3] = 1;
-                mux_lat_sel[4] = 0; // with delay set to 1
+                mux_lat_sel[4] = 0; // with delay set to 1, this make input MA at the same cycle with output MM
                 
                 mux_lat_sel_mu = 0;
             end
@@ -192,32 +192,45 @@ module RBU_V2 #(
         endcase
     end
     
-    delay #(.BW(48), .N(13)) A1_delay_2(.clk(clk), .in(A1), .out(A1_d));
-    mux #(BW) mux_0 (.sel(mux_sel[0]), .in1(mul_mod),   .in0(A1),      .out(mux_out[0]));
-    mux #(BW) mux_1 (.sel(mux_sel[1]), .in1(A1),        .in0(sub_mod), .out(mux_out[1]));
+    wire  [BW - 1:0]  A0_pipe;
+    wire  [BW - 1:0]  A1_pipe;
+    wire  [BW - 1:0]  q_pipe;
+    wire  [BW + 1:0]  mu_pipe;
+    wire  [BW - 1:0]  C_pipe;
+    
+    // pipeline input
+    pipeline #(BW)   pipe_A0 (.clk(clk), .rstn(rstn), .in(A0), .out(A0_pipe));
+    pipeline #(BW)   pipe_A1 (.clk(clk), .rstn(rstn), .in(A1), .out(A1_pipe));
+    pipeline #(BW)   pipe_q  (.clk(clk), .rstn(rstn), .in(q),  .out(q_pipe));
+    pipeline #(BW+2) pipe_mu (.clk(clk), .rstn(rstn), .in(mu), .out(mu_pipe));
+    pipeline #(BW)   pipe_C  (.clk(clk), .rstn(rstn), .in(C),  .out(C_pipe));
+    
+    delay #(.BW(48), .N(13)) A1_delay_2(.clk(clk), .in(A1_pipe), .out(A1_d));
+    mux #(BW) mux_0 (.sel(mux_sel[0]), .in1(mul_mod),   .in0(A1_pipe),      .out(mux_out[0]));
+    mux #(BW) mux_1 (.sel(mux_sel[1]), .in1(A1_pipe),        .in0(sub_mod), .out(mux_out[1]));
     mux #(BW) mux_2 (.sel(mux_sel[2]), .in1(B0_DIV2_d),   .in0(sum_mod), .out(mux_out[2]));
     mux #(BW) mux_3 (.sel(mux_sel[3]), .in1(B1_DIV2),   .in0(sub_mod), .out(mux_out[3]));
     mux #(BW) mux_4 (.sel(mux_sel[4]), .in1(A1_d),      .in0(mul_mod), .out(mux_out[4]));
     
-    delay #(.BW(48), .N(2)) q_delay_1(.clk(clk), .in(q), .out(q_d));
-    delay #(.BW(50), .N(2)) mu_delay_1(.clk(clk), .in(mu), .out(mu_d));
+    delay #(.BW(48), .N(2)) q_delay_1(.clk(clk), .in(q_pipe), .out(q_d));
+    delay #(.BW(50), .N(2)) mu_delay_1(.clk(clk), .in(mu_pipe), .out(mu_d));
     delay #(.BW(50), .N(1)) mu_delay_2(.clk(clk), .in(mu_d), .out(mu_d2));
-    mux #(BW) mux_lat_0 (.sel(mux_lat_sel[0]), .in1(q_d),   .in0(q),       .out(mux_lat_out_0));
-    mux #(BW+2) mux_lat_mu_1 (.sel(mux_lat_sel_mu), .in1(mu_d),  .in0(mu),      .out(mux_lat_mu));
+    mux #(BW) mux_lat_0 (.sel(mux_lat_sel[0]), .in1(q_d),   .in0(q_pipe),       .out(mux_lat_out_0));
+    mux #(BW+2) mux_lat_mu_1 (.sel(mux_lat_sel_mu), .in1(mu_d),  .in0(mu_pipe),      .out(mux_lat_mu));
 
     
     delay #(.BW(48), .N(2)) A1_delay_1(.clk(clk), .in(mux_out[1]), .out(mux_out_1_d));
-    delay #(.BW(48), .N(2)) C_delay_1(.clk(clk), .in(C), .out(C_d));
+    delay #(.BW(48), .N(2)) C_delay_1(.clk(clk), .in(C_pipe), .out(C_d));
     delay #(.BW(48), .N(1)) C_delay_2(.clk(clk), .in(C_d), .out(C_d2));
     mux #(BW) mux_lat_1 (.sel(mux_lat_sel[1]), .in1(mux_out_1_d),   .in0(mux_out[1]),       .out(mux_lat_out_1));
-    mux #(BW) mux_lat_2 (.sel(mux_lat_sel[2]), .in1(C_d),   .in0(C),       .out(mux_lat_out_2));
+    mux #(BW) mux_lat_2 (.sel(mux_lat_sel[2]), .in1(C_d),   .in0(C_pipe),       .out(mux_lat_out_2));
 
     delay #(.BW(48), .N(1)) q_delay_2(.clk(clk), .in(q_d), .out(q_d2));
     delay #(.BW(48), .N(8)) q_delay_3(.clk(clk), .in(q_d2), .out(q_d3));
     delay #(.BW(48), .N(2)) q_delay_4(.clk(clk), .in(q_d3), .out(q_d4));
-    delay #(.BW(48), .N(11)) A0_delay_2(.clk(clk), .in(A0), .out(A0_d));
-    mux #(BW) mux_lat_3 (.sel(mux_lat_sel[3]), .in1(q_d3),   .in0(q),       .out(mux_lat_out_3));
-    mux #(BW) mux_lat_4 (.sel(mux_lat_sel[4]), .in1(A0_d),   .in0(A0),      .out(mux_lat_out_4));
+    delay #(.BW(48), .N(11)) A0_delay_2(.clk(clk), .in(A0_pipe), .out(A0_d));
+    mux #(BW) mux_lat_3 (.sel(mux_lat_sel[3]), .in1(q_d3),   .in0(q_pipe),       .out(mux_lat_out_3));
+    mux #(BW) mux_lat_4 (.sel(mux_lat_sel[4]), .in1(A0_d),   .in0(A0_pipe),      .out(mux_lat_out_4));
     
     
     // Modular Subtraction
@@ -256,10 +269,10 @@ module RBU_V2 #(
     DIV2 #(BW) inv2_0 (clk, rstn, sum_mod, q_d, B0_DIV2);
     DIV2 #(BW) inv2_1 (clk, rstn, mul_mod, q_d4, B1_DIV2);
     
-    
+    // piepline output
+    pipeline #(BW) pipe_B0 (.clk(clk), .rstn(rstn), .in(mux_out[2]), .out(B0));
+    pipeline #(BW) pipe_B1 (.clk(clk), .rstn(rstn), .in(mux_out[3]), .out(B1));
+    pipeline #(BW) pipe_M  (.clk(clk), .rstn(rstn), .in(mux_out[4]), .out(M));
 
-    assign B0 = mux_out[2];
-    assign B1 = mux_out[3];
-    assign M  = mux_out[4];
-    assign M  = mux_out[4];
+
 endmodule
