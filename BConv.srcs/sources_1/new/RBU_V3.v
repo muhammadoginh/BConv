@@ -13,6 +13,28 @@
 // 
 // Dependencies: 
 // 
+// add pipeline input and pipeline output
+//
+// Modular Multiplication Mode
+//  mode = 3'b000;
+//        
+//  Modular Addition Mode
+//  mode = 3'b001;
+//
+//  Modular Subtractor Mode
+//  mode = 3'b010;
+//         
+//  Modular Sub Mul Mode
+//  mode = 3'b011;
+//
+//  Modular Mul Add Mode
+//  mode = 3'b100;
+//
+//  NTT Mode (Cooley-Tukey Butterfly)
+//  mode = 3'b101;
+//
+//  INTT Mode (Gentleman-Sande Butterfly)
+//  mode = 3'b110;
 // Revision:
 // Revision 0.01 - File Created
 // Additional Comments:

@@ -83,7 +83,7 @@ module RBU_V2 #(
 
     always @(*) begin
         case (mode)
-            0: begin  // MM (Latency: 11)
+            0: begin  // MM (Latency: 10)
                 mux_sel[0] = 0; // NOT USED
                 mux_sel[1] = 1;
                 mux_sel[2] = 0; // NOT USED
@@ -136,7 +136,7 @@ module RBU_V2 #(
                 mux_lat_sel[3] = 0;
                 mux_lat_sel_mu = 1;
             end
-            4: begin // MMA, systolic PE (Latency: 13)
+            4: begin // MMA, systolic PE (Latency: 12)
                 mux_sel[0] = 1;
                 mux_sel[1] = 1; 
                 mux_sel[2] = 0;
