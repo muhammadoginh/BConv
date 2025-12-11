@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <GenRun Id="synth_1" LaunchPart="xcu280-fsvh2892-2L-e" LaunchTime="1764736257" LaunchIncrCheckpoint="$PSRCDIR/utils_1/imports/synth_1/delay.dcp">
-  <File Type="RDS-DCP" Name="BConvEngine.dcp"/>
-  <File Type="RDS-UTIL-PB" Name="systolic_utilization_synth.pb"/>
   <File Type="PA-TCL" Name="BConvEngine.tcl"/>
-  <File Type="RDS-UTIL" Name="systolic_utilization_synth.rpt"/>
   <File Type="REPORTS-TCL" Name="BConvEngine_reports.tcl"/>
   <File Type="RDS-RDS" Name="BConvEngine.vds"/>
+  <File Type="RDS-UTIL" Name="systolic_utilization_synth.rpt"/>
+  <File Type="RDS-UTIL-PB" Name="systolic_utilization_synth.pb"/>
+  <File Type="RDS-DCP" Name="BConvEngine.dcp"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
     <Filter Type="Srcs"/>
     <File Path="$PSRCDIR/sources_1/new/DIV2.v">

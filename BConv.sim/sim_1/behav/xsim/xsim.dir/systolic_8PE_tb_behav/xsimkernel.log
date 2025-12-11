@@ -1,0 +1,4 @@
+Running: xsim.dir/systolic_8PE_tb_behav/xsimk.exe -simmode gui -wdb systolic_8PE_tb_behav.wdb -simrunnum 0 -socket 61181
+Design successfully loaded
+Design Loading Memory Usage: 10524 KB (Peak: 10524 KB)
+Design Loading CPU Usage: 15 ms
