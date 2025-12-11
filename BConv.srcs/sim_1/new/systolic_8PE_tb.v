@@ -153,7 +153,7 @@ module systolic_8PE_tb();
     wire            out_valid;
 
     // Instantiate DUT
-    systolic #(.BW(BW)) uut (
+    systolic_8PE #(.BW(BW)) uut (
         .clk(clk),
         .rstn(rstn),
         .en(en),
@@ -192,7 +192,7 @@ module systolic_8PE_tb();
             $display("ERROR: Could not open systolic_8PE_results.csv");
             $finish;
         end
-        $fdisplay(logfile, "Test_No,q,mu,x0,x1,qHat0,qHat1,a");
+        $fdisplay(logfile, "Test_No,q,mu,x0,x1,x2,x3,x4,x5,x6,x7,qHat0,qHat1,qHat2,qHat3,qHat4,qHat5,qHat6,qHat7,a");
 
         // Initialize
         clk = 0;
@@ -247,13 +247,13 @@ module systolic_8PE_tb();
 
 
             if (out_valid) begin
-                $fdisplay(logfile, "%0d,%0d,%0d,%0d,%0d,%0d,%0d,%0d",
-                          i+1, q, mu, x0, x1, qHat0, qHat1, a);
+                $fdisplay(logfile, "%0d,%0d,%0d,%0d,%0d,%0d,%0d,%0d,%0d,%0d,%0d,%0d,%0d,%0d,%0d,%0d,%0d,%0d,%0d,%0d",
+                          i+1, q, mu, x0, x1, x2, x3, x4, x5, x6, x7, qHat0, qHat1, qHat2, qHat3, qHat4, qHat5, qHat6, qHat7, a);
                 $display("[%0t] Test %0d: a = %0d", $time, i+1, a);
             end else begin
                 $display("[%0t] WARNING: Test %0d - out_valid not asserted!", $time, i+1);
-                $fdisplay(logfile, "%0d,%0d,%0d,%0d,%0d,%0d,%0d,NO_VALID", 
-                          i+1, q, mu, x0, x1, qHat0, qHat1);
+                $fdisplay(logfile, "%0d,%0d,%0d,%0d,%0d,%0d,%0d,%0d,%0d,%0d,%0d,%0d,%0d,%0d,%0d,%0d,%0d,%0d,%0d,%0d", 
+                          i+1, q, mu, x0, x1, x2, x3, x4, x5, x6, x7, qHat0, qHat1, qHat2, qHat3, qHat4, qHat5, qHat6, qHat7, a);
             end
         end
 

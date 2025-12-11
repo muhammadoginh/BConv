@@ -11,6 +11,8 @@
 // Tool Versions: 
 // Description: 
 // 
+// input for MM and MA in MMA are in the same cycle (not optimal)
+// 
 //  Modular Multiplication Mode
 //  mode = 3'b000;
 //        

@@ -1,14 +1,14 @@
 #-----------------------------------------------------------
 # Vivado v2023.2 (64-bit)
-# SW Build 4029153 on Fri Oct 13 20:13:54 MDT 2023
+# SW Build 4029153 on Fri Oct 13 20:14:34 MDT 2023
 # IP Build 4028589 on Sat Oct 14 00:45:43 MDT 2023
 # SharedData Build 4025554 on Tue Oct 10 17:18:54 MDT 2023
-# Start of session at: Wed Dec  3 13:31:00 2025
-# Process ID: 2991106
-# Current directory: /home/moginh/Projects/BConv/BConv.runs/synth_1
-# Command line: vivado -log BConvEngine.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source BConvEngine.tcl
-# Log file: /home/moginh/Projects/BConv/BConv.runs/synth_1/BConvEngine.vds
-# Journal file: /home/moginh/Projects/BConv/BConv.runs/synth_1/vivado.jou
-# Running On: dis-lab-SYS-7049GP-TRT, OS: Linux, CPU Frequency: 1000.202 MHz, CPU Physical cores: 16, Host memory: 134797 MB
+# Start of session at: Thu Dec 11 16:14:46 2025
+# Process ID: 18296
+# Current directory: D:/Projects/BConv/BConv.runs/synth_1
+# Command line: vivado.exe -log CU.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source CU.tcl
+# Log file: D:/Projects/BConv/BConv.runs/synth_1/CU.vds
+# Journal file: D:/Projects/BConv/BConv.runs/synth_1\vivado.jou
+# Running On: DESKTOP-4FM5FN0, OS: Windows, CPU Frequency: 1800 MHz, CPU Physical cores: 4, Host memory: 8473 MB
 #-----------------------------------------------------------
-source BConvEngine.tcl -notrace
+source CU.tcl -notrace

@@ -12,135 +12,139 @@
    </db_ref_list>
    <zoom_setting>
       <ZoomStartTime time="0.000 ns"></ZoomStartTime>
-      <ZoomEndTime time="36.401 ns"></ZoomEndTime>
-      <Cursor1Time time="49.900 ns"></Cursor1Time>
+      <ZoomEndTime time="63.201 ns"></ZoomEndTime>
+      <Cursor1Time time="52.000 ns"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
       <NameColumnWidth column_width="153"></NameColumnWidth>
-      <ValueColumnWidth column_width="124"></ValueColumnWidth>
+      <ValueColumnWidth column_width="119"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="31" />
-   <wvobject type="array" fp_name="/RBU_V2_tb/logfile">
+   <WVObjectSize size="32" />
+   <wvobject fp_name="/RBU_V2_tb/logfile" type="array">
       <obj_property name="ElementShortName">logfile[31:0]</obj_property>
       <obj_property name="ObjectShortName">logfile[31:0]</obj_property>
    </wvobject>
-   <wvobject type="array" fp_name="/RBU_V2_tb/q_array">
+   <wvobject fp_name="/RBU_V2_tb/q_array" type="array">
       <obj_property name="ElementShortName">q_array[0:31][47:0]</obj_property>
       <obj_property name="ObjectShortName">q_array[0:31][47:0]</obj_property>
    </wvobject>
-   <wvobject type="array" fp_name="/RBU_V2_tb/mu_array">
+   <wvobject fp_name="/RBU_V2_tb/mu_array" type="array">
       <obj_property name="ElementShortName">mu_array[0:31][49:0]</obj_property>
       <obj_property name="ObjectShortName">mu_array[0:31][49:0]</obj_property>
    </wvobject>
-   <wvobject type="array" fp_name="/RBU_V2_tb/psi_array">
+   <wvobject fp_name="/RBU_V2_tb/psi_array" type="array">
       <obj_property name="ElementShortName">psi_array[0:31][47:0]</obj_property>
       <obj_property name="ObjectShortName">psi_array[0:31][47:0]</obj_property>
    </wvobject>
-   <wvobject type="logic" fp_name="/RBU_V2_tb/clk">
+   <wvobject fp_name="/RBU_V2_tb/clk" type="logic">
       <obj_property name="ElementShortName">clk</obj_property>
       <obj_property name="ObjectShortName">clk</obj_property>
    </wvobject>
-   <wvobject type="logic" fp_name="/RBU_V2_tb/rstn">
+   <wvobject fp_name="/RBU_V2_tb/rstn" type="logic">
       <obj_property name="ElementShortName">rstn</obj_property>
       <obj_property name="ObjectShortName">rstn</obj_property>
    </wvobject>
-   <wvobject type="array" fp_name="/RBU_V2_tb/mode">
+   <wvobject fp_name="/RBU_V2_tb/mode" type="array">
       <obj_property name="ElementShortName">mode[2:0]</obj_property>
       <obj_property name="ObjectShortName">mode[2:0]</obj_property>
    </wvobject>
-   <wvobject type="array" fp_name="/RBU_V2_tb/A0">
+   <wvobject fp_name="/RBU_V2_tb/A0" type="array">
       <obj_property name="ElementShortName">A0[47:0]</obj_property>
       <obj_property name="ObjectShortName">A0[47:0]</obj_property>
    </wvobject>
-   <wvobject type="array" fp_name="/RBU_V2_tb/A1">
+   <wvobject fp_name="/RBU_V2_tb/A1" type="array">
       <obj_property name="ElementShortName">A1[47:0]</obj_property>
       <obj_property name="ObjectShortName">A1[47:0]</obj_property>
    </wvobject>
-   <wvobject type="array" fp_name="/RBU_V2_tb/q">
+   <wvobject fp_name="/RBU_V2_tb/q" type="array">
       <obj_property name="ElementShortName">q[47:0]</obj_property>
       <obj_property name="ObjectShortName">q[47:0]</obj_property>
    </wvobject>
-   <wvobject type="array" fp_name="/RBU_V2_tb/mu">
+   <wvobject fp_name="/RBU_V2_tb/mu" type="array">
       <obj_property name="ElementShortName">mu[49:0]</obj_property>
       <obj_property name="ObjectShortName">mu[49:0]</obj_property>
    </wvobject>
-   <wvobject type="array" fp_name="/RBU_V2_tb/C">
+   <wvobject fp_name="/RBU_V2_tb/C" type="array">
       <obj_property name="ElementShortName">C[47:0]</obj_property>
       <obj_property name="ObjectShortName">C[47:0]</obj_property>
    </wvobject>
-   <wvobject type="array" fp_name="/RBU_V2_tb/B0">
+   <wvobject fp_name="/RBU_V2_tb/B0" type="array">
       <obj_property name="ElementShortName">B0[47:0]</obj_property>
       <obj_property name="ObjectShortName">B0[47:0]</obj_property>
    </wvobject>
-   <wvobject type="array" fp_name="/RBU_V2_tb/B1">
+   <wvobject fp_name="/RBU_V2_tb/B1" type="array">
       <obj_property name="ElementShortName">B1[47:0]</obj_property>
       <obj_property name="ObjectShortName">B1[47:0]</obj_property>
    </wvobject>
-   <wvobject type="array" fp_name="/RBU_V2_tb/M">
+   <wvobject fp_name="/RBU_V2_tb/M" type="array">
       <obj_property name="ElementShortName">M[47:0]</obj_property>
       <obj_property name="ObjectShortName">M[47:0]</obj_property>
    </wvobject>
-   <wvobject type="array" fp_name="/RBU_V2_tb/BW">
+   <wvobject fp_name="/RBU_V2_tb/BW" type="array">
       <obj_property name="ElementShortName">BW[31:0]</obj_property>
       <obj_property name="ObjectShortName">BW[31:0]</obj_property>
    </wvobject>
-   <wvobject type="array" fp_name="/RBU_V2_tb/n_tests">
+   <wvobject fp_name="/RBU_V2_tb/n_tests" type="array">
       <obj_property name="ElementShortName">n_tests[31:0]</obj_property>
       <obj_property name="ObjectShortName">n_tests[31:0]</obj_property>
    </wvobject>
-   <wvobject type="array" fp_name="/RBU_V2_tb/uut/ModMul_0/A">
+   <wvobject fp_name="/RBU_V2_tb/uut/ModMul_0/A" type="array">
       <obj_property name="ElementShortName">A[47:0]</obj_property>
       <obj_property name="ObjectShortName">A[47:0]</obj_property>
    </wvobject>
-   <wvobject type="array" fp_name="/RBU_V2_tb/uut/ModMul_0/B">
+   <wvobject fp_name="/RBU_V2_tb/uut/ModMul_0/B" type="array">
       <obj_property name="ElementShortName">B[47:0]</obj_property>
       <obj_property name="ObjectShortName">B[47:0]</obj_property>
    </wvobject>
-   <wvobject type="array" fp_name="/RBU_V2_tb/uut/ModMul_0/mu">
+   <wvobject fp_name="/RBU_V2_tb/uut/ModMul_0/mu" type="array">
       <obj_property name="ElementShortName">mu[49:0]</obj_property>
       <obj_property name="ObjectShortName">mu[49:0]</obj_property>
    </wvobject>
-   <wvobject type="array" fp_name="/RBU_V2_tb/uut/ModMul_0/q">
+   <wvobject fp_name="/RBU_V2_tb/uut/ModMul_0/q" type="array">
       <obj_property name="ElementShortName">q[47:0]</obj_property>
       <obj_property name="ObjectShortName">q[47:0]</obj_property>
    </wvobject>
-   <wvobject type="array" fp_name="/RBU_V2_tb/uut/ModMul_0/A_reg">
+   <wvobject fp_name="/RBU_V2_tb/uut/ModMul_0/A_reg" type="array">
       <obj_property name="ElementShortName">A_reg[47:0]</obj_property>
       <obj_property name="ObjectShortName">A_reg[47:0]</obj_property>
    </wvobject>
-   <wvobject type="array" fp_name="/RBU_V2_tb/uut/ModMul_0/B_reg">
+   <wvobject fp_name="/RBU_V2_tb/uut/ModMul_0/B_reg" type="array">
       <obj_property name="ElementShortName">B_reg[47:0]</obj_property>
       <obj_property name="ObjectShortName">B_reg[47:0]</obj_property>
    </wvobject>
-   <wvobject type="array" fp_name="/RBU_V2_tb/uut/ModMul_0/q_reg">
+   <wvobject fp_name="/RBU_V2_tb/uut/ModMul_0/q_reg" type="array">
       <obj_property name="ElementShortName">q_reg[47:0]</obj_property>
       <obj_property name="ObjectShortName">q_reg[47:0]</obj_property>
    </wvobject>
-   <wvobject type="array" fp_name="/RBU_V2_tb/uut/ModMul_0/M">
+   <wvobject fp_name="/RBU_V2_tb/uut/ModMul_0/M" type="array">
       <obj_property name="ElementShortName">M[47:0]</obj_property>
       <obj_property name="ObjectShortName">M[47:0]</obj_property>
    </wvobject>
-   <wvobject type="array" fp_name="/RBU_V2_tb/uut/ModAdd_0/A">
+   <wvobject fp_name="/RBU_V2_tb/uut/ModAdd_0/A" type="array">
       <obj_property name="ElementShortName">A[47:0]</obj_property>
       <obj_property name="ObjectShortName">A[47:0]</obj_property>
    </wvobject>
-   <wvobject type="array" fp_name="/RBU_V2_tb/uut/ModAdd_0/B">
+   <wvobject fp_name="/RBU_V2_tb/uut/ModAdd_0/B" type="array">
       <obj_property name="ElementShortName">B[47:0]</obj_property>
       <obj_property name="ObjectShortName">B[47:0]</obj_property>
    </wvobject>
-   <wvobject type="array" fp_name="/RBU_V2_tb/uut/ModAdd_0/M">
+   <wvobject fp_name="/RBU_V2_tb/uut/ModAdd_0/M" type="array">
       <obj_property name="ElementShortName">M[47:0]</obj_property>
       <obj_property name="ObjectShortName">M[47:0]</obj_property>
    </wvobject>
-   <wvobject type="array" fp_name="/RBU_V2_tb/uut/ModAdd_0/A_reg">
+   <wvobject fp_name="/RBU_V2_tb/uut/ModAdd_0/A_reg" type="array">
       <obj_property name="ElementShortName">A_reg[47:0]</obj_property>
       <obj_property name="ObjectShortName">A_reg[47:0]</obj_property>
    </wvobject>
-   <wvobject type="array" fp_name="/RBU_V2_tb/uut/ModAdd_0/B_reg">
+   <wvobject fp_name="/RBU_V2_tb/uut/ModAdd_0/B_reg" type="array">
       <obj_property name="ElementShortName">B_reg[47:0]</obj_property>
       <obj_property name="ObjectShortName">B_reg[47:0]</obj_property>
    </wvobject>
-   <wvobject type="array" fp_name="/RBU_V2_tb/uut/ModAdd_0/M">
+   <wvobject fp_name="/RBU_V2_tb/uut/ModAdd_0/q_reg" type="array">
+      <obj_property name="ElementShortName">q_reg[47:0]</obj_property>
+      <obj_property name="ObjectShortName">q_reg[47:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/RBU_V2_tb/uut/ModAdd_0/M" type="array">
       <obj_property name="ElementShortName">M[47:0]</obj_property>
       <obj_property name="ObjectShortName">M[47:0]</obj_property>
    </wvobject>

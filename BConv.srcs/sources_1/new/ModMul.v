@@ -205,14 +205,9 @@ module ModMul #(
     assign w5_sub = w5_pipe - w0_pipe - w4_pipe + w2_pipe;
     
     wire [2*m-1:0] w0_sub_pipe, w4_sub_pipe;
-//    wire [2*m+2:0] w1_sub_pipe, w3_sub_pipe, w5_sub_pipe;
     
     pipeline #(2*m) pipe_w0_sub (clk, rstn, w0_pipe, w0_sub_pipe);
     pipeline #(2*m) pipe_w4_sub (clk, rstn, w4_pipe, w4_sub_pipe);
-    
-//    pipeline #(2*m+3) pipe_w1_sub (clk, rstn, w1_sub, w1_sub_pipe);
-//    pipeline #(2*m+3) pipe_w3_sub (clk, rstn, w3_sub, w3_sub_pipe);
-//    pipeline #(2*m+3) pipe_w5_sub (clk, rstn, w5_sub, w5_sub_pipe);
     
     wire [2*BW-1:0] r, r_pipe, r_t;
     assign r = (w1_sub << m) + (w5_sub << (2*m)) + (w3_sub << (3*m));
@@ -224,13 +219,13 @@ module ModMul #(
     
     // === Compute final result components ===
     wire [2*BW-1:0] z_d;
-    wire [BW:0] t, t_pipe;
+    wire [BW+1:0] t, t_pipe;
     
     delay #(.BW(2*BW), .N(6)) delay_z (.clk(clk), .in(z), .out(z_d));
     
     assign t = z_d - r_t;
     
-    pipeline #(BW+1) pipe_t (clk, rstn, t, t_pipe);
+    pipeline #(BW+2) pipe_t (clk, rstn, t, t_pipe);
     
     
     // Pipeline final values

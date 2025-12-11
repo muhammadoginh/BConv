@@ -1,0 +1,339 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="systolic_8PE_tb_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="glbl" />
+            <top_module name="systolic_8PE_tb" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="64.448 ns"></ZoomStartTime>
+      <ZoomEndTime time="181.749 ns"></ZoomEndTime>
+      <Cursor1Time time="111.548 ns"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="188"></NameColumnWidth>
+      <ValueColumnWidth column_width="175"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="79" />
+   <wvobject fp_name="/systolic_8PE_tb/logfile" type="array">
+      <obj_property name="ElementShortName">logfile[31:0]</obj_property>
+      <obj_property name="ObjectShortName">logfile[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/systolic_8PE_tb/q_array" type="array">
+      <obj_property name="ElementShortName">q_array[0:31][47:0]</obj_property>
+      <obj_property name="ObjectShortName">q_array[0:31][47:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/systolic_8PE_tb/mu_array" type="array">
+      <obj_property name="ElementShortName">mu_array[0:31][49:0]</obj_property>
+      <obj_property name="ObjectShortName">mu_array[0:31][49:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/systolic_8PE_tb/qHat_array" type="array">
+      <obj_property name="ElementShortName">qHat_array[0:31][47:0]</obj_property>
+      <obj_property name="ObjectShortName">qHat_array[0:31][47:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/systolic_8PE_tb/clk" type="logic">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/systolic_8PE_tb/rstn" type="logic">
+      <obj_property name="ElementShortName">rstn</obj_property>
+      <obj_property name="ObjectShortName">rstn</obj_property>
+   </wvobject>
+   <wvobject fp_name="/systolic_8PE_tb/en" type="logic">
+      <obj_property name="ElementShortName">en</obj_property>
+      <obj_property name="ObjectShortName">en</obj_property>
+   </wvobject>
+   <wvobject fp_name="/systolic_8PE_tb/clr" type="logic">
+      <obj_property name="ElementShortName">clr</obj_property>
+      <obj_property name="ObjectShortName">clr</obj_property>
+   </wvobject>
+   <wvobject fp_name="/systolic_8PE_tb/in_valid" type="logic">
+      <obj_property name="ElementShortName">in_valid</obj_property>
+      <obj_property name="ObjectShortName">in_valid</obj_property>
+   </wvobject>
+   <wvobject fp_name="/systolic_8PE_tb/x0" type="array">
+      <obj_property name="ElementShortName">x0[47:0]</obj_property>
+      <obj_property name="ObjectShortName">x0[47:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/systolic_8PE_tb/x1" type="array">
+      <obj_property name="ElementShortName">x1[47:0]</obj_property>
+      <obj_property name="ObjectShortName">x1[47:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/systolic_8PE_tb/x2" type="array">
+      <obj_property name="ElementShortName">x2[47:0]</obj_property>
+      <obj_property name="ObjectShortName">x2[47:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/systolic_8PE_tb/x3" type="array">
+      <obj_property name="ElementShortName">x3[47:0]</obj_property>
+      <obj_property name="ObjectShortName">x3[47:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/systolic_8PE_tb/x4" type="array">
+      <obj_property name="ElementShortName">x4[47:0]</obj_property>
+      <obj_property name="ObjectShortName">x4[47:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/systolic_8PE_tb/x5" type="array">
+      <obj_property name="ElementShortName">x5[47:0]</obj_property>
+      <obj_property name="ObjectShortName">x5[47:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/systolic_8PE_tb/x6" type="array">
+      <obj_property name="ElementShortName">x6[47:0]</obj_property>
+      <obj_property name="ObjectShortName">x6[47:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/systolic_8PE_tb/x7" type="array">
+      <obj_property name="ElementShortName">x7[47:0]</obj_property>
+      <obj_property name="ObjectShortName">x7[47:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/systolic_8PE_tb/q" type="array">
+      <obj_property name="ElementShortName">q[47:0]</obj_property>
+      <obj_property name="ObjectShortName">q[47:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/systolic_8PE_tb/mu" type="array">
+      <obj_property name="ElementShortName">mu[49:0]</obj_property>
+      <obj_property name="ObjectShortName">mu[49:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/systolic_8PE_tb/qHat0" type="array">
+      <obj_property name="ElementShortName">qHat0[47:0]</obj_property>
+      <obj_property name="ObjectShortName">qHat0[47:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/systolic_8PE_tb/qHat1" type="array">
+      <obj_property name="ElementShortName">qHat1[47:0]</obj_property>
+      <obj_property name="ObjectShortName">qHat1[47:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/systolic_8PE_tb/qHat2" type="array">
+      <obj_property name="ElementShortName">qHat2[47:0]</obj_property>
+      <obj_property name="ObjectShortName">qHat2[47:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/systolic_8PE_tb/qHat3" type="array">
+      <obj_property name="ElementShortName">qHat3[47:0]</obj_property>
+      <obj_property name="ObjectShortName">qHat3[47:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/systolic_8PE_tb/qHat4" type="array">
+      <obj_property name="ElementShortName">qHat4[47:0]</obj_property>
+      <obj_property name="ObjectShortName">qHat4[47:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/systolic_8PE_tb/qHat5" type="array">
+      <obj_property name="ElementShortName">qHat5[47:0]</obj_property>
+      <obj_property name="ObjectShortName">qHat5[47:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/systolic_8PE_tb/qHat6" type="array">
+      <obj_property name="ElementShortName">qHat6[47:0]</obj_property>
+      <obj_property name="ObjectShortName">qHat6[47:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/systolic_8PE_tb/qHat7" type="array">
+      <obj_property name="ElementShortName">qHat7[47:0]</obj_property>
+      <obj_property name="ObjectShortName">qHat7[47:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/systolic_8PE_tb/a" type="array">
+      <obj_property name="ElementShortName">a[47:0]</obj_property>
+      <obj_property name="ObjectShortName">a[47:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/systolic_8PE_tb/out_valid" type="logic">
+      <obj_property name="ElementShortName">out_valid</obj_property>
+      <obj_property name="ObjectShortName">out_valid</obj_property>
+   </wvobject>
+   <wvobject fp_name="/systolic_8PE_tb/BW" type="array">
+      <obj_property name="ElementShortName">BW[31:0]</obj_property>
+      <obj_property name="ObjectShortName">BW[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="divider" fp_name="divider38">
+      <obj_property name="label">p0</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+   </wvobject>
+   <wvobject fp_name="/systolic_8PE_tb/uut/pe00/A0" type="array">
+      <obj_property name="ElementShortName">A0[47:0]</obj_property>
+      <obj_property name="ObjectShortName">A0[47:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/systolic_8PE_tb/uut/pe00/A1" type="array">
+      <obj_property name="ElementShortName">A1[47:0]</obj_property>
+      <obj_property name="ObjectShortName">A1[47:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/systolic_8PE_tb/uut/pe00/q" type="array">
+      <obj_property name="ElementShortName">q[47:0]</obj_property>
+      <obj_property name="ObjectShortName">q[47:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/systolic_8PE_tb/uut/pe00/C" type="array">
+      <obj_property name="ElementShortName">C[47:0]</obj_property>
+      <obj_property name="ObjectShortName">C[47:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/systolic_8PE_tb/uut/pe00/B0" type="array">
+      <obj_property name="ElementShortName">B0[47:0]</obj_property>
+      <obj_property name="ObjectShortName">B0[47:0]</obj_property>
+   </wvobject>
+   <wvobject type="divider" fp_name="divider44">
+      <obj_property name="label">p1</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+   </wvobject>
+   <wvobject fp_name="/systolic_8PE_tb/uut/pe01/A0" type="array">
+      <obj_property name="ElementShortName">A0[47:0]</obj_property>
+      <obj_property name="ObjectShortName">A0[47:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/systolic_8PE_tb/uut/pe01/A1" type="array">
+      <obj_property name="ElementShortName">A1[47:0]</obj_property>
+      <obj_property name="ObjectShortName">A1[47:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/systolic_8PE_tb/uut/pe01/q" type="array">
+      <obj_property name="ElementShortName">q[47:0]</obj_property>
+      <obj_property name="ObjectShortName">q[47:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/systolic_8PE_tb/uut/pe01/C" type="array">
+      <obj_property name="ElementShortName">C[47:0]</obj_property>
+      <obj_property name="ObjectShortName">C[47:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/systolic_8PE_tb/uut/pe01/B0" type="array">
+      <obj_property name="ElementShortName">B0[47:0]</obj_property>
+      <obj_property name="ObjectShortName">B0[47:0]</obj_property>
+   </wvobject>
+   <wvobject type="divider" fp_name="divider50">
+      <obj_property name="label">p2</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+   </wvobject>
+   <wvobject fp_name="/systolic_8PE_tb/uut/pe02/A0" type="array">
+      <obj_property name="ElementShortName">A0[47:0]</obj_property>
+      <obj_property name="ObjectShortName">A0[47:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/systolic_8PE_tb/uut/pe02/A1" type="array">
+      <obj_property name="ElementShortName">A1[47:0]</obj_property>
+      <obj_property name="ObjectShortName">A1[47:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/systolic_8PE_tb/uut/pe02/q" type="array">
+      <obj_property name="ElementShortName">q[47:0]</obj_property>
+      <obj_property name="ObjectShortName">q[47:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/systolic_8PE_tb/uut/pe02/C" type="array">
+      <obj_property name="ElementShortName">C[47:0]</obj_property>
+      <obj_property name="ObjectShortName">C[47:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/systolic_8PE_tb/uut/pe02/B0" type="array">
+      <obj_property name="ElementShortName">B0[47:0]</obj_property>
+      <obj_property name="ObjectShortName">B0[47:0]</obj_property>
+   </wvobject>
+   <wvobject type="divider" fp_name="divider56">
+      <obj_property name="label">p3</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+   </wvobject>
+   <wvobject fp_name="/systolic_8PE_tb/uut/pe03/A0" type="array">
+      <obj_property name="ElementShortName">A0[47:0]</obj_property>
+      <obj_property name="ObjectShortName">A0[47:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/systolic_8PE_tb/uut/pe03/A1" type="array">
+      <obj_property name="ElementShortName">A1[47:0]</obj_property>
+      <obj_property name="ObjectShortName">A1[47:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/systolic_8PE_tb/uut/pe03/q" type="array">
+      <obj_property name="ElementShortName">q[47:0]</obj_property>
+      <obj_property name="ObjectShortName">q[47:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/systolic_8PE_tb/uut/pe03/C" type="array">
+      <obj_property name="ElementShortName">C[47:0]</obj_property>
+      <obj_property name="ObjectShortName">C[47:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/systolic_8PE_tb/uut/pe03/B0" type="array">
+      <obj_property name="ElementShortName">B0[47:0]</obj_property>
+      <obj_property name="ObjectShortName">B0[47:0]</obj_property>
+   </wvobject>
+   <wvobject type="divider" fp_name="divider62">
+      <obj_property name="label">p4</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+   </wvobject>
+   <wvobject fp_name="/systolic_8PE_tb/uut/pe04/A0" type="array">
+      <obj_property name="ElementShortName">A0[47:0]</obj_property>
+      <obj_property name="ObjectShortName">A0[47:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/systolic_8PE_tb/uut/pe04/A1" type="array">
+      <obj_property name="ElementShortName">A1[47:0]</obj_property>
+      <obj_property name="ObjectShortName">A1[47:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/systolic_8PE_tb/uut/pe04/q" type="array">
+      <obj_property name="ElementShortName">q[47:0]</obj_property>
+      <obj_property name="ObjectShortName">q[47:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/systolic_8PE_tb/uut/pe04/C" type="array">
+      <obj_property name="ElementShortName">C[47:0]</obj_property>
+      <obj_property name="ObjectShortName">C[47:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/systolic_8PE_tb/uut/pe04/B0" type="array">
+      <obj_property name="ElementShortName">B0[47:0]</obj_property>
+      <obj_property name="ObjectShortName">B0[47:0]</obj_property>
+   </wvobject>
+   <wvobject type="divider" fp_name="divider63">
+      <obj_property name="label">p5</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+   </wvobject>
+   <wvobject fp_name="/systolic_8PE_tb/uut/pe05/A0" type="array">
+      <obj_property name="ElementShortName">A0[47:0]</obj_property>
+      <obj_property name="ObjectShortName">A0[47:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/systolic_8PE_tb/uut/pe05/A1" type="array">
+      <obj_property name="ElementShortName">A1[47:0]</obj_property>
+      <obj_property name="ObjectShortName">A1[47:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/systolic_8PE_tb/uut/pe05/q" type="array">
+      <obj_property name="ElementShortName">q[47:0]</obj_property>
+      <obj_property name="ObjectShortName">q[47:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/systolic_8PE_tb/uut/pe05/C" type="array">
+      <obj_property name="ElementShortName">C[47:0]</obj_property>
+      <obj_property name="ObjectShortName">C[47:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/systolic_8PE_tb/uut/pe05/B0" type="array">
+      <obj_property name="ElementShortName">B0[47:0]</obj_property>
+      <obj_property name="ObjectShortName">B0[47:0]</obj_property>
+   </wvobject>
+   <wvobject type="divider" fp_name="divider70">
+      <obj_property name="label">p6</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+   </wvobject>
+   <wvobject fp_name="/systolic_8PE_tb/uut/pe06/A0" type="array">
+      <obj_property name="ElementShortName">A0[47:0]</obj_property>
+      <obj_property name="ObjectShortName">A0[47:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/systolic_8PE_tb/uut/pe06/A1" type="array">
+      <obj_property name="ElementShortName">A1[47:0]</obj_property>
+      <obj_property name="ObjectShortName">A1[47:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/systolic_8PE_tb/uut/pe06/q" type="array">
+      <obj_property name="ElementShortName">q[47:0]</obj_property>
+      <obj_property name="ObjectShortName">q[47:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/systolic_8PE_tb/uut/pe06/C" type="array">
+      <obj_property name="ElementShortName">C[47:0]</obj_property>
+      <obj_property name="ObjectShortName">C[47:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/systolic_8PE_tb/uut/pe06/B0" type="array">
+      <obj_property name="ElementShortName">B0[47:0]</obj_property>
+      <obj_property name="ObjectShortName">B0[47:0]</obj_property>
+   </wvobject>
+   <wvobject type="divider" fp_name="divider81">
+      <obj_property name="label">p7</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+   </wvobject>
+   <wvobject fp_name="/systolic_8PE_tb/uut/pe07/A0" type="array">
+      <obj_property name="ElementShortName">A0[47:0]</obj_property>
+      <obj_property name="ObjectShortName">A0[47:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/systolic_8PE_tb/uut/pe07/A1" type="array">
+      <obj_property name="ElementShortName">A1[47:0]</obj_property>
+      <obj_property name="ObjectShortName">A1[47:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/systolic_8PE_tb/uut/pe07/q" type="array">
+      <obj_property name="ElementShortName">q[47:0]</obj_property>
+      <obj_property name="ObjectShortName">q[47:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/systolic_8PE_tb/uut/pe07/C" type="array">
+      <obj_property name="ElementShortName">C[47:0]</obj_property>
+      <obj_property name="ObjectShortName">C[47:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/systolic_8PE_tb/uut/pe07/B0" type="array">
+      <obj_property name="ElementShortName">B0[47:0]</obj_property>
+      <obj_property name="ObjectShortName">B0[47:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/systolic_8PE_tb/uut/pe07/ModMul_0/M" type="array">
+      <obj_property name="ElementShortName">M[47:0]</obj_property>
+      <obj_property name="ObjectShortName">M[47:0]</obj_property>
+   </wvobject>
+</wave_config>
