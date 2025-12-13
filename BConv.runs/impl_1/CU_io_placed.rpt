@@ -1,8 +1,8 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------------------------------------
-| Tool Version              : Vivado v.2023.2 (win64) Build 4029153 Fri Oct 13 20:14:34 MDT 2023
-| Date                      : Thu Dec 11 16:19:13 2025
-| Host                      : DESKTOP-4FM5FN0 running 64-bit major release  (build 9200)
+| Tool Version              : Vivado v.2023.2 (lin64) Build 4029153 Fri Oct 13 20:13:54 MDT 2023
+| Date                      : Thu Dec 11 21:31:38 2025
+| Host                      : dis-lab-SYS-7049GP-TRT running 64-bit Ubuntu 24.04.3 LTS
 | Command                   : report_io -file CU_io_placed.rpt
 | Design                    : CU
 | Device                    : xcu280
