@@ -1,6 +1,8 @@
 # compile verilog/system verilog design source files
 verilog xil_defaultlib  \
+"../../../../BConv.srcs/sources_1/new/BConvEngine_CU.v" \
 "../../../../BConv.srcs/sources_1/new/CU.v" \
+"../../../../BConv.srcs/sources_1/new/CU_control.v" \
 "../../../../BConv.srcs/sources_1/new/DIV2.v" \
 "../../../../BConv.srcs/sources_1/new/ModAdd.v" \
 "../../../../BConv.srcs/sources_1/new/ModMul.v" \
@@ -11,9 +13,10 @@ verilog xil_defaultlib  \
 "../../../../BConv.srcs/sources_1/new/dsp_mul.v" \
 "../../../../BConv.srcs/sources_1/new/dsp_preadder.v" \
 "../../../../BConv.srcs/sources_1/new/mux.v" \
+"../../../../BConv.srcs/sources_1/new/pipe.v" \
 "../../../../BConv.srcs/sources_1/new/pipeline.v" \
 "../../../../BConv.srcs/sources_1/new/register.v" \
-"../../../../BConv.srcs/sim_1/new/CU_tb.v" \
+"../../../../BConv.srcs/sim_1/new/BConvEngine_CU_tb.v" \
 
 # compile glbl module
 verilog xil_defaultlib "glbl.v"

@@ -1,47 +1,13 @@
 Vivado Simulator v2023.2
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
-Running: C:/Xilinx/Vivado/2023.2/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot CU_tb_behav xil_defaultlib.CU_tb xil_defaultlib.glbl -log elaborate.log 
+Running: C:/Xilinx/Vivado/2023.2/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot BConvEngine_CU_tb_behav xil_defaultlib.BConvEngine_CU_tb xil_defaultlib.glbl -log elaborate.log 
 Using 2 slave threads.
 Starting static elaboration
 Pass Through NonSizing Optimizer
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 48 for port 'in0' [D:/Projects/BConv/BConv.srcs/sources_1/new/CU.v:152]
 WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 48 for port 'out' [D:/Projects/BConv/BConv.srcs/sources_1/new/RBU_V2.v:209]
 WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 48 for port 'in1' [D:/Projects/BConv/BConv.srcs/sources_1/new/RBU_V2.v:212]
+WARNING: [VRFC 10-5021] port 'Coeff' is not connected on this instance [D:/Projects/BConv/BConv.srcs/sources_1/new/BConvEngine_CU.v:49]
 Completed static elaboration
-Starting simulation data flow analysis
-Completed simulation data flow analysis
-Time Resolution for simulation is 1ps
-Compiling module xil_defaultlib.register
-Compiling module xil_defaultlib.register(BW=50)
-Compiling module xil_defaultlib.mux
-Compiling module xil_defaultlib.delay(N=13)
-Compiling module xil_defaultlib.delay(N=2)
-Compiling module xil_defaultlib.delay(N=2,BW=50)
-Compiling module xil_defaultlib.delay(BW=50)
-Compiling module xil_defaultlib.mux(BW=50)
-Compiling module xil_defaultlib.delay
-Compiling module xil_defaultlib.delay(N=8)
-Compiling module xil_defaultlib.delay(N=11)
-Compiling module xil_defaultlib.ModSub
-Compiling module xil_defaultlib.ModAdd
-Compiling module xil_defaultlib.dsp_mul(A_WIDTH=16,B_WIDTH=16,OU...
-Compiling module xil_defaultlib.dsp_mac(A_WIDTH=16,B_WIDTH=16,C_...
-Compiling module xil_defaultlib.pipeline(BW=32)
-Compiling module xil_defaultlib.pipeline(BW=34)
-Compiling module xil_defaultlib.delay(BW=51)
-Compiling module xil_defaultlib.delay(N=3,BW=51)
-Compiling module xil_defaultlib.dsp_mul(A_WIDTH=17,B_WIDTH=17,OU...
-Compiling module xil_defaultlib.dsp_mul(A_WIDTH=18,OUT_WIDTH=36)
-Compiling module xil_defaultlib.dsp_preadder
-Compiling module xil_defaultlib.delay(N=5)
-Compiling module xil_defaultlib.pipeline(BW=96)
-Compiling module xil_defaultlib.delay(N=6,BW=96)
-Compiling module xil_defaultlib.pipeline(BW=50)
-Compiling module xil_defaultlib.delay(N=4)
-Compiling module xil_defaultlib.ModMul_default
-Compiling module xil_defaultlib.DIV2
-Compiling module xil_defaultlib.RBU_V2
-Compiling module xil_defaultlib.CU
-Compiling module xil_defaultlib.CU_tb
-Compiling module xil_defaultlib.glbl
-Built simulation snapshot CU_tb_behav
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
