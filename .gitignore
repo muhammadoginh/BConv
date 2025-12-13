@@ -3,3 +3,14 @@ BConv.xpr
 BConv.cache/
 BConv.runs/
 .Xil/
+
+*.cache/
+*.runs/
+*.sim/
+*.hw/
+*.ip_user_files/
+*.jou
+*.log
+*.str
+BConv.xpr
+EOF
