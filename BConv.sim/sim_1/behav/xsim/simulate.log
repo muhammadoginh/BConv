@@ -1,0 +1,3 @@
+Time resolution is 1 ps
+Testbench finished. Results in bconv_cu_results.csv
+$finish called at time : 108 ns : File "D:/Projects/BConv/BConv.srcs/sim_1/new/BConvEngine_CU_tb.v" Line 210

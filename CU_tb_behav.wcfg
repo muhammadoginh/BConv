@@ -11,15 +11,15 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="102.864 ns"></ZoomStartTime>
-      <ZoomEndTime time="131.165 ns"></ZoomEndTime>
-      <Cursor1Time time="124.000 ns"></Cursor1Time>
+      <ZoomStartTime time="44.459 ns"></ZoomStartTime>
+      <ZoomEndTime time="264.459 ns"></ZoomEndTime>
+      <Cursor1Time time="125.475 ns"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
       <NameColumnWidth column_width="153"></NameColumnWidth>
-      <ValueColumnWidth column_width="109"></ValueColumnWidth>
+      <ValueColumnWidth column_width="104"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="59" />
+   <WVObjectSize size="62" />
    <wvobject fp_name="/CU_tb/logfile" type="array">
       <obj_property name="ElementShortName">logfile[31:0]</obj_property>
       <obj_property name="ObjectShortName">logfile[31:0]</obj_property>
@@ -188,6 +188,10 @@
       <obj_property name="label">check mode MMA</obj_property>
       <obj_property name="DisplayName">label</obj_property>
    </wvobject>
+   <wvobject fp_name="/CU_tb/uut/mux_sel" type="logic">
+      <obj_property name="ElementShortName">mux_sel</obj_property>
+      <obj_property name="ObjectShortName">mux_sel</obj_property>
+   </wvobject>
    <wvobject fp_name="/CU_tb/uut/mode" type="array">
       <obj_property name="ElementShortName">mode[2:0]</obj_property>
       <obj_property name="ObjectShortName">mode[2:0]</obj_property>
@@ -196,13 +200,17 @@
       <obj_property name="ElementShortName">A0[47:0]</obj_property>
       <obj_property name="ObjectShortName">A0[47:0]</obj_property>
    </wvobject>
-   <wvobject fp_name="/CU_tb/uut/in_ma" type="array">
-      <obj_property name="ElementShortName">in_ma[47:0]</obj_property>
-      <obj_property name="ObjectShortName">in_ma[47:0]</obj_property>
-   </wvobject>
    <wvobject fp_name="/CU_tb/uut/mux_out" type="array">
       <obj_property name="ElementShortName">mux_out[47:0]</obj_property>
       <obj_property name="ObjectShortName">mux_out[47:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/CU_tb/uut/rd_ptr" type="array">
+      <obj_property name="ElementShortName">rd_ptr[2:0]</obj_property>
+      <obj_property name="ObjectShortName">rd_ptr[2:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/CU_tb/uut/buffer" type="array">
+      <obj_property name="ElementShortName">buffer[47:0]</obj_property>
+      <obj_property name="ObjectShortName">buffer[47:0]</obj_property>
    </wvobject>
    <wvobject fp_name="/CU_tb/uut/pe/A1" type="array">
       <obj_property name="ElementShortName">A1[47:0]</obj_property>
@@ -239,6 +247,10 @@
    <wvobject fp_name="/CU_tb/uut/pe/ModMul_0/M" type="array">
       <obj_property name="ElementShortName">M[47:0]</obj_property>
       <obj_property name="ObjectShortName">M[47:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/CU_tb/uut/in_ma" type="array">
+      <obj_property name="ElementShortName">in_ma[47:0]</obj_property>
+      <obj_property name="ObjectShortName">in_ma[47:0]</obj_property>
    </wvobject>
    <wvobject fp_name="/CU_tb/uut/pe/ModAdd_0/A" type="array">
       <obj_property name="ElementShortName">A[47:0]</obj_property>

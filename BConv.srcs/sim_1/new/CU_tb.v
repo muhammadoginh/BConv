@@ -90,7 +90,7 @@ module CU_tb();
     wire  [BW-1:0]  out;
 
     // Instantiate the CU module
-    CU #(.BW(BW)) uut (
+    CU_standalone #(.BW(BW)) uut (
         .clk(clk),
         .rstn(rstn),
         .en(en),
@@ -160,6 +160,7 @@ module CU_tb();
         end
         
         #44; // finish mode MM
+        
         
         // Simulate 8 valid MMA operations 
         for (integer i = 0; i < n_tests; i = i + 1) begin

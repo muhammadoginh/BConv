@@ -26,8 +26,11 @@ module CU #(
     )(
         input               clk,
         input               rstn,
-        input               en,
         input               clr,
+        input               Coeff_ld,
+        input               Param_ld,
+        input               q_ld,
+        input               mu_ld,
         input   [2:0]       mode,
         input   [BW - 1:0]  Coeff,
         input   [BW - 1:0]  Param,
@@ -51,10 +54,10 @@ module CU #(
     reg             mux_sel;
     wire [BW - 1:0] mux_out; 
     
-    register #(48) r_q      ( .clk(clk), .rstn(rstn), .en(en), .clr(clr), .in(q),      .out(q_reg) ); 
-    register #(50) r_mu     ( .clk(clk), .rstn(rstn), .en(en), .clr(clr), .in(mu),     .out(mu_reg) ); 
-    register #(48) r_Param  ( .clk(clk), .rstn(rstn), .en(en), .clr(clr), .in(Param),  .out(Param_reg) ); 
-    register #(48) r_Coeff  ( .clk(clk), .rstn(rstn), .en(en), .clr(clr), .in(Coeff),  .out(Coeff_reg) ); 
+    register #(48) r_q      ( .clk(clk), .rstn(rstn), .en(q_ld),     .clr(clr), .in(q),      .out(q_reg) ); 
+    register #(50) r_mu     ( .clk(clk), .rstn(rstn), .en(mu_ld),    .clr(clr), .in(mu),     .out(mu_reg) ); 
+    register #(48) r_Param  ( .clk(clk), .rstn(rstn), .en(Param_ld), .clr(clr), .in(Param),  .out(Param_reg) ); 
+    register #(48) r_Coeff  ( .clk(clk), .rstn(rstn), .en(Coeff_ld), .clr(clr), .in(Coeff),  .out(Coeff_reg) ); 
     
     always @(*) begin
         case (mode)
@@ -71,9 +74,9 @@ module CU #(
     end
     
     // ---- Internal signals ----
-    wire        en_mm;               // en only during MM mode
+    wire         en_mm;               // en only during MM mode
     reg  [11:0]  en_mm_pipe;          // 10-stage pipeline
-    wire        en_mm_valid;         // delayed enable = valid out_step1
+    wire         en_mm_valid;         // delayed enable = valid out_step1
     
     // ---- Gate enable with MM mode (combinational) ----
     assign en_mm = en && (mode == 3'd0);
@@ -86,36 +89,69 @@ module CU #(
             en_mm_pipe <= {en_mm_pipe[10:0], en_mm};
     end
     
-    assign en_mm_valid = en_mm_pipe[11];  // valid 10 cycles after en+mode assert
+    assign en_mm_valid = en_mm_pipe[11];  // 12-cycle delayed
     
     
     // ---- Buffer write logic ----
     reg [2:0]   wr_ptr;
     reg         buffer_full; // asserts when 8 values stored
     
+    // Read pointer (for MMA mode)
+    reg [2:0] rd_ptr;
+    reg       rd_ptr_rst; // reset read pointer when entering MMA
+    
+    wire      mux_sel_d;
+    
+    pipeline #(1) mux (clk, rstn, mux_sel, mux_sel_d);
+    
     // Write logic with full protection
     always @(posedge clk or negedge rstn) begin
         if (!rstn) begin
             wr_ptr <= 3'd0;
             buffer_full <= 1'b0;
+            rd_ptr <= 3'd0;
         end else if (clr) begin
             wr_ptr <= 3'd0;
             buffer_full <= 1'b0;
-        end else if (en_mm_valid && !buffer_full) begin
-            Buffers[wr_ptr] <= out_step1;
-            if (wr_ptr == 3'd7)
-                buffer_full <= 1'b1;
-            else
-                wr_ptr <= wr_ptr + 1'd1;
+            rd_ptr <= 3'd0;
+        end else begin
+            // MM mode: write
+            if (en_mm_valid && !buffer_full) begin
+                
+                Buffers[wr_ptr] <= out_step1;
+                if (wr_ptr == 3'd7)
+                    buffer_full <= 1'b1;
+                else
+                    wr_ptr <= wr_ptr + 1'd1;
+            end
+            
+            // MMA mode: advance read pointer on every en
+            if (en && mux_sel_d) begin
+                rd_ptr <= rd_ptr + 1'd1; // auto-wrap or stop at 7?
+            end
         end
     end
     
-    // ---- Drive 'buffer' for mux (last stored value) ----
-    assign buffer = Buffers[wr_ptr == 3'd0 ? 3'd7 : wr_ptr - 1'd1];
+    // --- Buffer output: used in MMA mode ---
+    assign buffer = (mode == 3'd4)? Buffers[rd_ptr] : 0;
     
-    mux #(BW) mux_coeff_buffers (.sel(mux_sel), .in1(buffer),   .in0(Coeff_reg),      .out(mux_out));
+    wire valid_mm_in_mma;
+    wire [BW - 1:0] mux_out_reg_in_ma;
     
-    register #(48) r_add     ( .clk(clk), .rstn(rstn), .en(en), .clr(clr), .in(mma_out),    .out(in_ma) );
+    pipe #(12) pipe_valid_mm_in_mma (
+        .clk(clk),
+        .rstn(rstn),
+        .en(en), 
+        .clr(clr),
+        .in_valid(mux_sel),
+        .out_valid(valid_mm_in_mma)
+
+    );
+    
+    mux #(BW) mux_coeff_buffers (.sel(mux_sel),         .in1(buffer),   .in0(Coeff_reg),      .out(mux_out));
+    mux #(BW) mux_in_ma_buffers (.sel(valid_mm_in_mma), .in1(mma_out),  .in0(0),              .out(mux_out_reg_in_ma));
+    
+    register #(48) r_add     ( .clk(clk), .rstn(rstn), .en(mux_sel_d), .clr(clr), .in(mux_out_reg_in_ma),    .out(in_ma) );
     
     RBU_V2 #(BW) pe(.clk(clk), .rstn(rstn), .mode(mode), .A0(in_ma), .A1(mux_out),   .q(q_reg),  .mu(mu_reg),  .C(Param_reg),   .B0(mma_out), .B1(), .M(out_step1));
     
