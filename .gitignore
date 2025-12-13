@@ -1,1 +1,5 @@
-packages.microsoft.gpg
+packages.microsoft.gpgBConv.xpr
+BConv.xpr
+BConv.cache/
+BConv.runs/
+.Xil/
