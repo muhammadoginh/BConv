@@ -1,5 +1,4 @@
-packages.microsoft.gpgBConv.xpr
-BConv.xpr
+packages.microsoft.gpg
 BConv.cache/
 BConv.runs/
 .Xil/
@@ -12,5 +11,4 @@ BConv.runs/
 *.jou
 *.log
 *.str
-BConv.xpr
 EOF
