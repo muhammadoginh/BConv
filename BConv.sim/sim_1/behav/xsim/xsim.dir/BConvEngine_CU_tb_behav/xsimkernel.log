@@ -1,7 +1,7 @@
-Running: xsim.dir/BConvEngine_CU_tb_behav/xsimk.exe -simmode gui -wdb BConvEngine_CU_tb_behav.wdb -simrunnum 0 -socket 56786
+Running: xsim.dir/BConvEngine_CU_tb_behav/xsimk.exe -simmode gui -wdb BConvEngine_CU_tb_behav.wdb -simrunnum 0 -socket 62010
 Design successfully loaded
-Design Loading Memory Usage: 9740 KB (Peak: 9740 KB)
+Design Loading Memory Usage: 10352 KB (Peak: 10352 KB)
 Design Loading CPU Usage: 15 ms
 Simulation completed
-Simulation Memory Usage: 10596 KB (Peak: 10596 KB)
-Simulation CPU Usage: 61 ms
+Simulation Memory Usage: 11260 KB (Peak: 11260 KB)
+Simulation CPU Usage: 30 ms

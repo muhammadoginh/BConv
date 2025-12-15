@@ -17,7 +17,7 @@ proc create_report { reportName command } {
   }
 }
 namespace eval ::optrace {
-  variable script "/home/moginh/Projects/BConv/BConv.runs/impl_1/CU.tcl"
+  variable script "D:/Projects/BConv/BConv.runs/impl_1/CU.tcl"
   variable category "vivado_impl"
 }
 
@@ -122,8 +122,8 @@ start_step init_design
 set ACTIVE_STEP init_design
 set rc [catch {
   create_msg_db init_design.pb
-  set_param chipscope.maxJobs 8
-  set_param runs.launchOptions { -jobs 32  }
+  set_param chipscope.maxJobs 2
+  set_param runs.launchOptions { -jobs 8  }
 OPTRACE "create in-memory project" START { }
   create_project -in_memory -part xcu280-fsvh2892-2L-e
   set_property board_part xilinx.com:au280:part0:1.3 [current_project]
@@ -131,21 +131,21 @@ OPTRACE "create in-memory project" START { }
   set_param project.singleFileAddWarning.threshold 0
 OPTRACE "create in-memory project" END { }
 OPTRACE "set parameters" START { }
-  set_property webtalk.parent_dir /home/moginh/Projects/BConv/BConv.cache/wt [current_project]
-  set_property parent.project_path /home/moginh/Projects/BConv/BConv.xpr [current_project]
-  set_property ip_output_repo /home/moginh/Projects/BConv/BConv.cache/ip [current_project]
+  set_property webtalk.parent_dir D:/Projects/BConv/BConv.cache/wt [current_project]
+  set_property parent.project_path D:/Projects/BConv/BConv.xpr [current_project]
+  set_property ip_output_repo D:/Projects/BConv/BConv.cache/ip [current_project]
   set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "set parameters" END { }
 OPTRACE "add files" START { }
-  add_files -quiet /home/moginh/Projects/BConv/BConv.runs/synth_1/CU.dcp
+  add_files -quiet D:/Projects/BConv/BConv.runs/synth_1/CU.dcp
 OPTRACE "read constraints: implementation" START { }
-  read_xdc /home/moginh/Projects/BConv/BConv.srcs/constrs_1/new/timing.xdc
+  read_xdc D:/Projects/BConv/BConv.srcs/constrs_1/new/timing.xdc
 OPTRACE "read constraints: implementation" END { }
 OPTRACE "read constraints: implementation_pre" START { }
 OPTRACE "read constraints: implementation_pre" END { }
 OPTRACE "add files" END { }
 OPTRACE "link_design" START { }
-  link_design -top CU -part xcu280-fsvh2892-2L-e 
+  link_design -top CU -part xcu280-fsvh2892-2L-e -mode out_of_context 
 OPTRACE "link_design" END { }
 OPTRACE "gray box cells" START { }
 OPTRACE "gray box cells" END { }

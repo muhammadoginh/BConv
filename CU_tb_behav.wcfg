@@ -11,15 +11,15 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="44.459 ns"></ZoomStartTime>
-      <ZoomEndTime time="264.459 ns"></ZoomEndTime>
-      <Cursor1Time time="125.475 ns"></Cursor1Time>
+      <ZoomStartTime time="148.049 ns"></ZoomStartTime>
+      <ZoomEndTime time="263.250 ns"></ZoomEndTime>
+      <Cursor1Time time="4.000 ns"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
       <NameColumnWidth column_width="153"></NameColumnWidth>
-      <ValueColumnWidth column_width="104"></ValueColumnWidth>
+      <ValueColumnWidth column_width="99"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="62" />
+   <WVObjectSize size="82" />
    <wvobject fp_name="/CU_tb/logfile" type="array">
       <obj_property name="ElementShortName">logfile[31:0]</obj_property>
       <obj_property name="ObjectShortName">logfile[31:0]</obj_property>
@@ -47,10 +47,6 @@
    <wvobject fp_name="/CU_tb/rstn" type="logic">
       <obj_property name="ElementShortName">rstn</obj_property>
       <obj_property name="ObjectShortName">rstn</obj_property>
-   </wvobject>
-   <wvobject fp_name="/CU_tb/en" type="logic">
-      <obj_property name="ElementShortName">en</obj_property>
-      <obj_property name="ObjectShortName">en</obj_property>
    </wvobject>
    <wvobject fp_name="/CU_tb/clr" type="logic">
       <obj_property name="ElementShortName">clr</obj_property>
@@ -124,25 +120,89 @@
       <obj_property name="ElementShortName">mu_reg[50:0]</obj_property>
       <obj_property name="ObjectShortName">mu_reg[50:0]</obj_property>
    </wvobject>
-   <wvobject fp_name="/CU_tb/uut/en_mm" type="logic">
-      <obj_property name="ElementShortName">en_mm</obj_property>
-      <obj_property name="ObjectShortName">en_mm</obj_property>
+   <wvobject type="divider" fp_name="divider284">
+      <obj_property name="label">check mode MM</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
    </wvobject>
-   <wvobject fp_name="/CU_tb/uut/en_mm_pipe" type="array">
-      <obj_property name="ElementShortName">en_mm_pipe[11:0]</obj_property>
-      <obj_property name="ObjectShortName">en_mm_pipe[11:0]</obj_property>
+   <wvobject fp_name="/CU_tb/uut/mode" type="array">
+      <obj_property name="ElementShortName">mode[2:0]</obj_property>
+      <obj_property name="ObjectShortName">mode[2:0]</obj_property>
    </wvobject>
-   <wvobject fp_name="/CU_tb/uut/en_mm_valid" type="logic">
-      <obj_property name="ElementShortName">en_mm_valid</obj_property>
-      <obj_property name="ObjectShortName">en_mm_valid</obj_property>
+   <wvobject fp_name="/CU_tb/uut/mux_sel" type="logic">
+      <obj_property name="ElementShortName">mux_sel</obj_property>
+      <obj_property name="ObjectShortName">mux_sel</obj_property>
    </wvobject>
-   <wvobject fp_name="/CU_tb/uut/Buffers" type="array">
-      <obj_property name="ElementShortName">Buffers[0:7][47:0]</obj_property>
-      <obj_property name="ObjectShortName">Buffers[0:7][47:0]</obj_property>
+   <wvobject fp_name="/CU_tb/uut/Buffer_unit/wr" type="logic">
+      <obj_property name="ElementShortName">wr</obj_property>
+      <obj_property name="ObjectShortName">wr</obj_property>
    </wvobject>
-   <wvobject fp_name="/CU_tb/uut/wr_ptr" type="array">
-      <obj_property name="ElementShortName">wr_ptr[2:0]</obj_property>
-      <obj_property name="ObjectShortName">wr_ptr[2:0]</obj_property>
+   <wvobject fp_name="/CU_tb/uut/Buffer_unit/rd" type="logic">
+      <obj_property name="ElementShortName">rd</obj_property>
+      <obj_property name="ObjectShortName">rd</obj_property>
+   </wvobject>
+   <wvobject fp_name="/CU_tb/uut/mm_valid" type="logic">
+      <obj_property name="ElementShortName">mm_valid</obj_property>
+      <obj_property name="ObjectShortName">mm_valid</obj_property>
+   </wvobject>
+   <wvobject fp_name="/CU_tb/uut/Buffer_unit/w_data" type="array">
+      <obj_property name="ElementShortName">w_data[47:0]</obj_property>
+      <obj_property name="ObjectShortName">w_data[47:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/CU_tb/uut/Buffer_unit/wr" type="logic">
+      <obj_property name="ElementShortName">wr</obj_property>
+      <obj_property name="ObjectShortName">wr</obj_property>
+   </wvobject>
+   <wvobject fp_name="/CU_tb/uut/Buffer_unit/rd" type="logic">
+      <obj_property name="ElementShortName">rd</obj_property>
+      <obj_property name="ObjectShortName">rd</obj_property>
+   </wvobject>
+   <wvobject fp_name="/CU_tb/uut/Buffer_unit/w_data" type="array">
+      <obj_property name="ElementShortName">w_data[47:0]</obj_property>
+      <obj_property name="ObjectShortName">w_data[47:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/CU_tb/uut/Buffer_unit/reg_file_unit/memory" type="array">
+      <obj_property name="ElementShortName">memory[0:7][47:0]</obj_property>
+      <obj_property name="ObjectShortName">memory[0:7][47:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/CU_tb/uut/Buffer_unit/full" type="logic">
+      <obj_property name="ElementShortName">full</obj_property>
+      <obj_property name="ObjectShortName">full</obj_property>
+   </wvobject>
+   <wvobject fp_name="/CU_tb/uut/Buffer_unit/empty" type="logic">
+      <obj_property name="ElementShortName">empty</obj_property>
+      <obj_property name="ObjectShortName">empty</obj_property>
+   </wvobject>
+   <wvobject fp_name="/CU_tb/uut/Buffer_unit/r_data" type="array">
+      <obj_property name="ElementShortName">r_data[47:0]</obj_property>
+      <obj_property name="ObjectShortName">r_data[47:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/CU_tb/uut/Buffer_unit/w_addr" type="array">
+      <obj_property name="ElementShortName">w_addr[2:0]</obj_property>
+      <obj_property name="ObjectShortName">w_addr[2:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/CU_tb/uut/Buffer_unit/r_addr" type="array">
+      <obj_property name="ElementShortName">r_addr[2:0]</obj_property>
+      <obj_property name="ObjectShortName">r_addr[2:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/CU_tb/uut/Buffer_unit/full" type="logic">
+      <obj_property name="ElementShortName">full</obj_property>
+      <obj_property name="ObjectShortName">full</obj_property>
+   </wvobject>
+   <wvobject fp_name="/CU_tb/uut/Buffer_unit/empty" type="logic">
+      <obj_property name="ElementShortName">empty</obj_property>
+      <obj_property name="ObjectShortName">empty</obj_property>
+   </wvobject>
+   <wvobject fp_name="/CU_tb/uut/Buffer_unit/r_data" type="array">
+      <obj_property name="ElementShortName">r_data[47:0]</obj_property>
+      <obj_property name="ObjectShortName">r_data[47:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/CU_tb/uut/Buffer_unit/w_addr" type="array">
+      <obj_property name="ElementShortName">w_addr[2:0]</obj_property>
+      <obj_property name="ObjectShortName">w_addr[2:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/CU_tb/uut/Buffer_unit/r_addr" type="array">
+      <obj_property name="ElementShortName">r_addr[2:0]</obj_property>
+      <obj_property name="ObjectShortName">r_addr[2:0]</obj_property>
    </wvobject>
    <wvobject fp_name="/CU_tb/uut/pe/ModMul_0/M_reg" type="array">
       <obj_property name="ElementShortName">M_reg[47:0]</obj_property>
@@ -188,6 +248,10 @@
       <obj_property name="label">check mode MMA</obj_property>
       <obj_property name="DisplayName">label</obj_property>
    </wvobject>
+   <wvobject fp_name="/CU_tb/uut/clk" type="logic">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
    <wvobject fp_name="/CU_tb/uut/mux_sel" type="logic">
       <obj_property name="ElementShortName">mux_sel</obj_property>
       <obj_property name="ObjectShortName">mux_sel</obj_property>
@@ -200,13 +264,29 @@
       <obj_property name="ElementShortName">A0[47:0]</obj_property>
       <obj_property name="ObjectShortName">A0[47:0]</obj_property>
    </wvobject>
+   <wvobject fp_name="/CU_tb/uut/pe/A1" type="array">
+      <obj_property name="ElementShortName">A1[47:0]</obj_property>
+      <obj_property name="ObjectShortName">A1[47:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/CU_tb/uut/pe/q" type="array">
+      <obj_property name="ElementShortName">q[47:0]</obj_property>
+      <obj_property name="ObjectShortName">q[47:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/CU_tb/uut/pe/mu" type="array">
+      <obj_property name="ElementShortName">mu[49:0]</obj_property>
+      <obj_property name="ObjectShortName">mu[49:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/CU_tb/uut/pe/C" type="array">
+      <obj_property name="ElementShortName">C[47:0]</obj_property>
+      <obj_property name="ObjectShortName">C[47:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/CU_tb/uut/pe/B0" type="array">
+      <obj_property name="ElementShortName">B0[47:0]</obj_property>
+      <obj_property name="ObjectShortName">B0[47:0]</obj_property>
+   </wvobject>
    <wvobject fp_name="/CU_tb/uut/mux_out" type="array">
       <obj_property name="ElementShortName">mux_out[47:0]</obj_property>
       <obj_property name="ObjectShortName">mux_out[47:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/CU_tb/uut/rd_ptr" type="array">
-      <obj_property name="ElementShortName">rd_ptr[2:0]</obj_property>
-      <obj_property name="ObjectShortName">rd_ptr[2:0]</obj_property>
    </wvobject>
    <wvobject fp_name="/CU_tb/uut/buffer" type="array">
       <obj_property name="ElementShortName">buffer[47:0]</obj_property>
@@ -244,13 +324,13 @@
       <obj_property name="ElementShortName">q[47:0]</obj_property>
       <obj_property name="ObjectShortName">q[47:0]</obj_property>
    </wvobject>
+   <wvobject fp_name="/CU_tb/uut/valid_mm_in_mma" type="logic">
+      <obj_property name="ElementShortName">valid_mm_in_mma</obj_property>
+      <obj_property name="ObjectShortName">valid_mm_in_mma</obj_property>
+   </wvobject>
    <wvobject fp_name="/CU_tb/uut/pe/ModMul_0/M" type="array">
       <obj_property name="ElementShortName">M[47:0]</obj_property>
       <obj_property name="ObjectShortName">M[47:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/CU_tb/uut/in_ma" type="array">
-      <obj_property name="ElementShortName">in_ma[47:0]</obj_property>
-      <obj_property name="ObjectShortName">in_ma[47:0]</obj_property>
    </wvobject>
    <wvobject fp_name="/CU_tb/uut/pe/ModAdd_0/A" type="array">
       <obj_property name="ElementShortName">A[47:0]</obj_property>

@@ -80,14 +80,58 @@ module FIFO_tb();
         
         wr = 1'b1;
         w_data = 48'd223;
+        #CLK_PERIOD;
+        
+        wr = 1'b1;
+        w_data = 48'd233;
+        #CLK_PERIOD;
+        
+        wr = 1'b1;
+        w_data = 48'd443;
+        #CLK_PERIOD;
+        
+        wr = 1'b1;
+        w_data = 48'd523;
+        #CLK_PERIOD;
+        
+        wr = 1'b1;
+        w_data = 48'd221;
+        #CLK_PERIOD;
+        
+        wr = 1'b1;
+        w_data = 48'd432;
+        #CLK_PERIOD;
+        
+        wr = 1'b1;
+        w_data = 48'd623;
+        #CLK_PERIOD;
 
 //        $display("During write: wr_ptr=%d, wr_ptr_next=%d", uut.wr_ptr, uut.wr_ptr_next);
         #(CLK_PERIOD);
         wr = 1'b0;
         
         #CLK_PERIOD;
+        rd = 1'b1;
         
-//        $display("Before read: rd_ptr=%d, r_addr=%d", uut.rd_ptr, uut.r_addr);
+        #CLK_PERIOD;
+        rd = 1'b1;
+        
+        #CLK_PERIOD;
+        rd = 1'b1;
+        
+        #CLK_PERIOD;
+        rd = 1'b1;
+        
+        #CLK_PERIOD;
+        rd = 1'b1;
+        
+        #CLK_PERIOD;
+        rd = 1'b1;
+        
+        #CLK_PERIOD;
+        rd = 1'b1;
+        
+        #CLK_PERIOD;
         rd = 1'b1;
 
 

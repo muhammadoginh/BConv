@@ -3,9 +3,9 @@
 // Company: 
 // Engineer: 
 // 
-// Create Date: 12/11/2025 01:31:39 PM
+// Create Date: 12/15/2025 03:40:48 PM
 // Design Name: 
-// Module Name: CU_tb
+// Module Name: CU_standalone_tb
 // Project Name: 
 // Target Devices: 
 // Tool Versions: 
@@ -20,7 +20,7 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module CU_tb();
+module CU_standalone_tb();
     // parameter
     parameter BW = 48;
     parameter n_tests  = 8;  // Test 8 valid MM results (fills buffer once)
@@ -32,8 +32,6 @@ module CU_tb();
     reg [BW+1:0] mu_array   [0:7];
     reg [BW-1:0] Param_array[0:7];
     reg [BW-1:0] Coeff_array[0:7];
-    
-    
 
     initial begin
         q_array[0]  = 48'd281474976317441;
@@ -82,11 +80,8 @@ module CU_tb();
     // DUT signals
     reg             clk;
     reg             rstn;
+    reg             en;
     reg             clr;
-    reg             Coeff_ld;
-    reg             Param_ld;
-    reg             q_ld;
-    reg             mu_ld;
     reg   [2:0]     mode;
     reg   [BW-1:0]  Coeff;
     reg   [BW-1:0]  Param;
@@ -95,14 +90,11 @@ module CU_tb();
     wire  [BW-1:0]  out;
 
     // Instantiate the CU module
-    CU #(.BW(BW)) uut (
+    CU_standalone #(.BW(BW)) uut (
         .clk(clk),
         .rstn(rstn),
+        .en(en),
         .clr(clr),
-        .Coeff_ld(Coeff_ld),
-        .Param_ld(Param_ld),
-        .q_ld(q_ld),
-        .mu_ld(mu_ld),
         .mode(mode),
         .Coeff(Coeff),
         .Param(Param),
@@ -129,18 +121,15 @@ module CU_tb();
         $fdisplay(logfile, "Cycle,Test_ID,mode,en,clr,Coeff,Param,q,mu,out");
 
         // Initialize signals
-        clk         = 1;
-        rstn        = 0;
-        clr         = 1;
-        Coeff_ld    = 0;
-        Param_ld    = 0;
-        q_ld        = 0;
-        mu_ld       = 0;
-        mode        = 0;
-        Coeff       = 0;
-        Param       = 0;
-        q           = 0;
-        mu          = 0;
+        clk = 1;
+        rstn = 0;
+        en = 0;
+        clr = 1;
+        mode = 0;
+        Coeff = 0;
+        Param = 0;
+        q = 0;
+        mu = 0;
 
         // Reset sequence
         #4 rstn = 1;
@@ -150,19 +139,16 @@ module CU_tb();
         for (integer i = 0; i < n_tests; i = i + 1) begin
             // Apply inputs for MM mode
             mode = 3'd0;
+            en = 1;
             clr = 0;
-            Coeff_ld    = 1;
-            Param_ld    = 1;
-            q_ld        = 1;
-            mu_ld       = 1;
             Coeff = Coeff_array[i];
             Param = Param_array[i];
             q = q_array[i];
             mu = mu_array[i];
 
             // Log input at cycle of assertion
-            $fdisplay(logfile, "%0d,%0d,%0d,%0d,%0d,%0d,%0d,%0d,%0d", 
-                      $time, i, mode, clr, Coeff, Param, q, mu, out);
+            $fdisplay(logfile, "%0d,%0d,%0d,%0d,%0d,%0d,%0d,%0d,%0d,%0d", 
+                      $time, i, mode, en, clr, Coeff, Param, q, mu, out);
 
             // Hold for 1 cycle (en asserted for 1 cycle per sample)
             #4;
@@ -175,26 +161,21 @@ module CU_tb();
         
         #44; // finish mode MM
         
-        #4;
         
         // Simulate 8 valid MMA operations 
         for (integer i = 0; i < n_tests; i = i + 1) begin
             // Apply inputs for MM mode
             mode = 3'd4;
+            en = 1;
             clr = 0;
-            Coeff_ld    = 1;
-            Param_ld    = 1;
-            q_ld        = 1;
-            mu_ld       = 1;
             Coeff = Coeff_array[i];
             Param = Param_array[i];
             q = q_array[i];
             mu = mu_array[i];
-            #4;
 
             // Log input at cycle of assertion
-            $fdisplay(logfile, "%0d,%0d,%0d,%0d,%0d,%0d,%0d,%0d,%0d", 
-                      $time, i, mode, clr, Coeff, Param, q, mu, out);
+            $fdisplay(logfile, "%0d,%0d,%0d,%0d,%0d,%0d,%0d,%0d,%0d,%0d", 
+                      $time, i, mode, en, clr, Coeff, Param, q, mu, out);
 
             // Hold for 1 cycle (en asserted for 1 cycle per sample)
             #4;

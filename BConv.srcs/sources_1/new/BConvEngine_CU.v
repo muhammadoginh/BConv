@@ -46,6 +46,8 @@ module BConvEngine_CU #(
     wire q_ld;
     wire mu_ld;
     
+    
+    
     CU #(.BW(BW)) core_unit (
         .clk(clk),
         .rstn(rstn),

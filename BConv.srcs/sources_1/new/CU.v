@@ -36,6 +36,8 @@ module CU #(
         input   [BW - 1:0]  Param,
         input   [BW - 1:0]  q,
         input   [BW + 1:0]  mu,
+        output              full_buffer,    // data is ready
+  
         output  [BW - 1:0]  out   
     );
     
@@ -46,10 +48,8 @@ module CU #(
     
     wire [BW - 1:0] out_step1;
     wire [BW - 1:0] mma_out;
-    wire [BW - 1:0] in_ma;
     
     wire [BW - 1:0] buffer;
-    reg  [BW - 1:0] Buffers [0:7];
     
     reg             mux_sel;
     wire [BW - 1:0] mux_out; 
@@ -62,7 +62,7 @@ module CU #(
     always @(*) begin
         case (mode)
             0: begin  // MM (Latency: 10)
-                mux_sel = 0; // setp 1
+                mux_sel = 0; // step 1
             end
             4: begin // MMA (Latency: 12)
                 mux_sel = 1; // step 2
@@ -74,74 +74,47 @@ module CU #(
     end
     
     // ---- Internal signals ----
-    wire         en_mm;               // en only during MM mode
-    reg  [11:0]  en_mm_pipe;          // 10-stage pipeline
-    wire         en_mm_valid;         // delayed enable = valid out_step1
+    wire         mm_valid;         // delayed enable = valid out_step1
     
-    // ---- Gate enable with MM mode (combinational) ----
-    assign en_mm = en && (mode == 3'd0);
+
+    pipe #(12) pipe_valid_mm (
+        .clk(clk),
+        .rstn(rstn),
+        .en((mux_sel == 0)), 
+        .clr(clr),
+        .in_valid((mux_sel == 0)),
+        .out_valid(mm_valid)
+    );
     
-    // ---- Delay by 10 cycles (matches RBU_V2 MM latency) ----
-    always @(posedge clk or negedge rstn) begin
-        if (!rstn)
-            en_mm_pipe <= 10'd0;
-        else
-            en_mm_pipe <= {en_mm_pipe[10:0], en_mm};
-    end
-    
-    assign en_mm_valid = en_mm_pipe[11];  // 12-cycle delayed
+    wire [BW-1:0] r_data;
     
     
-    // ---- Buffer write logic ----
-    reg [2:0]   wr_ptr;
-    reg         buffer_full; // asserts when 8 values stored
-    
-    // Read pointer (for MMA mode)
-    reg [2:0] rd_ptr;
-    reg       rd_ptr_rst; // reset read pointer when entering MMA
-    
-    wire      mux_sel_d;
-    
-    pipeline #(1) mux (clk, rstn, mux_sel, mux_sel_d);
-    
-    // Write logic with full protection
-    always @(posedge clk or negedge rstn) begin
-        if (!rstn) begin
-            wr_ptr <= 3'd0;
-            buffer_full <= 1'b0;
-            rd_ptr <= 3'd0;
-        end else if (clr) begin
-            wr_ptr <= 3'd0;
-            buffer_full <= 1'b0;
-            rd_ptr <= 3'd0;
-        end else begin
-            // MM mode: write
-            if (en_mm_valid && !buffer_full) begin
-                
-                Buffers[wr_ptr] <= out_step1;
-                if (wr_ptr == 3'd7)
-                    buffer_full <= 1'b1;
-                else
-                    wr_ptr <= wr_ptr + 1'd1;
-            end
-            
-            // MMA mode: advance read pointer on every en
-            if (en && mux_sel_d) begin
-                rd_ptr <= rd_ptr + 1'd1; // auto-wrap or stop at 7?
-            end
-        end
-    end
+    // in original paper they use 16 buffer, to make better comparison
+    // in this implementation we use 8 buffer without the break the idea
+    FIFO #(
+        .ADDR_WIDTH(3),
+        .DATA_WIDTH(BW)
+    ) Buffer_unit (
+        .clk(clk),
+        .rstn(rstn),
+        .wr(mm_valid),
+        .rd(full_buffer),
+        .w_data(out_step1),
+        .full(full_buffer),
+        .empty(empty_buffer),
+        .r_data(r_data)
+    );
     
     // --- Buffer output: used in MMA mode ---
-    assign buffer = (mode == 3'd4)? Buffers[rd_ptr] : 0;
+    assign buffer = (mode == 3'd4)? r_data : 0;
     
     wire valid_mm_in_mma;
     wire [BW - 1:0] mux_out_reg_in_ma;
     
-    pipe #(12) pipe_valid_mm_in_mma (
+    pipe #(13) pipe_valid_mm_in_mma (
         .clk(clk),
         .rstn(rstn),
-        .en(en), 
+        .en(mux_sel), 
         .clr(clr),
         .in_valid(mux_sel),
         .out_valid(valid_mm_in_mma)
@@ -151,9 +124,7 @@ module CU #(
     mux #(BW) mux_coeff_buffers (.sel(mux_sel),         .in1(buffer),   .in0(Coeff_reg),      .out(mux_out));
     mux #(BW) mux_in_ma_buffers (.sel(valid_mm_in_mma), .in1(mma_out),  .in0(0),              .out(mux_out_reg_in_ma));
     
-    register #(48) r_add     ( .clk(clk), .rstn(rstn), .en(mux_sel_d), .clr(clr), .in(mux_out_reg_in_ma),    .out(in_ma) );
-    
-    RBU_V2 #(BW) pe(.clk(clk), .rstn(rstn), .mode(mode), .A0(in_ma), .A1(mux_out),   .q(q_reg),  .mu(mu_reg),  .C(Param_reg),   .B0(mma_out), .B1(), .M(out_step1));
+    RBU_V2 #(BW) pe(.clk(clk), .rstn(rstn), .mode(mode), .A0(mux_out_reg_in_ma), .A1(mux_out),   .q(q_reg),  .mu(mu_reg),  .C(Param_reg),   .B0(mma_out), .B1(), .M(out_step1));
     
     assign out = mma_out;
 

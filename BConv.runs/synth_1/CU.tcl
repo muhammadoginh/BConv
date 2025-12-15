@@ -4,7 +4,7 @@
 
 set TIME_start [clock seconds] 
 namespace eval ::optrace {
-  variable script "/home/moginh/Projects/BConv/BConv.runs/synth_1/CU.tcl"
+  variable script "D:/Projects/BConv/BConv.runs/synth_1/CU.tcl"
   variable category "vivado_synth"
 }
 
@@ -70,35 +70,40 @@ proc create_report { reportName command } {
   }
 }
 OPTRACE "synth_1" START { ROLLUP_AUTO }
+set_param chipscope.maxJobs 2
 OPTRACE "Creating in-memory project" START { }
 create_project -in_memory -part xcu280-fsvh2892-2L-e
 
 set_param project.singleFileAddWarning.threshold 0
 set_param project.compositeFile.enableAutoGeneration 0
 set_param synth.vivado.isSynthRun true
-set_property webtalk.parent_dir /home/moginh/Projects/BConv/BConv.cache/wt [current_project]
-set_property parent.project_path /home/moginh/Projects/BConv/BConv.xpr [current_project]
+set_property webtalk.parent_dir D:/Projects/BConv/BConv.cache/wt [current_project]
+set_property parent.project_path D:/Projects/BConv/BConv.xpr [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
 set_property board_part xilinx.com:au280:part0:1.3 [current_project]
-set_property ip_output_repo /home/moginh/Projects/BConv/BConv.cache/ip [current_project]
+set_property ip_output_repo d:/Projects/BConv/BConv.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
 read_verilog -library xil_defaultlib {
-  /home/moginh/Projects/BConv/BConv.srcs/sources_1/new/DIV2.v
-  /home/moginh/Projects/BConv/BConv.srcs/sources_1/new/ModAdd.v
-  /home/moginh/Projects/BConv/BConv.srcs/sources_1/new/ModMul.v
-  /home/moginh/Projects/BConv/BConv.srcs/sources_1/new/ModSub.v
-  /home/moginh/Projects/BConv/BConv.srcs/sources_1/new/RBU_V2.v
-  /home/moginh/Projects/BConv/BConv.srcs/sources_1/new/delay.v
-  /home/moginh/Projects/BConv/BConv.srcs/sources_1/new/dsp_mac.v
-  /home/moginh/Projects/BConv/BConv.srcs/sources_1/new/dsp_mul.v
-  /home/moginh/Projects/BConv/BConv.srcs/sources_1/new/dsp_preadder.v
-  /home/moginh/Projects/BConv/BConv.srcs/sources_1/new/mux.v
-  /home/moginh/Projects/BConv/BConv.srcs/sources_1/new/pipeline.v
-  /home/moginh/Projects/BConv/BConv.srcs/sources_1/new/register.v
-  /home/moginh/Projects/BConv/BConv.srcs/sources_1/new/CU.v
+  D:/Projects/BConv/BConv.srcs/sources_1/new/DIV2.v
+  D:/Projects/BConv/BConv.srcs/sources_1/new/FIFO.v
+  D:/Projects/BConv/BConv.srcs/sources_1/new/FIFO_control.v
+  D:/Projects/BConv/BConv.srcs/sources_1/new/ModAdd.v
+  D:/Projects/BConv/BConv.srcs/sources_1/new/ModMul.v
+  D:/Projects/BConv/BConv.srcs/sources_1/new/ModSub.v
+  D:/Projects/BConv/BConv.srcs/sources_1/new/RBU_V2.v
+  D:/Projects/BConv/BConv.srcs/sources_1/new/delay.v
+  D:/Projects/BConv/BConv.srcs/sources_1/new/dsp_mac.v
+  D:/Projects/BConv/BConv.srcs/sources_1/new/dsp_mul.v
+  D:/Projects/BConv/BConv.srcs/sources_1/new/dsp_preadder.v
+  D:/Projects/BConv/BConv.srcs/sources_1/new/mux.v
+  D:/Projects/BConv/BConv.srcs/sources_1/new/pipe.v
+  D:/Projects/BConv/BConv.srcs/sources_1/new/pipeline.v
+  D:/Projects/BConv/BConv.srcs/sources_1/new/reg_file.v
+  D:/Projects/BConv/BConv.srcs/sources_1/new/register.v
+  D:/Projects/BConv/BConv.srcs/sources_1/new/CU.v
 }
 OPTRACE "Adding files" END { }
 # Mark all dcp files as not used in implementation to prevent them from being
@@ -109,12 +114,12 @@ OPTRACE "Adding files" END { }
 foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
   set_property used_in_implementation false $dcp
 }
-read_xdc /home/moginh/Projects/BConv/BConv.srcs/constrs_1/new/timing.xdc
-set_property used_in_implementation false [get_files /home/moginh/Projects/BConv/BConv.srcs/constrs_1/new/timing.xdc]
+read_xdc D:/Projects/BConv/BConv.srcs/constrs_1/new/timing.xdc
+set_property used_in_implementation false [get_files D:/Projects/BConv/BConv.srcs/constrs_1/new/timing.xdc]
 
 set_param ips.enableIPCacheLiteLoad 1
 
-read_checkpoint -auto_incremental -incremental /home/moginh/Projects/BConv/BConv.srcs/utils_1/imports/synth_1/delay.dcp
+read_checkpoint -auto_incremental -incremental D:/Projects/BConv/BConv.srcs/utils_1/imports/synth_1/delay.dcp
 close [open __synthesis_is_running__ w]
 
 OPTRACE "synth_design" START { }

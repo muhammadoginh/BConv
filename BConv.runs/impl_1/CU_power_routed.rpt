@@ -1,8 +1,8 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------------
-| Tool Version     : Vivado v.2023.2 (lin64) Build 4029153 Fri Oct 13 20:13:54 MDT 2023
-| Date             : Thu Dec 11 21:32:40 2025
-| Host             : dis-lab-SYS-7049GP-TRT running 64-bit Ubuntu 24.04.3 LTS
+| Tool Version     : Vivado v.2023.2_AR000036317 (win64) Build 4029153 Fri Oct 13 20:14:34 MDT 2023
+| Date             : Mon Dec 15 21:08:39 2025
+| Host             : DESKTOP-4FM5FN0 running 64-bit major release  (build 9200)
 | Command          : report_power -file CU_power_routed.rpt -pb CU_power_summary_routed.pb -rpx CU_power_routed.rpx
 | Design           : CU
 | Device           : xcu280-fsvh2892-2L-e
@@ -30,13 +30,13 @@ Table of Contents
 ----------
 
 +--------------------------+---------------+
-| Total On-Chip Power (W)  | 5.857         |
-|   FPGA Power (W)         | 5.508         |
+| Total On-Chip Power (W)  | 5.841         |
+|   FPGA Power (W)         | 5.492         |
 |   HBM Power (W)          | 0.349         |
 | Design Power Budget (W)  | 160.000       |
-| Power Budget Margin (W)  | 154.143 (MET) |
-| Dynamic (W)              | 0.204         |
-| Device Static (W)        | 5.653         |
+| Power Budget Margin (W)  | 154.159 (MET) |
+| Dynamic (W)              | 0.190         |
+| Device Static (W)        | 5.652         |
 | Effective TJA (C/W)      | 0.8           |
 | Max Ambient (C)          | 95.6          |
 | Junction Temperature (C) | 59.4          |
@@ -50,21 +50,22 @@ Table of Contents
 1.1 On-Chip Components
 ----------------------
 
-+-------------------------+-----------+----------+-----------+-----------------+
-| On-Chip                 | Power (W) | Used     | Available | Utilization (%) |
-+-------------------------+-----------+----------+-----------+-----------------+
-| Clocks                  |     0.040 |        3 |       --- |             --- |
-| CLB Logic               |     0.067 |     5443 |       --- |             --- |
-|   LUT as Logic          |     0.048 |     1856 |   1303680 |            0.14 |
-|   LUT as Shift Register |     0.012 |      171 |    600960 |            0.03 |
-|   CARRY8                |     0.004 |      174 |    162960 |            0.11 |
-|   Register              |     0.004 |     2327 |   2607360 |            0.09 |
-|   Others                |     0.000 |      102 |       --- |             --- |
-| Signals                 |     0.058 |     4849 |       --- |             --- |
-| DSPs                    |     0.039 |       18 |      9024 |            0.20 |
-| Static Power            |     5.653 |          |           |                 |
-| Total                   |     5.857 |          |           |                 |
-+-------------------------+-----------+----------+-----------+-----------------+
++--------------------------+-----------+----------+-----------+-----------------+
+| On-Chip                  | Power (W) | Used     | Available | Utilization (%) |
++--------------------------+-----------+----------+-----------+-----------------+
+| Clocks                   |     0.037 |        3 |       --- |             --- |
+| CLB Logic                |     0.061 |     5057 |       --- |             --- |
+|   LUT as Logic           |     0.044 |     1740 |   1303680 |            0.13 |
+|   LUT as Shift Register  |     0.010 |      171 |    600960 |            0.03 |
+|   CARRY8                 |     0.004 |      174 |    162960 |            0.11 |
+|   Register               |     0.003 |     2008 |   2607360 |            0.08 |
+|   LUT as Distributed RAM |    <0.001 |       28 |    600960 |           <0.01 |
+|   Others                 |     0.000 |      102 |       --- |             --- |
+| Signals                  |     0.052 |     4427 |       --- |             --- |
+| DSPs                     |     0.039 |       18 |      9024 |            0.20 |
+| Static Power             |     5.652 |          |           |                 |
+| Total                    |     5.841 |          |           |                 |
++--------------------------+-----------+----------+-----------+-----------------+
 
 
 1.2 Power Supply Summary
@@ -73,10 +74,10 @@ Table of Contents
 +------------+-------------+-----------+-------------+------------+-------------+-------------+---------------+
 | Source     | Voltage (V) | Total (A) | Dynamic (A) | Static (A) | Powerup (A) | Budget (A)  | Margin (A)    |
 +------------+-------------+-----------+-------------+------------+-------------+-------------+---------------+
-| Vccint     |       0.850 |     4.188 |       0.240 |      3.948 |       NA    |     150.000 | 145.812 (MET) |
+| Vccint     |       0.850 |     4.169 |       0.223 |      3.946 |       NA    |     150.000 | 145.831 (MET) |
 | Vccint_io  |       0.850 |     0.478 |       0.000 |      0.478 |       NA    |       5.000 | 4.522 (MET)   |
 | Vccbram    |       0.850 |     0.103 |       0.000 |      0.103 |       NA    |       3.000 | 2.897 (MET)   |
-| Vccaux     |       1.800 |     0.745 |       0.000 |      0.745 |       NA    |       4.000 | 3.255 (MET)   |
+| Vccaux     |       1.800 |     0.746 |       0.000 |      0.746 |       NA    |       4.000 | 3.254 (MET)   |
 | Vccaux_io  |       1.800 |     0.035 |       0.000 |      0.035 |       NA    |       3.000 | 2.965 (MET)   |
 | Vcco33     |       3.300 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA            |
 | Vcco25     |       2.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA            |
@@ -148,31 +149,33 @@ Table of Contents
 +---------------------+-----------+
 | Name                | Power (W) |
 +---------------------+-----------+
-| CU                  |     0.204 |
-|   pe                |     0.190 |
-|     A0_delay_2      |     0.004 |
+| CU                  |     0.190 |
+|   Buffer_unit       |     0.004 |
+|     reg_file_unit   |     0.004 |
+|   pe                |     0.180 |
+|     A0_delay_2      |     0.003 |
 |     A1_delay_2      |     0.004 |
-|     B0_DIV2_delay   |     0.005 |
+|     B0_DIV2_delay   |     0.007 |
 |     C_delay_1       |     0.002 |
-|     ModAdd_0        |     0.006 |
-|     ModMul_0        |     0.142 |
+|     ModAdd_0        |     0.004 |
+|     ModMul_0        |     0.138 |
 |       delay_m1      |     0.004 |
 |       delay_m3      |     0.003 |
 |       delay_mu      |     0.004 |
-|       delay_q       |     0.003 |
+|       delay_q       |     0.004 |
 |       delay_q_final |     0.004 |
 |       delay_z       |     0.008 |
-|       mul_w1        |     0.007 |
+|       mul_w1        |     0.006 |
 |       mul_w3        |     0.006 |
 |       mul_w5        |     0.005 |
-|       mul_w_mu_0    |     0.004 |
+|       mul_w_mu_0    |     0.005 |
 |       mul_w_mu_2    |     0.009 |
 |       mul_w_mu_4    |     0.007 |
 |       mul_y0        |     0.006 |
 |       mul_y2        |     0.005 |
 |       mul_y4        |     0.002 |
-|       mul_z0        |     0.006 |
-|       mul_z2        |     0.009 |
+|       mul_z0        |     0.005 |
+|       mul_z2        |     0.008 |
 |       mul_z4        |     0.007 |
 |       pipe_r        |     0.003 |
 |       pipe_t        |     0.009 |
@@ -181,16 +184,16 @@ Table of Contents
 |       pipe_w3       |     0.002 |
 |       pipe_w5       |     0.002 |
 |       pipe_z1       |     0.004 |
-|       pipe_z3       |     0.004 |
+|       pipe_z3       |     0.003 |
 |       pipe_z5       |     0.004 |
-|     ModSub_0        |     0.016 |
-|     inv2_0          |     0.005 |
+|     ModSub_0        |     0.013 |
+|     inv2_0          |     0.004 |
 |     mu_delay_1      |     0.002 |
 |     q_delay_1       |     0.002 |
-|     q_delay_3       |     0.003 |
-|   r_Coeff           |     0.003 |
-|   r_add             |     0.001 |
+|     q_delay_3       |     0.002 |
+|   r_Coeff           |     0.002 |
 |   r_mu              |     0.001 |
+|   r_q               |     0.001 |
 +---------------------+-----------+
 
 
