@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="FIFO_tb_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="FIFO_tb" />
+            <top_module name="glbl" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="42.533 ns"></ZoomStartTime>
+      <ZoomEndTime time="195.494 ns"></ZoomEndTime>
+      <Cursor1Time time="75.000 ns"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="173"></NameColumnWidth>
+      <ValueColumnWidth column_width="245"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="21" />
+   <wvobject fp_name="/FIFO_tb/clk" type="logic">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/FIFO_tb/rstn" type="logic">
+      <obj_property name="ElementShortName">rstn</obj_property>
+      <obj_property name="ObjectShortName">rstn</obj_property>
+   </wvobject>
+   <wvobject fp_name="/FIFO_tb/wr" type="logic">
+      <obj_property name="ElementShortName">wr</obj_property>
+      <obj_property name="ObjectShortName">wr</obj_property>
+   </wvobject>
+   <wvobject fp_name="/FIFO_tb/rd" type="logic">
+      <obj_property name="ElementShortName">rd</obj_property>
+      <obj_property name="ObjectShortName">rd</obj_property>
+      <obj_property name="CustomSignalColor">#FFFF00</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="/FIFO_tb/uut/reg_file_unit/w_data" type="array">
+      <obj_property name="ElementShortName">w_data[47:0]</obj_property>
+      <obj_property name="ObjectShortName">w_data[47:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/FIFO_tb/uut/r_data" type="array">
+      <obj_property name="ElementShortName">r_data[47:0]</obj_property>
+      <obj_property name="ObjectShortName">r_data[47:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/FIFO_tb/uut/reg_file_unit/memory" type="array">
+      <obj_property name="ElementShortName">memory[0:7][47:0]</obj_property>
+      <obj_property name="ObjectShortName">memory[0:7][47:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/FIFO_tb/full" type="logic">
+      <obj_property name="ElementShortName">full</obj_property>
+      <obj_property name="ObjectShortName">full</obj_property>
+   </wvobject>
+   <wvobject fp_name="/FIFO_tb/empty" type="logic">
+      <obj_property name="ElementShortName">empty</obj_property>
+      <obj_property name="ObjectShortName">empty</obj_property>
+   </wvobject>
+   <wvobject fp_name="/FIFO_tb/ADDR_WIDTH" type="array">
+      <obj_property name="ElementShortName">ADDR_WIDTH[31:0]</obj_property>
+      <obj_property name="ObjectShortName">ADDR_WIDTH[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/FIFO_tb/DATA_WIDTH" type="array">
+      <obj_property name="ElementShortName">DATA_WIDTH[31:0]</obj_property>
+      <obj_property name="ObjectShortName">DATA_WIDTH[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/FIFO_tb/CLK_PERIOD" type="array">
+      <obj_property name="ElementShortName">CLK_PERIOD[31:0]</obj_property>
+      <obj_property name="ObjectShortName">CLK_PERIOD[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/FIFO_tb/uut/fifo_control_unit/w_addr" type="array">
+      <obj_property name="ElementShortName">w_addr[2:0]</obj_property>
+      <obj_property name="ObjectShortName">w_addr[2:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/FIFO_tb/uut/fifo_control_unit/r_addr" type="array">
+      <obj_property name="ElementShortName">r_addr[2:0]</obj_property>
+      <obj_property name="ObjectShortName">r_addr[2:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/FIFO_tb/uut/fifo_control_unit/wr_ptr" type="array">
+      <obj_property name="ElementShortName">wr_ptr[3:0]</obj_property>
+      <obj_property name="ObjectShortName">wr_ptr[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/FIFO_tb/uut/fifo_control_unit/rd_ptr" type="array">
+      <obj_property name="ElementShortName">rd_ptr[3:0]</obj_property>
+      <obj_property name="ObjectShortName">rd_ptr[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/FIFO_tb/uut/reg_file_unit/w_en" type="logic">
+      <obj_property name="ElementShortName">w_en</obj_property>
+      <obj_property name="ObjectShortName">w_en</obj_property>
+   </wvobject>
+   <wvobject fp_name="/FIFO_tb/uut/reg_file_unit/r_en" type="logic">
+      <obj_property name="ElementShortName">r_en</obj_property>
+      <obj_property name="ObjectShortName">r_en</obj_property>
+   </wvobject>
+   <wvobject fp_name="/FIFO_tb/uut/reg_file_unit/w_addr" type="array">
+      <obj_property name="ElementShortName">w_addr[2:0]</obj_property>
+      <obj_property name="ObjectShortName">w_addr[2:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/FIFO_tb/uut/reg_file_unit/w_data" type="array">
+      <obj_property name="ElementShortName">w_data[47:0]</obj_property>
+      <obj_property name="ObjectShortName">w_data[47:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/FIFO_tb/uut/reg_file_unit/memory" type="array">
+      <obj_property name="ElementShortName">memory[0:7][47:0]</obj_property>
+      <obj_property name="ObjectShortName">memory[0:7][47:0]</obj_property>
+   </wvobject>
+</wave_config>
