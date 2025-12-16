@@ -97,7 +97,7 @@ module CU #(
     ) Buffer_unit (
         .clk(clk),
         .rstn(rstn),
-        .wr(mm_valid),
+        .wr(mm_valid && (~mux_sel)),
         .rd(full_buffer),
         .w_data(out_step1),
         .full(full_buffer),

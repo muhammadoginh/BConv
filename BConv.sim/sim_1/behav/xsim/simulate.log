@@ -1,3 +1,30 @@
 Time resolution is 1 ps
-Simulation complete. Check cu_results.csv for I/O log.
-$finish called at time : 256 ns : File "D:/Projects/BConv/BConv.srcs/sim_1/new/CU_tb.v" Line 217
+ Loading data [0..7]...
+Load complete.
+
+Starting PASS 1...
+  [130000] PASS 1: data[0] = 0
+  [150000] PASS 1: data[1] = 1
+  [170000] PASS 1: data[2] = 2
+  [190000] PASS 1: data[3] = 3
+  [210000] PASS 1: data[4] = 4
+  [230000] PASS 1: data[5] = 5
+  [250000] PASS 1: data[6] = 6
+  [270000] PASS 1: data[7] = 7
+  [310000] PASS 1: end hold check OK
+PASS 1 completed successfully.
+
+Starting PASS 2...
+  [330000] PASS 2: data[0] = 0
+  [350000] PASS 2: data[1] = 1
+  [370000] PASS 2: data[2] = 2
+  [390000] PASS 2: data[3] = 3
+  [410000] PASS 2: data[4] = 4
+  [430000] PASS 2: data[5] = 5
+  [450000] PASS 2: data[6] = 6
+  [470000] PASS 2: data[7] = 7
+  [510000] PASS 2: end hold check OK
+PASS 2 completed successfully.
+
+ ALL TESTS PASSED: Write once, read twice - both passes correct!
+$finish called at time : 530 ns : File "D:/Projects/BConv/BConv.srcs/sim_1/new/step_replay_memory_tb.v" Line 146
