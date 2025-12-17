@@ -67,13 +67,13 @@ module step_replay_memory #(
             // Default: hold all signals
             eol <= (curr_addr == (2**ADDR_WIDTH - 1));
 
-            if (restart) begin
-                // Reset read pointer to beginning
-                curr_addr <= {ADDR_WIDTH{1'b0}};
-                eol <= 1'b0;
-                // Note: do NOT change data_out/valid here (optional design choice)
-            end
-            else if (read_en) begin
+//            if (restart) begin
+//                // Reset read pointer to beginning
+//                curr_addr <= {ADDR_WIDTH{1'b0}};
+//                eol <= 1'b0;
+//                // Note: do NOT change data_out/valid here (optional design choice)
+//            end
+            if (read_en) begin
                 // Output data from CURRENT address
                 data_out <= r_data;   // r_data = memory[curr_addr] ¡æ CORRECT
                 valid <= 1'b1;
@@ -81,8 +81,17 @@ module step_replay_memory #(
                 // Advance to next address only if not at end
                 if (!eol) begin
                     curr_addr <= curr_addr + 1;
+                end 
+                else begin
+                    if (restart) begin
+                        // Reset read pointer to beginning
+                        curr_addr <= 0;
+//                        eol <= 1'b0;
+                        // Note: do NOT change data_out/valid here (optional design choice)
+                    end
+//                    curr_addr <= 0; // If eol, curr_addr stays at last address (so r_data keeps being last value)
                 end
-                // If eol, curr_addr stays at last address (so r_data keeps being last value)
+                
             end
             // If neither restart nor read_en, hold everything
         end

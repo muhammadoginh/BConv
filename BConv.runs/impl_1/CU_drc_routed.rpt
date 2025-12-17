@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2023.2_AR000036317 (win64) Build 4029153 Fri Oct 13 20:14:34 MDT 2023
-| Date         : Mon Dec 15 21:08:25 2025
+| Date         : Wed Dec 17 19:15:01 2025
 | Host         : DESKTOP-4FM5FN0 running 64-bit major release  (build 9200)
 | Command      : report_drc -file CU_drc_routed.rpt -pb CU_drc_routed.pb -rpx CU_drc_routed.rpx
 | Design       : CU
@@ -24,14 +24,15 @@ Table of Contents
       Design limits: <entire design considered>
            Ruledeck: default
              Max violations: <unlimited>
-             Violations found: 33
-+----------+----------+------------------------+------------+
-| Rule     | Severity | Description            | Violations |
-+----------+----------+------------------------+------------+
-| DPIP-2   | Warning  | Input pipelining       | 24         |
-| DPOP-4   | Warning  | MREG Output pipelining | 6          |
-| PDRC-153 | Warning  | Gated clock check      | 3          |
-+----------+----------+------------------------+------------+
+             Violations found: 34
++-----------+----------+------------------------+------------+
+| Rule      | Severity | Description            | Violations |
++-----------+----------+------------------------+------------+
+| DPIP-2    | Warning  | Input pipelining       | 24         |
+| DPOP-4    | Warning  | MREG Output pipelining | 6          |
+| PDRC-153  | Warning  | Gated clock check      | 3          |
+| RTSTAT-10 | Warning  | No routable loads      | 1          |
++-----------+----------+------------------------+------------+
 
 2. REPORT DETAILS
 -----------------
@@ -198,6 +199,11 @@ Related violations: <none>
 PDRC-153#3 Warning
 Gated clock check  
 Net pe/mux_lat_sel_reg[4]_i_2_n_0 is a gated clock net sourced by a combinational pin pe/mux_lat_sel_reg[4]_i_2/O, cell pe/mux_lat_sel_reg[4]_i_2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+RTSTAT-10#1 Warning
+No routable loads  
+1 net(s) have no routable loads. The problem bus(es) and/or net(s) are full_buffer.
 Related violations: <none>
 
 

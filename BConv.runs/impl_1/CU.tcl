@@ -145,7 +145,7 @@ OPTRACE "read constraints: implementation_pre" START { }
 OPTRACE "read constraints: implementation_pre" END { }
 OPTRACE "add files" END { }
 OPTRACE "link_design" START { }
-  link_design -top CU -part xcu280-fsvh2892-2L-e -mode out_of_context 
+  link_design -top CU -part xcu280-fsvh2892-2L-e 
 OPTRACE "link_design" END { }
 OPTRACE "gray box cells" START { }
 OPTRACE "gray box cells" END { }

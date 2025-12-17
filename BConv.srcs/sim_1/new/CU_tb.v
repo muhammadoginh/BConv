@@ -113,11 +113,11 @@ module CU_tb();
     initial begin
         p_mu_array[0] = 50'd281474977103871;
         p_mu_array[1] = 50'd562949831786518;
-        p_mu_array[2] = 50'd140737505918977;
+        p_mu_array[2] = 50'd562950023675908;
         p_mu_array[3] = 50'd562949851709454;
         p_mu_array[4] = 50'd140737505132544;
         p_mu_array[5] = 50'd562949853806605;
-        p_mu_array[6] = 50'd140737504739328;
+        p_mu_array[6] = 50'd562950018957315;
         p_mu_array[7] = 50'd562949867438089;
         p_mu_array[8] = 50'd140737496350719;
         p_mu_array[9] = 50'd562949869010952;
@@ -432,6 +432,7 @@ module CU_tb();
     reg             q_ld;
     reg             mu_ld;
     reg   [2:0]     mode;
+    reg             replay_restart;
     reg   [BW-1:0]  Coeff;
     reg   [BW-1:0]  Param;
     reg   [BW-1:0]  q;
@@ -448,6 +449,7 @@ module CU_tb();
         .q_ld(q_ld),
         .mu_ld(mu_ld),
         .mode(mode),
+        .replay_restart(replay_restart),
         .Coeff(Coeff),
         .Param(Param),
         .q(q),
@@ -485,6 +487,7 @@ module CU_tb();
         Param       = 0;
         q           = 0;
         mu          = 0;
+        replay_restart  = 0;
 
         // Reset sequence
         #4 rstn = 1;
@@ -519,10 +522,10 @@ module CU_tb();
         
         #44; // finish mode MM
         
-        #4;
-        
         // Simulate 8 valid MMA operations 
         // first RNS
+        replay_restart  = 1;
+        #8 replay_restart  = 0;
         for (integer i = 0; i < n_tests; i = i + 1) begin
             // Apply inputs for MM mode
             mode = 3'd4;
@@ -550,7 +553,12 @@ module CU_tb();
             // (In real use, en may be pulsed once per sample)
         end
         
+        // wait to finish first rns
+        #4
+        
         // second RNS
+        #4 replay_restart  = 1;
+        #8 replay_restart  = 0;
         for (integer i = 0; i < n_tests; i = i + 1) begin
             // Apply inputs for MM mode
             mode = 3'd4;
@@ -563,6 +571,171 @@ module CU_tb();
             Param = Param1_array[i];
             q = p_array[1];
             mu = p_mu_array[1];
+            #4;
+
+            // Log input at cycle of assertion
+            $fdisplay(logfile, "%0d,%0d,%0d,%0d,%0d,%0d,%0d,%0d,%0d", 
+                      $time, i, mode, clr, Coeff, Param, q, mu, out);
+
+            // Hold for 1 cycle (en asserted for 1 cycle per sample)
+            #4;
+
+            // Wait for pipeline to produce output (10 cycles latency)
+            // But we don't check 'out' directly; CU stores internally
+            // Just advance time to next input
+            // (In real use, en may be pulsed once per sample)
+        end
+        
+        // wait to finish second rns
+        #4
+        
+        // third RNS
+        #4 replay_restart  = 1;
+        #8 replay_restart  = 0;
+        for (integer i = 0; i < n_tests; i = i + 1) begin
+            // Apply inputs for MM mode
+            mode = 3'd4;
+            clr = 0;
+            Coeff_ld    = 1;
+            Param_ld    = 1;
+            q_ld        = 1;
+            mu_ld       = 1;
+//            Coeff = Coeff_array[i];
+            Param = Param2_array[i];
+            q = p_array[2];
+            mu = p_mu_array[2];
+            #4;
+
+            // Log input at cycle of assertion
+            $fdisplay(logfile, "%0d,%0d,%0d,%0d,%0d,%0d,%0d,%0d,%0d", 
+                      $time, i, mode, clr, Coeff, Param, q, mu, out);
+
+            // Hold for 1 cycle (en asserted for 1 cycle per sample)
+            #4;
+
+            // Wait for pipeline to produce output (10 cycles latency)
+            // But we don't check 'out' directly; CU stores internally
+            // Just advance time to next input
+            // (In real use, en may be pulsed once per sample)
+        end
+        
+        // wait to finish second rns
+        #4
+        
+        // third RNS
+        #4 replay_restart  = 1;
+        #8 replay_restart  = 0;
+        for (integer i = 0; i < n_tests; i = i + 1) begin
+            // Apply inputs for MM mode
+            mode = 3'd4;
+            clr = 0;
+            Coeff_ld    = 1;
+            Param_ld    = 1;
+            q_ld        = 1;
+            mu_ld       = 1;
+//            Coeff = Coeff_array[i];
+            Param = Param3_array[i];
+            q = p_array[3];
+            mu = p_mu_array[3];
+            #4;
+
+            // Log input at cycle of assertion
+            $fdisplay(logfile, "%0d,%0d,%0d,%0d,%0d,%0d,%0d,%0d,%0d", 
+                      $time, i, mode, clr, Coeff, Param, q, mu, out);
+
+            // Hold for 1 cycle (en asserted for 1 cycle per sample)
+            #4;
+
+            // Wait for pipeline to produce output (10 cycles latency)
+            // But we don't check 'out' directly; CU stores internally
+            // Just advance time to next input
+            // (In real use, en may be pulsed once per sample)
+        end
+        
+        // wait to finish second rns
+        #4
+        
+        // third RNS
+        #4 replay_restart  = 1;
+        #8 replay_restart  = 0;
+        for (integer i = 0; i < n_tests; i = i + 1) begin
+            // Apply inputs for MM mode
+            mode = 3'd4;
+            clr = 0;
+            Coeff_ld    = 1;
+            Param_ld    = 1;
+            q_ld        = 1;
+            mu_ld       = 1;
+//            Coeff = Coeff_array[i];
+            Param = Param4_array[i];
+            q = p_array[4];
+            mu = p_mu_array[4];
+            #4;
+
+            // Log input at cycle of assertion
+            $fdisplay(logfile, "%0d,%0d,%0d,%0d,%0d,%0d,%0d,%0d,%0d", 
+                      $time, i, mode, clr, Coeff, Param, q, mu, out);
+
+            // Hold for 1 cycle (en asserted for 1 cycle per sample)
+            #4;
+
+            // Wait for pipeline to produce output (10 cycles latency)
+            // But we don't check 'out' directly; CU stores internally
+            // Just advance time to next input
+            // (In real use, en may be pulsed once per sample)
+        end
+        
+        // wait to finish second rns
+        #4
+        
+        // third RNS
+        #4 replay_restart  = 1;
+        #8 replay_restart  = 0;
+        for (integer i = 0; i < n_tests; i = i + 1) begin
+            // Apply inputs for MM mode
+            mode = 3'd4;
+            clr = 0;
+            Coeff_ld    = 1;
+            Param_ld    = 1;
+            q_ld        = 1;
+            mu_ld       = 1;
+//            Coeff = Coeff_array[i];
+            Param = Param5_array[i];
+            q = p_array[5];
+            mu = p_mu_array[5];
+            #4;
+
+            // Log input at cycle of assertion
+            $fdisplay(logfile, "%0d,%0d,%0d,%0d,%0d,%0d,%0d,%0d,%0d", 
+                      $time, i, mode, clr, Coeff, Param, q, mu, out);
+
+            // Hold for 1 cycle (en asserted for 1 cycle per sample)
+            #4;
+
+            // Wait for pipeline to produce output (10 cycles latency)
+            // But we don't check 'out' directly; CU stores internally
+            // Just advance time to next input
+            // (In real use, en may be pulsed once per sample)
+        end
+        
+        // wait to finish second rns
+        #4
+        
+        // third RNS
+        #4 replay_restart  = 1;
+        #8 replay_restart  = 0;
+        for (integer i = 0; i < n_tests; i = i + 1) begin
+            // Apply inputs for MM mode
+            mode = 3'd4;
+            clr = 0;
+            Coeff_ld    = 1;
+            Param_ld    = 1;
+            q_ld        = 1;
+            mu_ld       = 1;
+//            Coeff = Coeff_array[i];
+            Param = Param6_array[i];
+            q = p_array[6];
+            mu = p_mu_array[6];
             #4;
 
             // Log input at cycle of assertion

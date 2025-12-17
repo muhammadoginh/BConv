@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2023.2_AR000036317 (win64) Build 4029153 Fri Oct 13 20:14:34 MDT 2023
-| Date         : Mon Dec 15 21:08:31 2025
+| Date         : Wed Dec 17 19:15:09 2025
 | Host         : DESKTOP-4FM5FN0 running 64-bit major release  (build 9200)
 | Command      : report_methodology -file CU_methodology_drc_routed.rpt -pb CU_methodology_drc_routed.pb -rpx CU_methodology_drc_routed.rpx
 | Design       : CU
@@ -23,12 +23,12 @@ Table of Contents
           Floorplan: design_1
       Design limits: <entire design considered>
              Max violations: <unlimited>
-             Violations found: 448
+             Violations found: 449
 +-----------+----------+--------------------------------+------------+
 | Rule      | Severity | Description                    | Violations |
 +-----------+----------+--------------------------------+------------+
 | DPIR-2    | Warning  | Asynchronous driver check      | 192        |
-| TIMING-18 | Warning  | Missing input or output delay  | 252        |
+| TIMING-18 | Warning  | Missing input or output delay  | 253        |
 | TIMING-20 | Warning  | Non-clocked latch              | 3          |
 | LATCH-1   | Advisory | Existing latches in the design | 1          |
 +-----------+----------+--------------------------------+------------+
@@ -2007,250 +2007,255 @@ Related violations: <none>
 
 TIMING-18#203 Warning
 Missing input or output delay  
-An input delay is missing on rstn relative to the rising and/or falling clock edge(s) of clk.
+An input delay is missing on replay_restart relative to the rising and/or falling clock edge(s) of clk.
 Related violations: <none>
 
 TIMING-18#204 Warning
 Missing input or output delay  
-An output delay is missing on full_buffer relative to the rising and/or falling clock edge(s) of clk.
+An input delay is missing on rstn relative to the rising and/or falling clock edge(s) of clk.
 Related violations: <none>
 
 TIMING-18#205 Warning
 Missing input or output delay  
-An output delay is missing on out[0] relative to the rising and/or falling clock edge(s) of clk.
+An output delay is missing on full_buffer relative to the rising and/or falling clock edge(s) of clk.
 Related violations: <none>
 
 TIMING-18#206 Warning
 Missing input or output delay  
-An output delay is missing on out[10] relative to the rising and/or falling clock edge(s) of clk.
+An output delay is missing on out[0] relative to the rising and/or falling clock edge(s) of clk.
 Related violations: <none>
 
 TIMING-18#207 Warning
 Missing input or output delay  
-An output delay is missing on out[11] relative to the rising and/or falling clock edge(s) of clk.
+An output delay is missing on out[10] relative to the rising and/or falling clock edge(s) of clk.
 Related violations: <none>
 
 TIMING-18#208 Warning
 Missing input or output delay  
-An output delay is missing on out[12] relative to the rising and/or falling clock edge(s) of clk.
+An output delay is missing on out[11] relative to the rising and/or falling clock edge(s) of clk.
 Related violations: <none>
 
 TIMING-18#209 Warning
 Missing input or output delay  
-An output delay is missing on out[13] relative to the rising and/or falling clock edge(s) of clk.
+An output delay is missing on out[12] relative to the rising and/or falling clock edge(s) of clk.
 Related violations: <none>
 
 TIMING-18#210 Warning
 Missing input or output delay  
-An output delay is missing on out[14] relative to the rising and/or falling clock edge(s) of clk.
+An output delay is missing on out[13] relative to the rising and/or falling clock edge(s) of clk.
 Related violations: <none>
 
 TIMING-18#211 Warning
 Missing input or output delay  
-An output delay is missing on out[15] relative to the rising and/or falling clock edge(s) of clk.
+An output delay is missing on out[14] relative to the rising and/or falling clock edge(s) of clk.
 Related violations: <none>
 
 TIMING-18#212 Warning
 Missing input or output delay  
-An output delay is missing on out[16] relative to the rising and/or falling clock edge(s) of clk.
+An output delay is missing on out[15] relative to the rising and/or falling clock edge(s) of clk.
 Related violations: <none>
 
 TIMING-18#213 Warning
 Missing input or output delay  
-An output delay is missing on out[17] relative to the rising and/or falling clock edge(s) of clk.
+An output delay is missing on out[16] relative to the rising and/or falling clock edge(s) of clk.
 Related violations: <none>
 
 TIMING-18#214 Warning
 Missing input or output delay  
-An output delay is missing on out[18] relative to the rising and/or falling clock edge(s) of clk.
+An output delay is missing on out[17] relative to the rising and/or falling clock edge(s) of clk.
 Related violations: <none>
 
 TIMING-18#215 Warning
 Missing input or output delay  
-An output delay is missing on out[19] relative to the rising and/or falling clock edge(s) of clk.
+An output delay is missing on out[18] relative to the rising and/or falling clock edge(s) of clk.
 Related violations: <none>
 
 TIMING-18#216 Warning
 Missing input or output delay  
-An output delay is missing on out[1] relative to the rising and/or falling clock edge(s) of clk.
+An output delay is missing on out[19] relative to the rising and/or falling clock edge(s) of clk.
 Related violations: <none>
 
 TIMING-18#217 Warning
 Missing input or output delay  
-An output delay is missing on out[20] relative to the rising and/or falling clock edge(s) of clk.
+An output delay is missing on out[1] relative to the rising and/or falling clock edge(s) of clk.
 Related violations: <none>
 
 TIMING-18#218 Warning
 Missing input or output delay  
-An output delay is missing on out[21] relative to the rising and/or falling clock edge(s) of clk.
+An output delay is missing on out[20] relative to the rising and/or falling clock edge(s) of clk.
 Related violations: <none>
 
 TIMING-18#219 Warning
 Missing input or output delay  
-An output delay is missing on out[22] relative to the rising and/or falling clock edge(s) of clk.
+An output delay is missing on out[21] relative to the rising and/or falling clock edge(s) of clk.
 Related violations: <none>
 
 TIMING-18#220 Warning
 Missing input or output delay  
-An output delay is missing on out[23] relative to the rising and/or falling clock edge(s) of clk.
+An output delay is missing on out[22] relative to the rising and/or falling clock edge(s) of clk.
 Related violations: <none>
 
 TIMING-18#221 Warning
 Missing input or output delay  
-An output delay is missing on out[24] relative to the rising and/or falling clock edge(s) of clk.
+An output delay is missing on out[23] relative to the rising and/or falling clock edge(s) of clk.
 Related violations: <none>
 
 TIMING-18#222 Warning
 Missing input or output delay  
-An output delay is missing on out[25] relative to the rising and/or falling clock edge(s) of clk.
+An output delay is missing on out[24] relative to the rising and/or falling clock edge(s) of clk.
 Related violations: <none>
 
 TIMING-18#223 Warning
 Missing input or output delay  
-An output delay is missing on out[26] relative to the rising and/or falling clock edge(s) of clk.
+An output delay is missing on out[25] relative to the rising and/or falling clock edge(s) of clk.
 Related violations: <none>
 
 TIMING-18#224 Warning
 Missing input or output delay  
-An output delay is missing on out[27] relative to the rising and/or falling clock edge(s) of clk.
+An output delay is missing on out[26] relative to the rising and/or falling clock edge(s) of clk.
 Related violations: <none>
 
 TIMING-18#225 Warning
 Missing input or output delay  
-An output delay is missing on out[28] relative to the rising and/or falling clock edge(s) of clk.
+An output delay is missing on out[27] relative to the rising and/or falling clock edge(s) of clk.
 Related violations: <none>
 
 TIMING-18#226 Warning
 Missing input or output delay  
-An output delay is missing on out[29] relative to the rising and/or falling clock edge(s) of clk.
+An output delay is missing on out[28] relative to the rising and/or falling clock edge(s) of clk.
 Related violations: <none>
 
 TIMING-18#227 Warning
 Missing input or output delay  
-An output delay is missing on out[2] relative to the rising and/or falling clock edge(s) of clk.
+An output delay is missing on out[29] relative to the rising and/or falling clock edge(s) of clk.
 Related violations: <none>
 
 TIMING-18#228 Warning
 Missing input or output delay  
-An output delay is missing on out[30] relative to the rising and/or falling clock edge(s) of clk.
+An output delay is missing on out[2] relative to the rising and/or falling clock edge(s) of clk.
 Related violations: <none>
 
 TIMING-18#229 Warning
 Missing input or output delay  
-An output delay is missing on out[31] relative to the rising and/or falling clock edge(s) of clk.
+An output delay is missing on out[30] relative to the rising and/or falling clock edge(s) of clk.
 Related violations: <none>
 
 TIMING-18#230 Warning
 Missing input or output delay  
-An output delay is missing on out[32] relative to the rising and/or falling clock edge(s) of clk.
+An output delay is missing on out[31] relative to the rising and/or falling clock edge(s) of clk.
 Related violations: <none>
 
 TIMING-18#231 Warning
 Missing input or output delay  
-An output delay is missing on out[33] relative to the rising and/or falling clock edge(s) of clk.
+An output delay is missing on out[32] relative to the rising and/or falling clock edge(s) of clk.
 Related violations: <none>
 
 TIMING-18#232 Warning
 Missing input or output delay  
-An output delay is missing on out[34] relative to the rising and/or falling clock edge(s) of clk.
+An output delay is missing on out[33] relative to the rising and/or falling clock edge(s) of clk.
 Related violations: <none>
 
 TIMING-18#233 Warning
 Missing input or output delay  
-An output delay is missing on out[35] relative to the rising and/or falling clock edge(s) of clk.
+An output delay is missing on out[34] relative to the rising and/or falling clock edge(s) of clk.
 Related violations: <none>
 
 TIMING-18#234 Warning
 Missing input or output delay  
-An output delay is missing on out[36] relative to the rising and/or falling clock edge(s) of clk.
+An output delay is missing on out[35] relative to the rising and/or falling clock edge(s) of clk.
 Related violations: <none>
 
 TIMING-18#235 Warning
 Missing input or output delay  
-An output delay is missing on out[37] relative to the rising and/or falling clock edge(s) of clk.
+An output delay is missing on out[36] relative to the rising and/or falling clock edge(s) of clk.
 Related violations: <none>
 
 TIMING-18#236 Warning
 Missing input or output delay  
-An output delay is missing on out[38] relative to the rising and/or falling clock edge(s) of clk.
+An output delay is missing on out[37] relative to the rising and/or falling clock edge(s) of clk.
 Related violations: <none>
 
 TIMING-18#237 Warning
 Missing input or output delay  
-An output delay is missing on out[39] relative to the rising and/or falling clock edge(s) of clk.
+An output delay is missing on out[38] relative to the rising and/or falling clock edge(s) of clk.
 Related violations: <none>
 
 TIMING-18#238 Warning
 Missing input or output delay  
-An output delay is missing on out[3] relative to the rising and/or falling clock edge(s) of clk.
+An output delay is missing on out[39] relative to the rising and/or falling clock edge(s) of clk.
 Related violations: <none>
 
 TIMING-18#239 Warning
 Missing input or output delay  
-An output delay is missing on out[40] relative to the rising and/or falling clock edge(s) of clk.
+An output delay is missing on out[3] relative to the rising and/or falling clock edge(s) of clk.
 Related violations: <none>
 
 TIMING-18#240 Warning
 Missing input or output delay  
-An output delay is missing on out[41] relative to the rising and/or falling clock edge(s) of clk.
+An output delay is missing on out[40] relative to the rising and/or falling clock edge(s) of clk.
 Related violations: <none>
 
 TIMING-18#241 Warning
 Missing input or output delay  
-An output delay is missing on out[42] relative to the rising and/or falling clock edge(s) of clk.
+An output delay is missing on out[41] relative to the rising and/or falling clock edge(s) of clk.
 Related violations: <none>
 
 TIMING-18#242 Warning
 Missing input or output delay  
-An output delay is missing on out[43] relative to the rising and/or falling clock edge(s) of clk.
+An output delay is missing on out[42] relative to the rising and/or falling clock edge(s) of clk.
 Related violations: <none>
 
 TIMING-18#243 Warning
 Missing input or output delay  
-An output delay is missing on out[44] relative to the rising and/or falling clock edge(s) of clk.
+An output delay is missing on out[43] relative to the rising and/or falling clock edge(s) of clk.
 Related violations: <none>
 
 TIMING-18#244 Warning
 Missing input or output delay  
-An output delay is missing on out[45] relative to the rising and/or falling clock edge(s) of clk.
+An output delay is missing on out[44] relative to the rising and/or falling clock edge(s) of clk.
 Related violations: <none>
 
 TIMING-18#245 Warning
 Missing input or output delay  
-An output delay is missing on out[46] relative to the rising and/or falling clock edge(s) of clk.
+An output delay is missing on out[45] relative to the rising and/or falling clock edge(s) of clk.
 Related violations: <none>
 
 TIMING-18#246 Warning
 Missing input or output delay  
-An output delay is missing on out[47] relative to the rising and/or falling clock edge(s) of clk.
+An output delay is missing on out[46] relative to the rising and/or falling clock edge(s) of clk.
 Related violations: <none>
 
 TIMING-18#247 Warning
 Missing input or output delay  
-An output delay is missing on out[4] relative to the rising and/or falling clock edge(s) of clk.
+An output delay is missing on out[47] relative to the rising and/or falling clock edge(s) of clk.
 Related violations: <none>
 
 TIMING-18#248 Warning
 Missing input or output delay  
-An output delay is missing on out[5] relative to the rising and/or falling clock edge(s) of clk.
+An output delay is missing on out[4] relative to the rising and/or falling clock edge(s) of clk.
 Related violations: <none>
 
 TIMING-18#249 Warning
 Missing input or output delay  
-An output delay is missing on out[6] relative to the rising and/or falling clock edge(s) of clk.
+An output delay is missing on out[5] relative to the rising and/or falling clock edge(s) of clk.
 Related violations: <none>
 
 TIMING-18#250 Warning
 Missing input or output delay  
-An output delay is missing on out[7] relative to the rising and/or falling clock edge(s) of clk.
+An output delay is missing on out[6] relative to the rising and/or falling clock edge(s) of clk.
 Related violations: <none>
 
 TIMING-18#251 Warning
 Missing input or output delay  
-An output delay is missing on out[8] relative to the rising and/or falling clock edge(s) of clk.
+An output delay is missing on out[7] relative to the rising and/or falling clock edge(s) of clk.
 Related violations: <none>
 
 TIMING-18#252 Warning
+Missing input or output delay  
+An output delay is missing on out[8] relative to the rising and/or falling clock edge(s) of clk.
+Related violations: <none>
+
+TIMING-18#253 Warning
 Missing input or output delay  
 An output delay is missing on out[9] relative to the rising and/or falling clock edge(s) of clk.
 Related violations: <none>

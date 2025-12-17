@@ -70,7 +70,6 @@ proc create_report { reportName command } {
   }
 }
 OPTRACE "synth_1" START { ROLLUP_AUTO }
-set_param chipscope.maxJobs 2
 OPTRACE "Creating in-memory project" START { }
 create_project -in_memory -part xcu280-fsvh2892-2L-e
 
@@ -88,8 +87,6 @@ OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
 read_verilog -library xil_defaultlib {
   D:/Projects/BConv/BConv.srcs/sources_1/new/DIV2.v
-  D:/Projects/BConv/BConv.srcs/sources_1/new/FIFO.v
-  D:/Projects/BConv/BConv.srcs/sources_1/new/FIFO_control.v
   D:/Projects/BConv/BConv.srcs/sources_1/new/ModAdd.v
   D:/Projects/BConv/BConv.srcs/sources_1/new/ModMul.v
   D:/Projects/BConv/BConv.srcs/sources_1/new/ModSub.v
@@ -103,6 +100,7 @@ read_verilog -library xil_defaultlib {
   D:/Projects/BConv/BConv.srcs/sources_1/new/pipeline.v
   D:/Projects/BConv/BConv.srcs/sources_1/new/reg_file.v
   D:/Projects/BConv/BConv.srcs/sources_1/new/register.v
+  D:/Projects/BConv/BConv.srcs/sources_1/new/step_replay_memory.v
   D:/Projects/BConv/BConv.srcs/sources_1/new/CU.v
 }
 OPTRACE "Adding files" END { }

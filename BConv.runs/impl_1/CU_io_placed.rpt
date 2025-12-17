@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version              : Vivado v.2023.2_AR000036317 (win64) Build 4029153 Fri Oct 13 20:14:34 MDT 2023
-| Date                      : Mon Dec 15 21:06:39 2025
+| Date                      : Wed Dec 17 19:13:33 2025
 | Host                      : DESKTOP-4FM5FN0 running 64-bit major release  (build 9200)
 | Command                   : report_io -file CU_io_placed.rpt
 | Design                    : CU
@@ -25,7 +25,7 @@ Table of Contents
 +---------------+
 | Total User IO |
 +---------------+
-|           253 |
+|           254 |
 +---------------+
 
 

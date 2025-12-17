@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2023.2_AR000036317 (win64) Build 4029153 Fri Oct 13 20:14:34 MDT 2023
-| Date         : Mon Dec 15 21:06:40 2025
+| Date         : Wed Dec 17 19:13:34 2025
 | Host         : DESKTOP-4FM5FN0 running 64-bit major release  (build 9200)
 | Command      : report_control_sets -verbose -file CU_control_sets_placed.rpt
 | Design       : CU
@@ -27,7 +27,7 @@ Table of Contents
 |    Minimum number of control sets                        |    16 |
 |    Addition due to synthesis replication                 |     0 |
 |    Addition due to physical synthesis replication        |     0 |
-| Unused register locations in slices containing registers |    20 |
+| Unused register locations in slices containing registers |    18 |
 +----------------------------------------------------------+-------+
 * Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
 ** Run report_qor_suggestions for automated merging and remapping suggestions
@@ -40,13 +40,13 @@ Table of Contents
 |       Fanout       | Count |
 +--------------------+-------+
 | Total control sets |    16 |
-| >= 0 to < 4        |     3 |
-| >= 4 to < 6        |     2 |
+| >= 0 to < 4        |     5 |
+| >= 4 to < 6        |     0 |
 | >= 6 to < 8        |     0 |
 | >= 8 to < 10       |     0 |
 | >= 10 to < 12      |     0 |
-| >= 12 to < 14      |     2 |
-| >= 14 to < 16      |     0 |
+| >= 12 to < 14      |     1 |
+| >= 14 to < 16      |     1 |
 | >= 16              |     9 |
 +--------------------+-------+
 * Control sets can be remapped at either synth_design or opt_design
@@ -58,37 +58,37 @@ Table of Contents
 +--------------+-----------------------+------------------------+-----------------+--------------+
 | Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
 +--------------+-----------------------+------------------------+-----------------+--------------+
-| No           | No                    | No                     |             944 |          169 |
-| No           | No                    | Yes                    |             481 |          133 |
-| No           | Yes                   | No                     |             308 |           60 |
-| Yes          | No                    | No                     |              48 |           17 |
-| Yes          | No                    | Yes                    |              33 |            3 |
-| Yes          | Yes                   | No                     |             194 |           75 |
+| No           | No                    | No                     |            1041 |          183 |
+| No           | No                    | Yes                    |             483 |          135 |
+| No           | Yes                   | No                     |             308 |           56 |
+| Yes          | No                    | No                     |               0 |            0 |
+| Yes          | No                    | Yes                    |              80 |           30 |
+| Yes          | Yes                   | No                     |             194 |           77 |
 +--------------+-----------------------+------------------------+-----------------+--------------+
 
 
 4. Detailed Control Set Information
 -----------------------------------
 
-+--------------------------------+--------------------------------------------------+---------------------------+------------------+----------------+--------------+
-|          Clock Signal          |                   Enable Signal                  |      Set/Reset Signal     | Slice Load Count | Bel Load Count | Bels / Slice |
-+--------------------------------+--------------------------------------------------+---------------------------+------------------+----------------+--------------+
-|  pe/mux_lat_sel_reg[4]_i_2_n_0 |                                                  |                           |                1 |              1 |         1.00 |
-|  pe/mux_lat_sel_reg[2]_i_2_n_0 |                                                  |                           |                1 |              1 |         1.00 |
-|  pe/mux_lat_sel_mu_reg_i_2_n_0 |                                                  |                           |                1 |              1 |         1.00 |
-|  clk                           | Buffer_unit/fifo_control_unit/rd_ptr_reg[3]_0[0] | rstn                      |                1 |              4 |         4.00 |
-|  clk                           | Buffer_unit/fifo_control_unit/E[0]               | rstn                      |                1 |              4 |         4.00 |
-|  clk                           | pipe_valid_mm/p_0_in                             | rstn                      |                1 |             12 |        12.00 |
-|  clk                           | pipe_valid_mm_in_mma/valid_pipe[12]_i_1_n_0      | rstn                      |                1 |             13 |        13.00 |
-|  clk                           |                                                  | pipe_valid_mm_in_mma/Q[0] |               17 |             48 |         2.82 |
-|  clk                           | Buffer_unit/fifo_control_unit/E[0]               |                           |               17 |             48 |         2.82 |
-|  clk                           | Coeff_ld                                         | r_mu/SR[0]                |               22 |             48 |         2.18 |
-|  clk                           | Param_ld                                         | r_mu/SR[0]                |               18 |             48 |         2.67 |
-|  clk                           | q_ld                                             | r_mu/SR[0]                |               18 |             48 |         2.67 |
-|  clk                           | mu_ld                                            | r_mu/SR[0]                |               18 |             50 |         2.78 |
-|  clk                           | Buffer_unit/fifo_control_unit/rd_ptr_reg[3]_0[0] |                           |                4 |             56 |        14.00 |
-|  clk                           |                                                  | rstn                      |              162 |            741 |         4.57 |
-|  clk                           |                                                  |                           |              189 |           1279 |         6.77 |
-+--------------------------------+--------------------------------------------------+---------------------------+------------------+----------------+--------------+
++--------------------------------+--------------------------------------+---------------------+------------------+----------------+--------------+
+|          Clock Signal          |             Enable Signal            |   Set/Reset Signal  | Slice Load Count | Bel Load Count | Bels / Slice |
++--------------------------------+--------------------------------------+---------------------+------------------+----------------+--------------+
+|  pe/mux_lat_sel_reg[4]_i_2_n_0 |                                      |                     |                1 |              1 |         1.00 |
+|  pe/mux_lat_sel_mu_reg_i_2_n_0 |                                      |                     |                1 |              1 |         1.00 |
+|  pe/mux_lat_sel_reg[2]_i_2_n_0 |                                      |                     |                1 |              1 |         1.00 |
+|  clk                           | togle_buffer/E[0]                    | rstn                |                2 |              3 |         1.50 |
+|  clk                           | u_replay_mem/curr_addr               | rstn                |                1 |              3 |         3.00 |
+|  clk                           | pipe_valid_mm/valid_pipe[11]_i_1_n_0 | rstn                |                2 |             12 |         6.00 |
+|  clk                           | pipe_valid_mm/E[0]                   | rstn                |                1 |             14 |        14.00 |
+|  clk                           |                                      | pipe_start_mma/Q[0] |               17 |             48 |         2.82 |
+|  clk                           | u_replay_mem/replay_read_en          | rstn                |               24 |             48 |         2.00 |
+|  clk                           | Coeff_ld                             | r_mu/SR[0]          |               19 |             48 |         2.53 |
+|  clk                           | Param_ld                             | r_mu/SR[0]          |               19 |             48 |         2.53 |
+|  clk                           | q_ld                                 | r_mu/SR[0]          |               16 |             48 |         3.00 |
+|  clk                           | mu_ld                                | r_mu/SR[0]          |               24 |             50 |         2.08 |
+|  clk                           | togle_buffer/load_phase              |                     |                4 |             56 |        14.00 |
+|  clk                           |                                      | rstn                |              171 |            743 |         4.35 |
+|  clk                           |                                      |                     |              203 |           1376 |         6.78 |
++--------------------------------+--------------------------------------+---------------------+------------------+----------------+--------------+
 
 
