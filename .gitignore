@@ -11,4 +11,5 @@ BConv.runs/
 *.jou
 *.log
 *.str
+.BConv.xpr
 EOF
