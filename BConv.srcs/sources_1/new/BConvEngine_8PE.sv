@@ -172,7 +172,6 @@ module BConvEngine_8PE #(
     );
     
     
-    
     assign out = B0[7];
 
 
