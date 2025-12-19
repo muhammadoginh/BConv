@@ -1,3 +1,0 @@
-Time resolution is 1 ps
-Simulation complete. Check cu_results.csv for I/O log.
-$finish called at time : 744 ns : File "D:/Projects/BConv/BConv.srcs/sim_1/new/CU_tb.v" Line 765
