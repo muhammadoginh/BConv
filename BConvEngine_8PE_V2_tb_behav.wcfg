@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="BConvEngine_8PE_V2_tb_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="BConvEngine_8PE_V2_tb" />
+            <top_module name="glbl" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="0.000 ns"></ZoomStartTime>
+      <ZoomEndTime time="328.001 ns"></ZoomEndTime>
+      <Cursor1Time time="328.000 ns"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="153"></NameColumnWidth>
+      <ValueColumnWidth column_width="124"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="50" />
+   <wvobject type="array" fp_name="/BConvEngine_8PE_V2_tb/i">
+      <obj_property name="ElementShortName">i[31:0]</obj_property>
+      <obj_property name="ObjectShortName">i[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/BConvEngine_8PE_V2_tb/clk">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/BConvEngine_8PE_V2_tb/rstn">
+      <obj_property name="ElementShortName">rstn</obj_property>
+      <obj_property name="ObjectShortName">rstn</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/BConvEngine_8PE_V2_tb/clr">
+      <obj_property name="ElementShortName">clr</obj_property>
+      <obj_property name="ObjectShortName">clr</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/BConvEngine_8PE_V2_tb/coeff_load">
+      <obj_property name="ElementShortName">coeff_load</obj_property>
+      <obj_property name="ObjectShortName">coeff_load</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/BConvEngine_8PE_V2_tb/param_load">
+      <obj_property name="ElementShortName">param_load</obj_property>
+      <obj_property name="ObjectShortName">param_load</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/BConvEngine_8PE_V2_tb/q_load">
+      <obj_property name="ElementShortName">q_load</obj_property>
+      <obj_property name="ObjectShortName">q_load</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/BConvEngine_8PE_V2_tb/mu_load">
+      <obj_property name="ElementShortName">mu_load</obj_property>
+      <obj_property name="ObjectShortName">mu_load</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/BConvEngine_8PE_V2_tb/p_load">
+      <obj_property name="ElementShortName">p_load</obj_property>
+      <obj_property name="ObjectShortName">p_load</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/BConvEngine_8PE_V2_tb/mu_p_load">
+      <obj_property name="ElementShortName">mu_p_load</obj_property>
+      <obj_property name="ObjectShortName">mu_p_load</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/BConvEngine_8PE_V2_tb/mode">
+      <obj_property name="ElementShortName">mode[2:0]</obj_property>
+      <obj_property name="ObjectShortName">mode[2:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/BConvEngine_8PE_V2_tb/replay_restart">
+      <obj_property name="ElementShortName">replay_restart</obj_property>
+      <obj_property name="ObjectShortName">replay_restart</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/BConvEngine_8PE_V2_tb/a0">
+      <obj_property name="ElementShortName">a0[47:0]</obj_property>
+      <obj_property name="ObjectShortName">a0[47:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/BConvEngine_8PE_V2_tb/a1">
+      <obj_property name="ElementShortName">a1[47:0]</obj_property>
+      <obj_property name="ObjectShortName">a1[47:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/BConvEngine_8PE_V2_tb/a2">
+      <obj_property name="ElementShortName">a2[47:0]</obj_property>
+      <obj_property name="ObjectShortName">a2[47:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/BConvEngine_8PE_V2_tb/a3">
+      <obj_property name="ElementShortName">a3[47:0]</obj_property>
+      <obj_property name="ObjectShortName">a3[47:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/BConvEngine_8PE_V2_tb/a4">
+      <obj_property name="ElementShortName">a4[47:0]</obj_property>
+      <obj_property name="ObjectShortName">a4[47:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/BConvEngine_8PE_V2_tb/a5">
+      <obj_property name="ElementShortName">a5[47:0]</obj_property>
+      <obj_property name="ObjectShortName">a5[47:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/BConvEngine_8PE_V2_tb/a6">
+      <obj_property name="ElementShortName">a6[47:0]</obj_property>
+      <obj_property name="ObjectShortName">a6[47:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/BConvEngine_8PE_V2_tb/a7">
+      <obj_property name="ElementShortName">a7[47:0]</obj_property>
+      <obj_property name="ObjectShortName">a7[47:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/BConvEngine_8PE_V2_tb/param0">
+      <obj_property name="ElementShortName">param0[47:0]</obj_property>
+      <obj_property name="ObjectShortName">param0[47:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/BConvEngine_8PE_V2_tb/param1">
+      <obj_property name="ElementShortName">param1[47:0]</obj_property>
+      <obj_property name="ObjectShortName">param1[47:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/BConvEngine_8PE_V2_tb/param2">
+      <obj_property name="ElementShortName">param2[47:0]</obj_property>
+      <obj_property name="ObjectShortName">param2[47:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/BConvEngine_8PE_V2_tb/param3">
+      <obj_property name="ElementShortName">param3[47:0]</obj_property>
+      <obj_property name="ObjectShortName">param3[47:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/BConvEngine_8PE_V2_tb/param4">
+      <obj_property name="ElementShortName">param4[47:0]</obj_property>
+      <obj_property name="ObjectShortName">param4[47:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/BConvEngine_8PE_V2_tb/param5">
+      <obj_property name="ElementShortName">param5[47:0]</obj_property>
+      <obj_property name="ObjectShortName">param5[47:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/BConvEngine_8PE_V2_tb/param6">
+      <obj_property name="ElementShortName">param6[47:0]</obj_property>
+      <obj_property name="ObjectShortName">param6[47:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/BConvEngine_8PE_V2_tb/param7">
+      <obj_property name="ElementShortName">param7[47:0]</obj_property>
+      <obj_property name="ObjectShortName">param7[47:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/BConvEngine_8PE_V2_tb/q0">
+      <obj_property name="ElementShortName">q0[47:0]</obj_property>
+      <obj_property name="ObjectShortName">q0[47:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/BConvEngine_8PE_V2_tb/q1">
+      <obj_property name="ElementShortName">q1[47:0]</obj_property>
+      <obj_property name="ObjectShortName">q1[47:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/BConvEngine_8PE_V2_tb/q2">
+      <obj_property name="ElementShortName">q2[47:0]</obj_property>
+      <obj_property name="ObjectShortName">q2[47:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/BConvEngine_8PE_V2_tb/q3">
+      <obj_property name="ElementShortName">q3[47:0]</obj_property>
+      <obj_property name="ObjectShortName">q3[47:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/BConvEngine_8PE_V2_tb/q4">
+      <obj_property name="ElementShortName">q4[47:0]</obj_property>
+      <obj_property name="ObjectShortName">q4[47:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/BConvEngine_8PE_V2_tb/q5">
+      <obj_property name="ElementShortName">q5[47:0]</obj_property>
+      <obj_property name="ObjectShortName">q5[47:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/BConvEngine_8PE_V2_tb/q6">
+      <obj_property name="ElementShortName">q6[47:0]</obj_property>
+      <obj_property name="ObjectShortName">q6[47:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/BConvEngine_8PE_V2_tb/q7">
+      <obj_property name="ElementShortName">q7[47:0]</obj_property>
+      <obj_property name="ObjectShortName">q7[47:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/BConvEngine_8PE_V2_tb/mu0">
+      <obj_property name="ElementShortName">mu0[49:0]</obj_property>
+      <obj_property name="ObjectShortName">mu0[49:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/BConvEngine_8PE_V2_tb/mu1">
+      <obj_property name="ElementShortName">mu1[49:0]</obj_property>
+      <obj_property name="ObjectShortName">mu1[49:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/BConvEngine_8PE_V2_tb/mu2">
+      <obj_property name="ElementShortName">mu2[49:0]</obj_property>
+      <obj_property name="ObjectShortName">mu2[49:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/BConvEngine_8PE_V2_tb/mu3">
+      <obj_property name="ElementShortName">mu3[49:0]</obj_property>
+      <obj_property name="ObjectShortName">mu3[49:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/BConvEngine_8PE_V2_tb/mu4">
+      <obj_property name="ElementShortName">mu4[49:0]</obj_property>
+      <obj_property name="ObjectShortName">mu4[49:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/BConvEngine_8PE_V2_tb/mu5">
+      <obj_property name="ElementShortName">mu5[49:0]</obj_property>
+      <obj_property name="ObjectShortName">mu5[49:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/BConvEngine_8PE_V2_tb/mu6">
+      <obj_property name="ElementShortName">mu6[49:0]</obj_property>
+      <obj_property name="ObjectShortName">mu6[49:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/BConvEngine_8PE_V2_tb/mu7">
+      <obj_property name="ElementShortName">mu7[49:0]</obj_property>
+      <obj_property name="ObjectShortName">mu7[49:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/BConvEngine_8PE_V2_tb/p">
+      <obj_property name="ElementShortName">p[47:0]</obj_property>
+      <obj_property name="ObjectShortName">p[47:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/BConvEngine_8PE_V2_tb/mu_p">
+      <obj_property name="ElementShortName">mu_p[49:0]</obj_property>
+      <obj_property name="ObjectShortName">mu_p[49:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/BConvEngine_8PE_V2_tb/out">
+      <obj_property name="ElementShortName">out[47:0]</obj_property>
+      <obj_property name="ObjectShortName">out[47:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/BConvEngine_8PE_V2_tb/BW">
+      <obj_property name="ElementShortName">BW[31:0]</obj_property>
+      <obj_property name="ObjectShortName">BW[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/BConvEngine_8PE_V2_tb/CLK_PERIOD">
+      <obj_property name="ElementShortName">CLK_PERIOD[31:0]</obj_property>
+      <obj_property name="ObjectShortName">CLK_PERIOD[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/BConvEngine_8PE_V2_tb/NUM_TESTS">
+      <obj_property name="ElementShortName">NUM_TESTS[31:0]</obj_property>
+      <obj_property name="ObjectShortName">NUM_TESTS[31:0]</obj_property>
+   </wvobject>
+</wave_config>

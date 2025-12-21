@@ -3,9 +3,9 @@
 // Company: 
 // Engineer: 
 // 
-// Create Date: 12/18/2025 11:26:43 PM
+// Create Date: 12/21/2025 09:35:04 PM
 // Design Name: 
-// Module Name: BConvEngine_8PE
+// Module Name: BConvEngine_8PE_V2
 // Project Name: 
 // Target Devices: 
 // Tool Versions: 
@@ -20,7 +20,7 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module BConvEngine_8PE #(
+module BConvEngine_8PE_V2 #(
         parameter BW = 48
     )(
         input               clk,

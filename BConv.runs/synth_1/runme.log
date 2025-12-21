@@ -1,6 +1,6 @@
 
 *** Running vivado
-    with args -log ModMul.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source ModMul.tcl
+    with args -log BConvEngine_8PE.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source BConvEngine_8PE.tcl
 
 
 ****** Vivado v2023.2 (64-bit)
@@ -10,12 +10,12 @@
     ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
     ** Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 
-source ModMul.tcl -notrace
-create_project: Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1349.031 ; gain = 45.840 ; free physical = 71588 ; free virtual = 125761
+source BConvEngine_8PE.tcl -notrace
+create_project: Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1349.188 ; gain = 43.840 ; free physical = 117294 ; free virtual = 129433
 Command: read_checkpoint -auto_incremental -incremental /home/moginh/Projects/BConv/BConv.srcs/utils_1/imports/synth_1/delay.dcp
 INFO: [Vivado 12-5825] Read reference checkpoint from /home/moginh/Projects/BConv/BConv.srcs/utils_1/imports/synth_1/delay.dcp for incremental synthesis
 INFO: [Vivado 12-7989] Please ensure there are no constraint changes
-Command: synth_design -top ModMul -part xcu280-fsvh2892-2L-e -mode out_of_context
+Command: synth_design -top BConvEngine_8PE -part xcu280-fsvh2892-2L-e -mode out_of_context
 Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xcu280'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xcu280'
@@ -23,11 +23,102 @@ INFO: [Vivado_Tcl 4-1810] synth_design options have changed between reference an
 INFO: [Device 21-403] Loading part xcu280-fsvh2892-2L-e
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 4 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 3776823
+INFO: [Synth 8-7075] Helper process launched with PID 137454
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 3108.340 ; gain = 397.715 ; free physical = 69550 ; free virtual = 123723
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 3108.496 ; gain = 397.715 ; free physical = 115243 ; free virtual = 127382
 ---------------------------------------------------------------------------------
+INFO: [Synth 8-11241] undeclared symbol 'mm_valid', assumed default net type 'wire' [/home/moginh/Projects/BConv/BConv.srcs/sources_1/new/BConvEngine_8PE.sv:195]
+INFO: [Synth 8-11241] undeclared symbol 'mux_out_1_d', assumed default net type 'wire' [/home/moginh/Projects/BConv/BConv.srcs/sources_1/new/RBU_V2.v:209]
+INFO: [Synth 8-6157] synthesizing module 'BConvEngine_8PE' [/home/moginh/Projects/BConv/BConv.srcs/sources_1/new/BConvEngine_8PE.sv:23]
+INFO: [Synth 8-6157] synthesizing module 'register' [/home/moginh/Projects/BConv/BConv.srcs/sources_1/new/register.v:23]
+	Parameter BW bound to: 48 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'register' (0#1) [/home/moginh/Projects/BConv/BConv.srcs/sources_1/new/register.v:23]
+INFO: [Synth 8-6157] synthesizing module 'mux' [/home/moginh/Projects/BConv/BConv.srcs/sources_1/new/mux.v:23]
+	Parameter BW bound to: 48 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'mux' (0#1) [/home/moginh/Projects/BConv/BConv.srcs/sources_1/new/mux.v:23]
+INFO: [Synth 8-6157] synthesizing module 'register__parameterized0' [/home/moginh/Projects/BConv/BConv.srcs/sources_1/new/register.v:23]
+	Parameter BW bound to: 50 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'register__parameterized0' (0#1) [/home/moginh/Projects/BConv/BConv.srcs/sources_1/new/register.v:23]
+INFO: [Synth 8-6157] synthesizing module 'mux__parameterized0' [/home/moginh/Projects/BConv/BConv.srcs/sources_1/new/mux.v:23]
+	Parameter BW bound to: 50 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'mux__parameterized0' (0#1) [/home/moginh/Projects/BConv/BConv.srcs/sources_1/new/mux.v:23]
+INFO: [Synth 8-6157] synthesizing module 'delay' [/home/moginh/Projects/BConv/BConv.srcs/sources_1/new/delay.v:23]
+	Parameter N bound to: 2 - type: integer 
+	Parameter BW bound to: 48 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'delay' (0#1) [/home/moginh/Projects/BConv/BConv.srcs/sources_1/new/delay.v:23]
+INFO: [Synth 8-6157] synthesizing module 'delay__parameterized0' [/home/moginh/Projects/BConv/BConv.srcs/sources_1/new/delay.v:23]
+	Parameter N bound to: 4 - type: integer 
+	Parameter BW bound to: 48 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'delay__parameterized0' (0#1) [/home/moginh/Projects/BConv/BConv.srcs/sources_1/new/delay.v:23]
+INFO: [Synth 8-6157] synthesizing module 'delay__parameterized1' [/home/moginh/Projects/BConv/BConv.srcs/sources_1/new/delay.v:23]
+	Parameter N bound to: 6 - type: integer 
+	Parameter BW bound to: 48 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'delay__parameterized1' (0#1) [/home/moginh/Projects/BConv/BConv.srcs/sources_1/new/delay.v:23]
+INFO: [Synth 8-6157] synthesizing module 'delay__parameterized2' [/home/moginh/Projects/BConv/BConv.srcs/sources_1/new/delay.v:23]
+	Parameter N bound to: 8 - type: integer 
+	Parameter BW bound to: 48 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'delay__parameterized2' (0#1) [/home/moginh/Projects/BConv/BConv.srcs/sources_1/new/delay.v:23]
+INFO: [Synth 8-6157] synthesizing module 'delay__parameterized3' [/home/moginh/Projects/BConv/BConv.srcs/sources_1/new/delay.v:23]
+	Parameter N bound to: 12 - type: integer 
+	Parameter BW bound to: 48 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'delay__parameterized3' (0#1) [/home/moginh/Projects/BConv/BConv.srcs/sources_1/new/delay.v:23]
+INFO: [Synth 8-6157] synthesizing module 'delay__parameterized4' [/home/moginh/Projects/BConv/BConv.srcs/sources_1/new/delay.v:23]
+	Parameter N bound to: 14 - type: integer 
+	Parameter BW bound to: 48 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'delay__parameterized4' (0#1) [/home/moginh/Projects/BConv/BConv.srcs/sources_1/new/delay.v:23]
+INFO: [Synth 8-6157] synthesizing module 'delay__parameterized5' [/home/moginh/Projects/BConv/BConv.srcs/sources_1/new/delay.v:23]
+	Parameter N bound to: 16 - type: integer 
+	Parameter BW bound to: 48 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'delay__parameterized5' (0#1) [/home/moginh/Projects/BConv/BConv.srcs/sources_1/new/delay.v:23]
+INFO: [Synth 8-6157] synthesizing module 'pipe' [/home/moginh/Projects/BConv/BConv.srcs/sources_1/new/pipe.v:23]
+	Parameter cycle bound to: 12 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'pipe' (0#1) [/home/moginh/Projects/BConv/BConv.srcs/sources_1/new/pipe.v:23]
+INFO: [Synth 8-6157] synthesizing module 'array_reg' [/home/moginh/Projects/BConv/BConv.srcs/sources_1/new/array_reg.sv:23]
+	Parameter BW bound to: 48 - type: integer 
+	Parameter N bound to: 8 - type: integer 
+WARNING: [Synth 8-7186] Applying attribute ram_style = "distributed" is ignored, object 'storage[0]' is not inferred as ram due to incorrect usage [/home/moginh/Projects/BConv/BConv.srcs/sources_1/new/array_reg.sv:32]
+WARNING: [Synth 8-7186] Applying attribute ram_style = "distributed" is ignored, object 'storage[1]' is not inferred as ram due to incorrect usage [/home/moginh/Projects/BConv/BConv.srcs/sources_1/new/array_reg.sv:32]
+WARNING: [Synth 8-7186] Applying attribute ram_style = "distributed" is ignored, object 'storage[2]' is not inferred as ram due to incorrect usage [/home/moginh/Projects/BConv/BConv.srcs/sources_1/new/array_reg.sv:32]
+WARNING: [Synth 8-7186] Applying attribute ram_style = "distributed" is ignored, object 'storage[3]' is not inferred as ram due to incorrect usage [/home/moginh/Projects/BConv/BConv.srcs/sources_1/new/array_reg.sv:32]
+WARNING: [Synth 8-7186] Applying attribute ram_style = "distributed" is ignored, object 'storage[4]' is not inferred as ram due to incorrect usage [/home/moginh/Projects/BConv/BConv.srcs/sources_1/new/array_reg.sv:32]
+WARNING: [Synth 8-7186] Applying attribute ram_style = "distributed" is ignored, object 'storage[5]' is not inferred as ram due to incorrect usage [/home/moginh/Projects/BConv/BConv.srcs/sources_1/new/array_reg.sv:32]
+WARNING: [Synth 8-7186] Applying attribute ram_style = "distributed" is ignored, object 'storage[6]' is not inferred as ram due to incorrect usage [/home/moginh/Projects/BConv/BConv.srcs/sources_1/new/array_reg.sv:32]
+WARNING: [Synth 8-7186] Applying attribute ram_style = "distributed" is ignored, object 'storage[7]' is not inferred as ram due to incorrect usage [/home/moginh/Projects/BConv/BConv.srcs/sources_1/new/array_reg.sv:32]
+INFO: [Synth 8-6155] done synthesizing module 'array_reg' (0#1) [/home/moginh/Projects/BConv/BConv.srcs/sources_1/new/array_reg.sv:23]
+INFO: [Synth 8-6157] synthesizing module 'RBUA' [/home/moginh/Projects/BConv/BConv.srcs/sources_1/new/RBUA.sv:23]
+	Parameter BW bound to: 48 - type: integer 
+	Parameter N bound to: 8 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'RBU_V2' [/home/moginh/Projects/BConv/BConv.srcs/sources_1/new/RBU_V2.v:44]
+	Parameter BW bound to: 48 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'delay__parameterized6' [/home/moginh/Projects/BConv/BConv.srcs/sources_1/new/delay.v:23]
+	Parameter N bound to: 13 - type: integer 
+	Parameter BW bound to: 48 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'delay__parameterized6' (0#1) [/home/moginh/Projects/BConv/BConv.srcs/sources_1/new/delay.v:23]
+INFO: [Synth 8-6157] synthesizing module 'delay__parameterized7' [/home/moginh/Projects/BConv/BConv.srcs/sources_1/new/delay.v:23]
+	Parameter N bound to: 2 - type: integer 
+	Parameter BW bound to: 50 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'delay__parameterized7' (0#1) [/home/moginh/Projects/BConv/BConv.srcs/sources_1/new/delay.v:23]
+INFO: [Synth 8-6157] synthesizing module 'delay__parameterized8' [/home/moginh/Projects/BConv/BConv.srcs/sources_1/new/delay.v:23]
+	Parameter N bound to: 1 - type: integer 
+	Parameter BW bound to: 50 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'delay__parameterized8' (0#1) [/home/moginh/Projects/BConv/BConv.srcs/sources_1/new/delay.v:23]
+WARNING: [Synth 8-689] width (1) of port connection 'out' does not match port width (48) of module 'delay' [/home/moginh/Projects/BConv/BConv.srcs/sources_1/new/RBU_V2.v:209]
+INFO: [Synth 8-6157] synthesizing module 'delay__parameterized9' [/home/moginh/Projects/BConv/BConv.srcs/sources_1/new/delay.v:23]
+	Parameter N bound to: 1 - type: integer 
+	Parameter BW bound to: 48 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'delay__parameterized9' (0#1) [/home/moginh/Projects/BConv/BConv.srcs/sources_1/new/delay.v:23]
+INFO: [Synth 8-6157] synthesizing module 'delay__parameterized10' [/home/moginh/Projects/BConv/BConv.srcs/sources_1/new/delay.v:23]
+	Parameter N bound to: 11 - type: integer 
+	Parameter BW bound to: 48 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'delay__parameterized10' (0#1) [/home/moginh/Projects/BConv/BConv.srcs/sources_1/new/delay.v:23]
+INFO: [Synth 8-6157] synthesizing module 'ModSub' [/home/moginh/Projects/BConv/BConv.srcs/sources_1/new/ModSub.v:23]
+	Parameter BW bound to: 48 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'ModSub' (0#1) [/home/moginh/Projects/BConv/BConv.srcs/sources_1/new/ModSub.v:23]
+INFO: [Synth 8-6157] synthesizing module 'ModAdd' [/home/moginh/Projects/BConv/BConv.srcs/sources_1/new/ModAdd.v:23]
+	Parameter BW bound to: 48 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'ModAdd' (0#1) [/home/moginh/Projects/BConv/BConv.srcs/sources_1/new/ModAdd.v:23]
 INFO: [Synth 8-6157] synthesizing module 'ModMul' [/home/moginh/Projects/BConv/BConv.srcs/sources_1/new/ModMul.v:24]
+	Parameter BW bound to: 48 - type: integer 
 INFO: [Synth 8-6157] synthesizing module 'dsp_mul' [/home/moginh/Projects/BConv/BConv.srcs/sources_1/new/dsp_mul.v:23]
 	Parameter A_WIDTH bound to: 16 - type: integer 
 	Parameter B_WIDTH bound to: 16 - type: integer 
@@ -45,14 +136,14 @@ INFO: [Synth 8-6155] done synthesizing module 'pipeline' (0#1) [/home/moginh/Pro
 INFO: [Synth 8-6157] synthesizing module 'pipeline__parameterized0' [/home/moginh/Projects/BConv/BConv.srcs/sources_1/new/pipeline.v:23]
 	Parameter BW bound to: 34 - type: integer 
 INFO: [Synth 8-6155] done synthesizing module 'pipeline__parameterized0' (0#1) [/home/moginh/Projects/BConv/BConv.srcs/sources_1/new/pipeline.v:23]
-INFO: [Synth 8-6157] synthesizing module 'delay' [/home/moginh/Projects/BConv/BConv.srcs/sources_1/new/delay.v:23]
+INFO: [Synth 8-6157] synthesizing module 'delay__parameterized11' [/home/moginh/Projects/BConv/BConv.srcs/sources_1/new/delay.v:23]
 	Parameter N bound to: 1 - type: integer 
 	Parameter BW bound to: 51 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'delay' (0#1) [/home/moginh/Projects/BConv/BConv.srcs/sources_1/new/delay.v:23]
-INFO: [Synth 8-6157] synthesizing module 'delay__parameterized0' [/home/moginh/Projects/BConv/BConv.srcs/sources_1/new/delay.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'delay__parameterized11' (0#1) [/home/moginh/Projects/BConv/BConv.srcs/sources_1/new/delay.v:23]
+INFO: [Synth 8-6157] synthesizing module 'delay__parameterized12' [/home/moginh/Projects/BConv/BConv.srcs/sources_1/new/delay.v:23]
 	Parameter N bound to: 3 - type: integer 
 	Parameter BW bound to: 51 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'delay__parameterized0' (0#1) [/home/moginh/Projects/BConv/BConv.srcs/sources_1/new/delay.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'delay__parameterized12' (0#1) [/home/moginh/Projects/BConv/BConv.srcs/sources_1/new/delay.v:23]
 INFO: [Synth 8-6157] synthesizing module 'dsp_mul__parameterized0' [/home/moginh/Projects/BConv/BConv.srcs/sources_1/new/dsp_mul.v:23]
 	Parameter A_WIDTH bound to: 17 - type: integer 
 	Parameter B_WIDTH bound to: 17 - type: integer 
@@ -69,42 +160,41 @@ INFO: [Synth 8-6157] synthesizing module 'dsp_mul__parameterized1' [/home/moginh
 	Parameter OUT_WIDTH bound to: 36 - type: integer 
 INFO: [Synth 8-6155] done synthesizing module 'dsp_mul__parameterized1' (0#1) [/home/moginh/Projects/BConv/BConv.srcs/sources_1/new/dsp_mul.v:23]
 INFO: [Synth 8-6155] done synthesizing module 'dsp_preadder' (0#1) [/home/moginh/Projects/BConv/BConv.srcs/sources_1/new/dsp_preadder.v:23]
-INFO: [Synth 8-6157] synthesizing module 'delay__parameterized1' [/home/moginh/Projects/BConv/BConv.srcs/sources_1/new/delay.v:23]
-	Parameter N bound to: 1 - type: integer 
-	Parameter BW bound to: 48 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'delay__parameterized1' (0#1) [/home/moginh/Projects/BConv/BConv.srcs/sources_1/new/delay.v:23]
-INFO: [Synth 8-6157] synthesizing module 'delay__parameterized2' [/home/moginh/Projects/BConv/BConv.srcs/sources_1/new/delay.v:23]
+INFO: [Synth 8-6157] synthesizing module 'delay__parameterized13' [/home/moginh/Projects/BConv/BConv.srcs/sources_1/new/delay.v:23]
 	Parameter N bound to: 5 - type: integer 
 	Parameter BW bound to: 48 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'delay__parameterized2' (0#1) [/home/moginh/Projects/BConv/BConv.srcs/sources_1/new/delay.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'delay__parameterized13' (0#1) [/home/moginh/Projects/BConv/BConv.srcs/sources_1/new/delay.v:23]
 INFO: [Synth 8-6157] synthesizing module 'pipeline__parameterized1' [/home/moginh/Projects/BConv/BConv.srcs/sources_1/new/pipeline.v:23]
 	Parameter BW bound to: 96 - type: integer 
 INFO: [Synth 8-6155] done synthesizing module 'pipeline__parameterized1' (0#1) [/home/moginh/Projects/BConv/BConv.srcs/sources_1/new/pipeline.v:23]
-INFO: [Synth 8-6157] synthesizing module 'delay__parameterized3' [/home/moginh/Projects/BConv/BConv.srcs/sources_1/new/delay.v:23]
+INFO: [Synth 8-6157] synthesizing module 'delay__parameterized14' [/home/moginh/Projects/BConv/BConv.srcs/sources_1/new/delay.v:23]
 	Parameter N bound to: 6 - type: integer 
 	Parameter BW bound to: 96 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'delay__parameterized3' (0#1) [/home/moginh/Projects/BConv/BConv.srcs/sources_1/new/delay.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'delay__parameterized14' (0#1) [/home/moginh/Projects/BConv/BConv.srcs/sources_1/new/delay.v:23]
 INFO: [Synth 8-6157] synthesizing module 'pipeline__parameterized2' [/home/moginh/Projects/BConv/BConv.srcs/sources_1/new/pipeline.v:23]
 	Parameter BW bound to: 50 - type: integer 
 INFO: [Synth 8-6155] done synthesizing module 'pipeline__parameterized2' (0#1) [/home/moginh/Projects/BConv/BConv.srcs/sources_1/new/pipeline.v:23]
-INFO: [Synth 8-6157] synthesizing module 'delay__parameterized4' [/home/moginh/Projects/BConv/BConv.srcs/sources_1/new/delay.v:23]
-	Parameter N bound to: 4 - type: integer 
-	Parameter BW bound to: 48 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'delay__parameterized4' (0#1) [/home/moginh/Projects/BConv/BConv.srcs/sources_1/new/delay.v:23]
 INFO: [Synth 8-6155] done synthesizing module 'ModMul' (0#1) [/home/moginh/Projects/BConv/BConv.srcs/sources_1/new/ModMul.v:24]
+INFO: [Synth 8-6157] synthesizing module 'DIV2' [/home/moginh/Projects/BConv/BConv.srcs/sources_1/new/DIV2.v:23]
+	Parameter BW bound to: 48 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'DIV2' (0#1) [/home/moginh/Projects/BConv/BConv.srcs/sources_1/new/DIV2.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'RBU_V2' (0#1) [/home/moginh/Projects/BConv/BConv.srcs/sources_1/new/RBU_V2.v:44]
+INFO: [Synth 8-6155] done synthesizing module 'RBUA' (0#1) [/home/moginh/Projects/BConv/BConv.srcs/sources_1/new/RBUA.sv:23]
+INFO: [Synth 8-6155] done synthesizing module 'BConvEngine_8PE' (0#1) [/home/moginh/Projects/BConv/BConv.srcs/sources_1/new/BConvEngine_8PE.sv:23]
+WARNING: [Synth 8-7129] Port replay_restart in module BConvEngine_8PE is either unconnected or has no load
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 3187.309 ; gain = 476.684 ; free physical = 69450 ; free virtual = 123624
+Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 3193.465 ; gain = 482.684 ; free physical = 115143 ; free virtual = 127283
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 3202.152 ; gain = 491.527 ; free physical = 69450 ; free virtual = 123624
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 3211.277 ; gain = 500.496 ; free physical = 115141 ; free virtual = 127282
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 3202.152 ; gain = 491.527 ; free physical = 69450 ; free virtual = 123624
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 3211.277 ; gain = 500.496 ; free physical = 115141 ; free virtual = 127282
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00.03 ; elapsed = 00:00:00.02 . Memory (MB): peak = 3202.152 ; gain = 0.000 ; free physical = 69451 ; free virtual = 123625
+Netlist sorting complete. Time (s): cpu = 00:00:00.4 ; elapsed = 00:00:00.4 . Memory (MB): peak = 3211.277 ; gain = 0.000 ; free physical = 115147 ; free virtual = 127288
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
@@ -113,13 +203,13 @@ Parsing XDC File [/home/moginh/Projects/BConv/BConv.srcs/constrs_1/new/timing.xd
 Finished Parsing XDC File [/home/moginh/Projects/BConv/BConv.srcs/constrs_1/new/timing.xdc]
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3361.715 ; gain = 0.000 ; free physical = 69412 ; free virtual = 123586
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3386.809 ; gain = 0.000 ; free physical = 115073 ; free virtual = 127214
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00.09 ; elapsed = 00:00:00.04 . Memory (MB): peak = 3361.750 ; gain = 0.000 ; free physical = 69411 ; free virtual = 123585
+Constraint Validation Runtime : Time (s): cpu = 00:00:02 ; elapsed = 00:00:00.54 . Memory (MB): peak = 3396.715 ; gain = 9.871 ; free physical = 115070 ; free virtual = 127211
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 3361.750 ; gain = 651.125 ; free physical = 69415 ; free virtual = 123588
+Finished Constraint Validation : Time (s): cpu = 00:00:21 ; elapsed = 00:00:19 . Memory (MB): peak = 3396.715 ; gain = 685.934 ; free physical = 115056 ; free virtual = 127197
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
@@ -127,25 +217,29 @@ Start Loading Part and Timing Information
 Loading part: xcu280-fsvh2892-2L-e
 INFO: [Synth 8-6742] Reading net delay rules and data
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 3361.750 ; gain = 651.125 ; free physical = 69415 ; free virtual = 123589
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:21 ; elapsed = 00:00:19 . Memory (MB): peak = 3396.715 ; gain = 685.934 ; free physical = 115056 ; free virtual = 127197
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 3361.750 ; gain = 651.125 ; free physical = 69415 ; free virtual = 123589
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:21 ; elapsed = 00:00:19 . Memory (MB): peak = 3396.715 ; gain = 685.934 ; free physical = 115056 ; free virtual = 127197
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Preparing Guide Design
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Doing Graph Differ : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 3361.750 ; gain = 651.125 ; free physical = 69413 ; free virtual = 123588
+Finished Doing Graph Differ : Time (s): cpu = 00:00:21 ; elapsed = 00:00:19 . Memory (MB): peak = 3396.715 ; gain = 685.934 ; free physical = 115055 ; free virtual = 127198
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Preparing Guide Design : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 3361.750 ; gain = 651.125 ; free physical = 69413 ; free virtual = 123588
+Finished Preparing Guide Design : Time (s): cpu = 00:00:21 ; elapsed = 00:00:19 . Memory (MB): peak = 3396.715 ; gain = 685.934 ; free physical = 115055 ; free virtual = 127198
 ---------------------------------------------------------------------------------
+WARNING: [Synth 8-327] inferring latch for variable 'mux_lat_sel_reg[4]' [/home/moginh/Projects/BConv/BConv.srcs/sources_1/new/RBU_V2.v:93]
+WARNING: [Synth 8-327] inferring latch for variable 'mux_lat_sel_reg[2]' [/home/moginh/Projects/BConv/BConv.srcs/sources_1/new/RBU_V2.v:93]
+WARNING: [Synth 8-327] inferring latch for variable 'mux_lat_sel_reg[1]' [/home/moginh/Projects/BConv/BConv.srcs/sources_1/new/RBU_V2.v:93]
+WARNING: [Synth 8-327] inferring latch for variable 'mux_lat_sel_mu_reg' [/home/moginh/Projects/BConv/BConv.srcs/sources_1/new/RBU_V2.v:98]
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:15 ; elapsed = 00:00:15 . Memory (MB): peak = 3361.750 ; gain = 651.125 ; free physical = 69413 ; free virtual = 123587
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:22 ; elapsed = 00:00:19 . Memory (MB): peak = 3396.715 ; gain = 685.934 ; free physical = 115056 ; free virtual = 127198
 ---------------------------------------------------------------------------------
 
 
@@ -162,28 +256,37 @@ Start RTL Component Statistics
 ---------------------------------------------------------------------------------
 Detailed RTL Component Info : 
 +---Adders : 
-	   5 Input   96 Bit       Adders := 1     
-	   3 Input   84 Bit       Adders := 1     
-	   5 Input   50 Bit       Adders := 1     
-	   3 Input   48 Bit       Adders := 2     
-	   4 Input   48 Bit       Adders := 1     
-	   5 Input   37 Bit       Adders := 1     
-	   4 Input   37 Bit       Adders := 2     
-	   5 Input   35 Bit       Adders := 2     
-	   4 Input   35 Bit       Adders := 4     
-	   2 Input   18 Bit       Adders := 6     
-	   2 Input   17 Bit       Adders := 12    
+	   5 Input   96 Bit       Adders := 8     
+	   3 Input   84 Bit       Adders := 8     
+	   5 Input   50 Bit       Adders := 8     
+	   4 Input   49 Bit       Adders := 8     
+	   2 Input   49 Bit       Adders := 8     
+	   3 Input   48 Bit       Adders := 32    
+	   4 Input   48 Bit       Adders := 8     
+	   2 Input   48 Bit       Adders := 32    
+	   5 Input   37 Bit       Adders := 8     
+	   4 Input   37 Bit       Adders := 16    
+	   5 Input   35 Bit       Adders := 16    
+	   4 Input   35 Bit       Adders := 32    
+	   2 Input   18 Bit       Adders := 48    
+	   2 Input   17 Bit       Adders := 96    
 +---Registers : 
-	               96 Bit    Registers := 7     
-	               51 Bit    Registers := 5     
-	               50 Bit    Registers := 1     
-	               48 Bit    Registers := 14    
-	               36 Bit    Registers := 3     
-	               34 Bit    Registers := 6     
-	               32 Bit    Registers := 8     
+	               96 Bit    Registers := 56    
+	               51 Bit    Registers := 40    
+	               50 Bit    Registers := 41    
+	               48 Bit    Registers := 743   
+	               36 Bit    Registers := 24    
+	               34 Bit    Registers := 48    
+	               32 Bit    Registers := 64    
+	               12 Bit    Registers := 1     
+	                1 Bit    Registers := 16    
 +---Muxes : 
-	   2 Input   48 Bit        Muxes := 2     
-	   2 Input   35 Bit        Muxes := 3     
+	   2 Input   50 Bit        Muxes := 16    
+	   2 Input   48 Bit        Muxes := 152   
+	   2 Input   35 Bit        Muxes := 24    
+	   2 Input   12 Bit        Muxes := 1     
+	   8 Input    1 Bit        Muxes := 88    
+	   2 Input    1 Bit        Muxes := 2     
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
 ---------------------------------------------------------------------------------
@@ -284,27 +387,32 @@ DSP Report: register pipe_w1/out_reg is absorbed into DSP pipe_w1/out_reg.
 DSP Report: register mul_y1/out_reg is absorbed into DSP pipe_w1/out_reg.
 DSP Report: operator mul_y1/product is absorbed into DSP pipe_w1/out_reg.
 DSP Report: operator q0q1 is absorbed into DSP pipe_w1/out_reg.
+WARNING: [Synth 8-3936] Found unconnected internal register 'A1_delay_1/buffer_reg[1]' and it is trimmed from '48' to '1' bits. [/home/moginh/Projects/BConv/BConv.srcs/sources_1/new/delay.v:36]
+WARNING: [Synth 8-3936] Found unconnected internal register 'A1_delay_1/buffer_reg[0]' and it is trimmed from '48' to '1' bits. [/home/moginh/Projects/BConv/BConv.srcs/sources_1/new/delay.v:36]
+WARNING: [Synth 8-7129] Port replay_restart in module BConvEngine_8PE is either unconnected or has no load
+WARNING: [Synth 8-3332] Sequential element (mux_lat_sel_reg[1]) is unused and will be removed from module RBU_V2.
+WARNING: [Synth 8-3332] Sequential element (mux_lat_sel_reg[4]) is unused and will be removed from module RBU_V2.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:19 ; elapsed = 00:00:19 . Memory (MB): peak = 3361.750 ; gain = 651.125 ; free physical = 69413 ; free virtual = 123588
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:33 ; elapsed = 00:00:31 . Memory (MB): peak = 3396.715 ; gain = 685.934 ; free physical = 115068 ; free virtual = 127210
 ---------------------------------------------------------------------------------
- Sort Area is  out_reg_8 : 0 0 : 2424 2424 : Used 1 time 100
- Sort Area is  out_reg_a : 0 0 : 2424 2424 : Used 1 time 100
- Sort Area is  out_reg_b : 0 0 : 2424 2424 : Used 1 time 100
- Sort Area is  pipe_w1/out_reg_13 : 0 0 : 2379 2379 : Used 1 time 100
- Sort Area is  pipe_w3/out_reg_15 : 0 0 : 2347 2347 : Used 1 time 100
- Sort Area is  pipe_w5/out_reg_17 : 0 0 : 2347 2347 : Used 1 time 100
- Sort Area is  pipe_z1/out_reg_12 : 0 0 : 2299 2299 : Used 1 time 100
- Sort Area is  pipe_z3/out_reg_f : 0 0 : 2299 2299 : Used 1 time 100
- Sort Area is  pipe_z5/out_reg_11 : 0 0 : 2299 2299 : Used 1 time 100
- Sort Area is  out_reg_4 : 0 0 : 2215 2215 : Used 1 time 100
- Sort Area is  out_reg_6 : 0 0 : 2215 2215 : Used 1 time 100
- Sort Area is  out_reg_7 : 0 0 : 2215 2215 : Used 1 time 100
- Sort Area is  out_reg_0 : 0 0 : 1978 1978 : Used 1 time 100
- Sort Area is  out_reg_2 : 0 0 : 1978 1978 : Used 1 time 100
- Sort Area is  out_reg_3 : 0 0 : 1978 1978 : Used 1 time 100
- Sort Area is  out_reg_c : 0 0 : 1978 1978 : Used 1 time 100
- Sort Area is  out_reg_d : 0 0 : 1978 1978 : Used 1 time 100
- Sort Area is  out_reg_e : 0 0 : 1978 1978 : Used 1 time 100
+ Sort Area is RBU_V2 out_reg_8 : 0 0 : 2424 2424 : Used 8 time 100
+ Sort Area is RBU_V2 out_reg_a : 0 0 : 2424 2424 : Used 8 time 100
+ Sort Area is RBU_V2 out_reg_b : 0 0 : 2424 2424 : Used 8 time 100
+ Sort Area is RBU_V2 pipe_w1/out_reg_13 : 0 0 : 2379 2379 : Used 8 time 100
+ Sort Area is RBU_V2 pipe_w3/out_reg_15 : 0 0 : 2347 2347 : Used 8 time 100
+ Sort Area is RBU_V2 pipe_w5/out_reg_17 : 0 0 : 2347 2347 : Used 8 time 100
+ Sort Area is RBU_V2 pipe_z1/out_reg_12 : 0 0 : 2299 2299 : Used 8 time 100
+ Sort Area is RBU_V2 pipe_z3/out_reg_f : 0 0 : 2299 2299 : Used 8 time 100
+ Sort Area is RBU_V2 pipe_z5/out_reg_11 : 0 0 : 2299 2299 : Used 8 time 100
+ Sort Area is RBU_V2 out_reg_4 : 0 0 : 2215 2215 : Used 8 time 100
+ Sort Area is RBU_V2 out_reg_6 : 0 0 : 2215 2215 : Used 8 time 100
+ Sort Area is RBU_V2 out_reg_7 : 0 0 : 2215 2215 : Used 8 time 100
+ Sort Area is RBU_V2 out_reg_0 : 0 0 : 1978 1978 : Used 8 time 100
+ Sort Area is RBU_V2 out_reg_2 : 0 0 : 1978 1978 : Used 8 time 100
+ Sort Area is RBU_V2 out_reg_3 : 0 0 : 1978 1978 : Used 8 time 100
+ Sort Area is RBU_V2 out_reg_c : 0 0 : 1978 1978 : Used 8 time 100
+ Sort Area is RBU_V2 out_reg_d : 0 0 : 1978 1978 : Used 8 time 100
+ Sort Area is RBU_V2 out_reg_e : 0 0 : 1978 1978 : Used 8 time 100
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP, Shift Register and Retiming Reporting
 ---------------------------------------------------------------------------------
@@ -341,19 +449,19 @@ Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:26 ; elapsed = 00:00:27 . Memory (MB): peak = 3676.965 ; gain = 966.340 ; free physical = 69012 ; free virtual = 123187
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:41 ; elapsed = 00:00:39 . Memory (MB): peak = 3705.902 ; gain = 995.121 ; free physical = 114722 ; free virtual = 126865
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:28 ; elapsed = 00:00:29 . Memory (MB): peak = 3715.012 ; gain = 1004.387 ; free physical = 68934 ; free virtual = 123133
+Finished Timing Optimization : Time (s): cpu = 00:00:46 ; elapsed = 00:00:44 . Memory (MB): peak = 3780.949 ; gain = 1070.168 ; free physical = 114645 ; free virtual = 126788
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:29 ; elapsed = 00:00:30 . Memory (MB): peak = 3715.012 ; gain = 1004.387 ; free physical = 68912 ; free virtual = 123131
+Finished Technology Mapping : Time (s): cpu = 00:01:00 ; elapsed = 00:00:58 . Memory (MB): peak = 3875.855 ; gain = 1165.074 ; free physical = 114546 ; free virtual = 126689
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -371,53 +479,61 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:33 ; elapsed = 00:00:33 . Memory (MB): peak = 3721.949 ; gain = 1011.324 ; free physical = 68791 ; free virtual = 122969
+Finished IO Insertion : Time (s): cpu = 00:01:05 ; elapsed = 00:01:03 . Memory (MB): peak = 3905.402 ; gain = 1194.621 ; free physical = 114520 ; free virtual = 126663
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:33 ; elapsed = 00:00:33 . Memory (MB): peak = 3721.949 ; gain = 1011.324 ; free physical = 68791 ; free virtual = 122969
+Finished Renaming Generated Instances : Time (s): cpu = 00:01:05 ; elapsed = 00:01:03 . Memory (MB): peak = 3905.402 ; gain = 1194.621 ; free physical = 114520 ; free virtual = 126663
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:33 ; elapsed = 00:00:34 . Memory (MB): peak = 3721.949 ; gain = 1011.324 ; free physical = 68792 ; free virtual = 122970
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:12 ; elapsed = 00:01:11 . Memory (MB): peak = 3923.684 ; gain = 1212.902 ; free physical = 114500 ; free virtual = 126642
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:34 ; elapsed = 00:00:34 . Memory (MB): peak = 3721.949 ; gain = 1011.324 ; free physical = 68792 ; free virtual = 122970
+Finished Renaming Generated Ports : Time (s): cpu = 00:01:13 ; elapsed = 00:01:11 . Memory (MB): peak = 3923.684 ; gain = 1212.902 ; free physical = 114500 ; free virtual = 126642
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:34 ; elapsed = 00:00:34 . Memory (MB): peak = 3721.949 ; gain = 1011.324 ; free physical = 68800 ; free virtual = 122978
+Finished Handling Custom Attributes : Time (s): cpu = 00:01:13 ; elapsed = 00:01:12 . Memory (MB): peak = 3923.684 ; gain = 1212.902 ; free physical = 114500 ; free virtual = 126642
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:34 ; elapsed = 00:00:34 . Memory (MB): peak = 3721.949 ; gain = 1011.324 ; free physical = 68800 ; free virtual = 122979
+Finished Renaming Generated Nets : Time (s): cpu = 00:01:13 ; elapsed = 00:01:12 . Memory (MB): peak = 3923.684 ; gain = 1212.902 ; free physical = 114500 ; free virtual = 126643
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP, Shift Register and Retiming Reporting
 ---------------------------------------------------------------------------------
 
 Static Shift Register Report:
-+------------+---------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
-|Module Name | RTL Name                        | Length | Width | Reset Signal | Pull out first Reg | Pull out last Reg | SRL16E | SRLC32E | 
-+------------+---------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
-|ModMul      | delay_q/buffer_reg[2][31]       | 3      | 32    | NO           | NO                 | YES               | 32     | 0       | 
-|ModMul      | delay_q/buffer_reg[3][47]       | 4      | 16    | NO           | NO                 | YES               | 16     | 0       | 
-|ModMul      | delay_q_final/buffer_reg[3][47] | 5      | 48    | NO           | NO                 | YES               | 48     | 0       | 
-|ModMul      | delay_z/buffer_reg[5][49]       | 5      | 3     | NO           | NO                 | YES               | 3      | 0       | 
-|ModMul      | delay_z/buffer_reg[5][46]       | 6      | 32    | NO           | YES                | YES               | 32     | 0       | 
-|ModMul      | delay_z/buffer_reg[5][14]       | 6      | 15    | NO           | NO                 | YES               | 15     | 0       | 
-+------------+---------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
++----------------+----------------------------------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+|Module Name     | RTL Name                                                             | Length | Width | Reset Signal | Pull out first Reg | Pull out last Reg | SRL16E | SRLC32E | 
++----------------+----------------------------------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+|BConvEngine_8PE | RBUA_unit/RBU_inst[0].RBU_i/ModMul_0/delay_q/buffer_reg[2][31]       | 3      | 256   | NO           | NO                 | YES               | 256    | 0       | 
+|BConvEngine_8PE | RBUA_unit/RBU_inst[0].RBU_i/ModMul_0/delay_q/buffer_reg[3][47]       | 4      | 128   | NO           | NO                 | YES               | 128    | 0       | 
+|BConvEngine_8PE | RBUA_unit/RBU_inst[0].RBU_i/ModMul_0/delay_q_final/buffer_reg[3][47] | 5      | 408   | NO           | NO                 | YES               | 408    | 0       | 
+|BConvEngine_8PE | RBUA_unit/RBU_inst[0].RBU_i/ModMul_0/delay_z/buffer_reg[5][46]       | 6      | 256   | NO           | YES                | YES               | 256    | 0       | 
+|BConvEngine_8PE | RBUA_unit/RBU_inst[0].RBU_i/ModMul_0/delay_z/buffer_reg[5][14]       | 6      | 120   | NO           | NO                 | YES               | 120    | 0       | 
+|BConvEngine_8PE | RBUA_unit/RBU_inst[0].RBU_i/q_delay_3/buffer_reg[7][47]              | 9      | 384   | NO           | NO                 | YES               | 384    | 0       | 
+|BConvEngine_8PE | RBUA_unit/RBU_inst[0].RBU_i/B0_DIV2_delay/buffer_reg[10][47]         | 11     | 720   | NO           | NO                 | YES               | 720    | 0       | 
+|BConvEngine_8PE | RBUA_unit/RBU_inst[0].RBU_i/A1_delay_2/buffer_reg[12][47]            | 13     | 384   | NO           | NO                 | YES               | 384    | 0       | 
+|BConvEngine_8PE | C_array2_delay/buffer_reg[3][47]                                     | 4      | 48    | NO           | NO                 | YES               | 48     | 0       | 
+|BConvEngine_8PE | C_array3_delay/buffer_reg[5][47]                                     | 6      | 48    | NO           | NO                 | YES               | 48     | 0       | 
+|BConvEngine_8PE | C_array4_delay/buffer_reg[7][47]                                     | 8      | 48    | NO           | NO                 | YES               | 48     | 0       | 
+|BConvEngine_8PE | C_array5_delay/buffer_reg[11][47]                                    | 12     | 48    | NO           | NO                 | YES               | 48     | 0       | 
+|BConvEngine_8PE | C_array6_delay/buffer_reg[13][47]                                    | 14     | 48    | NO           | NO                 | YES               | 48     | 0       | 
+|BConvEngine_8PE | C_array7_delay/buffer_reg[15][47]                                    | 16     | 48    | NO           | NO                 | YES               | 48     | 0       | 
++----------------+----------------------------------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
 
 ---------------------------------------------------------------------------------
 Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
@@ -430,6 +546,132 @@ DSP Final Report (the ' indicates corresponding REG is set)
 +------------+----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
 |Module Name | DSP Mapping    | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
 +------------+----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|dsp_mul     | Dynamic        | -      | -      | -      | -      | 36     | -    | -    | -    | -    | -     | 0    | 1    | 
+|dsp_mul     | Dynamic        | -      | -      | -      | -      | 36     | -    | -    | -    | -    | -     | 0    | 1    | 
+|dsp_mul     | Dynamic        | -      | -      | -      | -      | 36     | -    | -    | -    | -    | -     | 0    | 1    | 
+|dsp_mul     | (A'*B'')'      | 17     | 17     | -      | -      | 34     | 1    | 2    | -    | -    | -     | 0    | 1    | 
+|dsp_mul     | (A'*B'')'      | 17     | 17     | -      | -      | 34     | 1    | 2    | -    | -    | -     | 0    | 1    | 
+|dsp_mul     | (A'*B'')'      | 15     | 16     | -      | -      | 34     | 1    | 2    | -    | -    | -     | 0    | 1    | 
+|dsp_mul     | ((A'*B'')')'   | 16     | 16     | -      | -      | 32     | 1    | 2    | -    | -    | -     | 1    | 1    | 
+|dsp_mul     | ((A'*B'')')'   | 16     | 16     | -      | -      | 32     | 1    | 2    | -    | -    | -     | 1    | 1    | 
+|dsp_mul     | ((A'*B'')')'   | 16     | 16     | -      | -      | 32     | 1    | 2    | -    | -    | -     | 1    | 1    | 
+|dsp_mul     | ((A*B)')'      | 16     | 16     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 1    | 1    | 
+|dsp_mul     | ((A*B)')'      | 16     | 16     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 1    | 1    | 
+|dsp_mul     | ((A*B)')'      | 16     | 16     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 1    | 1    | 
+|ModMul      | ((D'+A''*B)')' | 16     | 17     | -      | 16     | 34     | 2    | 0    | -    | 0    | 0     | 1    | 1    | 
+|ModMul      | ((D'+A''*B)')' | 16     | 17     | -      | 16     | 34     | 2    | 0    | -    | 0    | 0     | 1    | 1    | 
+|ModMul      | ((D'+A''*B)')' | 16     | 17     | -      | 16     | 34     | 2    | 0    | -    | 0    | 0     | 1    | 1    | 
+|ModMul      | ((D+A*B)')'    | 16     | 17     | -      | 16     | 34     | 0    | 0    | -    | 0    | 0     | 1    | 1    | 
+|ModMul      | ((D+A*B)')'    | 16     | 17     | -      | 16     | 34     | 0    | 0    | -    | 0    | 0     | 1    | 1    | 
+|ModMul      | ((D+A*B)')'    | 16     | 17     | -      | 16     | 34     | 0    | 0    | -    | 0    | 0     | 1    | 1    | 
+|dsp_mul     | Dynamic        | -      | -      | -      | -      | 36     | -    | -    | -    | -    | -     | 0    | 1    | 
+|dsp_mul     | Dynamic        | -      | -      | -      | -      | 36     | -    | -    | -    | -    | -     | 0    | 1    | 
+|dsp_mul     | Dynamic        | -      | -      | -      | -      | 36     | -    | -    | -    | -    | -     | 0    | 1    | 
+|dsp_mul     | (A'*B'')'      | 17     | 17     | -      | -      | 34     | 1    | 2    | -    | -    | -     | 0    | 1    | 
+|dsp_mul     | (A'*B'')'      | 17     | 17     | -      | -      | 34     | 1    | 2    | -    | -    | -     | 0    | 1    | 
+|dsp_mul     | (A'*B'')'      | 15     | 16     | -      | -      | 34     | 1    | 2    | -    | -    | -     | 0    | 1    | 
+|dsp_mul     | ((A'*B'')')'   | 16     | 16     | -      | -      | 32     | 1    | 2    | -    | -    | -     | 1    | 1    | 
+|dsp_mul     | ((A'*B'')')'   | 16     | 16     | -      | -      | 32     | 1    | 2    | -    | -    | -     | 1    | 1    | 
+|dsp_mul     | ((A'*B'')')'   | 16     | 16     | -      | -      | 32     | 1    | 2    | -    | -    | -     | 1    | 1    | 
+|dsp_mul     | ((A*B)')'      | 16     | 16     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 1    | 1    | 
+|dsp_mul     | ((A*B)')'      | 16     | 16     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 1    | 1    | 
+|dsp_mul     | ((A*B)')'      | 16     | 16     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 1    | 1    | 
+|ModMul      | ((D'+A''*B)')' | 16     | 17     | -      | 16     | 34     | 2    | 0    | -    | 0    | 0     | 1    | 1    | 
+|ModMul      | ((D'+A''*B)')' | 16     | 17     | -      | 16     | 34     | 2    | 0    | -    | 0    | 0     | 1    | 1    | 
+|ModMul      | ((D'+A''*B)')' | 16     | 17     | -      | 16     | 34     | 2    | 0    | -    | 0    | 0     | 1    | 1    | 
+|ModMul      | ((D+A*B)')'    | 16     | 17     | -      | 16     | 34     | 0    | 0    | -    | 0    | 0     | 1    | 1    | 
+|ModMul      | ((D+A*B)')'    | 16     | 17     | -      | 16     | 34     | 0    | 0    | -    | 0    | 0     | 1    | 1    | 
+|ModMul      | ((D+A*B)')'    | 16     | 17     | -      | 16     | 34     | 0    | 0    | -    | 0    | 0     | 1    | 1    | 
+|dsp_mul     | Dynamic        | -      | -      | -      | -      | 36     | -    | -    | -    | -    | -     | 0    | 1    | 
+|dsp_mul     | Dynamic        | -      | -      | -      | -      | 36     | -    | -    | -    | -    | -     | 0    | 1    | 
+|dsp_mul     | Dynamic        | -      | -      | -      | -      | 36     | -    | -    | -    | -    | -     | 0    | 1    | 
+|dsp_mul     | (A'*B'')'      | 17     | 17     | -      | -      | 34     | 1    | 2    | -    | -    | -     | 0    | 1    | 
+|dsp_mul     | (A'*B'')'      | 17     | 17     | -      | -      | 34     | 1    | 2    | -    | -    | -     | 0    | 1    | 
+|dsp_mul     | (A'*B'')'      | 15     | 16     | -      | -      | 34     | 1    | 2    | -    | -    | -     | 0    | 1    | 
+|dsp_mul     | ((A'*B'')')'   | 16     | 16     | -      | -      | 32     | 1    | 2    | -    | -    | -     | 1    | 1    | 
+|dsp_mul     | ((A'*B'')')'   | 16     | 16     | -      | -      | 32     | 1    | 2    | -    | -    | -     | 1    | 1    | 
+|dsp_mul     | ((A'*B'')')'   | 16     | 16     | -      | -      | 32     | 1    | 2    | -    | -    | -     | 1    | 1    | 
+|dsp_mul     | ((A*B)')'      | 16     | 16     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 1    | 1    | 
+|dsp_mul     | ((A*B)')'      | 16     | 16     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 1    | 1    | 
+|dsp_mul     | ((A*B)')'      | 16     | 16     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 1    | 1    | 
+|ModMul      | ((D'+A''*B)')' | 16     | 17     | -      | 16     | 34     | 2    | 0    | -    | 0    | 0     | 1    | 1    | 
+|ModMul      | ((D'+A''*B)')' | 16     | 17     | -      | 16     | 34     | 2    | 0    | -    | 0    | 0     | 1    | 1    | 
+|ModMul      | ((D'+A''*B)')' | 16     | 17     | -      | 16     | 34     | 2    | 0    | -    | 0    | 0     | 1    | 1    | 
+|ModMul      | ((D+A*B)')'    | 16     | 17     | -      | 16     | 34     | 0    | 0    | -    | 0    | 0     | 1    | 1    | 
+|ModMul      | ((D+A*B)')'    | 16     | 17     | -      | 16     | 34     | 0    | 0    | -    | 0    | 0     | 1    | 1    | 
+|ModMul      | ((D+A*B)')'    | 16     | 17     | -      | 16     | 34     | 0    | 0    | -    | 0    | 0     | 1    | 1    | 
+|dsp_mul     | Dynamic        | -      | -      | -      | -      | 36     | -    | -    | -    | -    | -     | 0    | 1    | 
+|dsp_mul     | Dynamic        | -      | -      | -      | -      | 36     | -    | -    | -    | -    | -     | 0    | 1    | 
+|dsp_mul     | Dynamic        | -      | -      | -      | -      | 36     | -    | -    | -    | -    | -     | 0    | 1    | 
+|dsp_mul     | (A'*B'')'      | 17     | 17     | -      | -      | 34     | 1    | 2    | -    | -    | -     | 0    | 1    | 
+|dsp_mul     | (A'*B'')'      | 17     | 17     | -      | -      | 34     | 1    | 2    | -    | -    | -     | 0    | 1    | 
+|dsp_mul     | (A'*B'')'      | 15     | 16     | -      | -      | 34     | 1    | 2    | -    | -    | -     | 0    | 1    | 
+|dsp_mul     | ((A'*B'')')'   | 16     | 16     | -      | -      | 32     | 1    | 2    | -    | -    | -     | 1    | 1    | 
+|dsp_mul     | ((A'*B'')')'   | 16     | 16     | -      | -      | 32     | 1    | 2    | -    | -    | -     | 1    | 1    | 
+|dsp_mul     | ((A'*B'')')'   | 16     | 16     | -      | -      | 32     | 1    | 2    | -    | -    | -     | 1    | 1    | 
+|dsp_mul     | ((A*B)')'      | 16     | 16     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 1    | 1    | 
+|dsp_mul     | ((A*B)')'      | 16     | 16     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 1    | 1    | 
+|dsp_mul     | ((A*B)')'      | 16     | 16     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 1    | 1    | 
+|ModMul      | ((D'+A''*B)')' | 16     | 17     | -      | 16     | 34     | 2    | 0    | -    | 0    | 0     | 1    | 1    | 
+|ModMul      | ((D'+A''*B)')' | 16     | 17     | -      | 16     | 34     | 2    | 0    | -    | 0    | 0     | 1    | 1    | 
+|ModMul      | ((D'+A''*B)')' | 16     | 17     | -      | 16     | 34     | 2    | 0    | -    | 0    | 0     | 1    | 1    | 
+|ModMul      | ((D+A*B)')'    | 16     | 17     | -      | 16     | 34     | 0    | 0    | -    | 0    | 0     | 1    | 1    | 
+|ModMul      | ((D+A*B)')'    | 16     | 17     | -      | 16     | 34     | 0    | 0    | -    | 0    | 0     | 1    | 1    | 
+|ModMul      | ((D+A*B)')'    | 16     | 17     | -      | 16     | 34     | 0    | 0    | -    | 0    | 0     | 1    | 1    | 
+|dsp_mul     | Dynamic        | -      | -      | -      | -      | 36     | -    | -    | -    | -    | -     | 0    | 1    | 
+|dsp_mul     | Dynamic        | -      | -      | -      | -      | 36     | -    | -    | -    | -    | -     | 0    | 1    | 
+|dsp_mul     | Dynamic        | -      | -      | -      | -      | 36     | -    | -    | -    | -    | -     | 0    | 1    | 
+|dsp_mul     | (A'*B'')'      | 17     | 17     | -      | -      | 34     | 1    | 2    | -    | -    | -     | 0    | 1    | 
+|dsp_mul     | (A'*B'')'      | 17     | 17     | -      | -      | 34     | 1    | 2    | -    | -    | -     | 0    | 1    | 
+|dsp_mul     | (A'*B'')'      | 15     | 16     | -      | -      | 34     | 1    | 2    | -    | -    | -     | 0    | 1    | 
+|dsp_mul     | ((A'*B'')')'   | 16     | 16     | -      | -      | 32     | 1    | 2    | -    | -    | -     | 1    | 1    | 
+|dsp_mul     | ((A'*B'')')'   | 16     | 16     | -      | -      | 32     | 1    | 2    | -    | -    | -     | 1    | 1    | 
+|dsp_mul     | ((A'*B'')')'   | 16     | 16     | -      | -      | 32     | 1    | 2    | -    | -    | -     | 1    | 1    | 
+|dsp_mul     | ((A*B)')'      | 16     | 16     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 1    | 1    | 
+|dsp_mul     | ((A*B)')'      | 16     | 16     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 1    | 1    | 
+|dsp_mul     | ((A*B)')'      | 16     | 16     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 1    | 1    | 
+|ModMul      | ((D'+A''*B)')' | 16     | 17     | -      | 16     | 34     | 2    | 0    | -    | 0    | 0     | 1    | 1    | 
+|ModMul      | ((D'+A''*B)')' | 16     | 17     | -      | 16     | 34     | 2    | 0    | -    | 0    | 0     | 1    | 1    | 
+|ModMul      | ((D'+A''*B)')' | 16     | 17     | -      | 16     | 34     | 2    | 0    | -    | 0    | 0     | 1    | 1    | 
+|ModMul      | ((D+A*B)')'    | 16     | 17     | -      | 16     | 34     | 0    | 0    | -    | 0    | 0     | 1    | 1    | 
+|ModMul      | ((D+A*B)')'    | 16     | 17     | -      | 16     | 34     | 0    | 0    | -    | 0    | 0     | 1    | 1    | 
+|ModMul      | ((D+A*B)')'    | 16     | 17     | -      | 16     | 34     | 0    | 0    | -    | 0    | 0     | 1    | 1    | 
+|dsp_mul     | Dynamic        | -      | -      | -      | -      | 36     | -    | -    | -    | -    | -     | 0    | 1    | 
+|dsp_mul     | Dynamic        | -      | -      | -      | -      | 36     | -    | -    | -    | -    | -     | 0    | 1    | 
+|dsp_mul     | Dynamic        | -      | -      | -      | -      | 36     | -    | -    | -    | -    | -     | 0    | 1    | 
+|dsp_mul     | (A'*B'')'      | 17     | 17     | -      | -      | 34     | 1    | 2    | -    | -    | -     | 0    | 1    | 
+|dsp_mul     | (A'*B'')'      | 17     | 17     | -      | -      | 34     | 1    | 2    | -    | -    | -     | 0    | 1    | 
+|dsp_mul     | (A'*B'')'      | 15     | 16     | -      | -      | 34     | 1    | 2    | -    | -    | -     | 0    | 1    | 
+|dsp_mul     | ((A'*B'')')'   | 16     | 16     | -      | -      | 32     | 1    | 2    | -    | -    | -     | 1    | 1    | 
+|dsp_mul     | ((A'*B'')')'   | 16     | 16     | -      | -      | 32     | 1    | 2    | -    | -    | -     | 1    | 1    | 
+|dsp_mul     | ((A'*B'')')'   | 16     | 16     | -      | -      | 32     | 1    | 2    | -    | -    | -     | 1    | 1    | 
+|dsp_mul     | ((A*B)')'      | 16     | 16     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 1    | 1    | 
+|dsp_mul     | ((A*B)')'      | 16     | 16     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 1    | 1    | 
+|dsp_mul     | ((A*B)')'      | 16     | 16     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 1    | 1    | 
+|ModMul      | ((D'+A''*B)')' | 16     | 17     | -      | 16     | 34     | 2    | 0    | -    | 0    | 0     | 1    | 1    | 
+|ModMul      | ((D'+A''*B)')' | 16     | 17     | -      | 16     | 34     | 2    | 0    | -    | 0    | 0     | 1    | 1    | 
+|ModMul      | ((D'+A''*B)')' | 16     | 17     | -      | 16     | 34     | 2    | 0    | -    | 0    | 0     | 1    | 1    | 
+|ModMul      | ((D+A*B)')'    | 16     | 17     | -      | 16     | 34     | 0    | 0    | -    | 0    | 0     | 1    | 1    | 
+|ModMul      | ((D+A*B)')'    | 16     | 17     | -      | 16     | 34     | 0    | 0    | -    | 0    | 0     | 1    | 1    | 
+|ModMul      | ((D+A*B)')'    | 16     | 17     | -      | 16     | 34     | 0    | 0    | -    | 0    | 0     | 1    | 1    | 
+|dsp_mul     | Dynamic        | -      | -      | -      | -      | 36     | -    | -    | -    | -    | -     | 0    | 1    | 
+|dsp_mul     | Dynamic        | -      | -      | -      | -      | 36     | -    | -    | -    | -    | -     | 0    | 1    | 
+|dsp_mul     | Dynamic        | -      | -      | -      | -      | 36     | -    | -    | -    | -    | -     | 0    | 1    | 
+|dsp_mul     | (A'*B'')'      | 17     | 17     | -      | -      | 34     | 1    | 2    | -    | -    | -     | 0    | 1    | 
+|dsp_mul     | (A'*B'')'      | 17     | 17     | -      | -      | 34     | 1    | 2    | -    | -    | -     | 0    | 1    | 
+|dsp_mul     | (A'*B'')'      | 15     | 16     | -      | -      | 34     | 1    | 2    | -    | -    | -     | 0    | 1    | 
+|dsp_mul     | ((A'*B'')')'   | 16     | 16     | -      | -      | 32     | 1    | 2    | -    | -    | -     | 1    | 1    | 
+|dsp_mul     | ((A'*B'')')'   | 16     | 16     | -      | -      | 32     | 1    | 2    | -    | -    | -     | 1    | 1    | 
+|dsp_mul     | ((A'*B'')')'   | 16     | 16     | -      | -      | 32     | 1    | 2    | -    | -    | -     | 1    | 1    | 
+|dsp_mul     | ((A*B)')'      | 16     | 16     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 1    | 1    | 
+|dsp_mul     | ((A*B)')'      | 16     | 16     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 1    | 1    | 
+|dsp_mul     | ((A*B)')'      | 16     | 16     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 1    | 1    | 
+|ModMul      | ((D'+A''*B)')' | 16     | 17     | -      | 16     | 34     | 2    | 0    | -    | 0    | 0     | 1    | 1    | 
+|ModMul      | ((D'+A''*B)')' | 16     | 17     | -      | 16     | 34     | 2    | 0    | -    | 0    | 0     | 1    | 1    | 
+|ModMul      | ((D'+A''*B)')' | 16     | 17     | -      | 16     | 34     | 2    | 0    | -    | 0    | 0     | 1    | 1    | 
+|ModMul      | ((D+A*B)')'    | 16     | 17     | -      | 16     | 34     | 0    | 0    | -    | 0    | 0     | 1    | 1    | 
+|ModMul      | ((D+A*B)')'    | 16     | 17     | -      | 16     | 34     | 0    | 0    | -    | 0    | 0     | 1    | 1    | 
+|ModMul      | ((D+A*B)')'    | 16     | 17     | -      | 16     | 34     | 0    | 0    | -    | 0    | 0     | 1    | 1    | 
 |dsp_mul     | Dynamic        | -      | -      | -      | -      | 36     | -    | -    | -    | -    | -     | 0    | 1    | 
 |dsp_mul     | Dynamic        | -      | -      | -      | -      | 36     | -    | -    | -    | -    | -     | 0    | 1    | 
 |dsp_mul     | Dynamic        | -      | -      | -      | -      | 36     | -    | -    | -    | -    | -     | 0    | 1    | 
@@ -461,50 +703,52 @@ Report Cell Usage:
 +------+----------------+------+
 |      |Cell            |Count |
 +------+----------------+------+
-|1     |CARRY8          |   128|
-|2     |DSP_ALU         |    18|
-|4     |DSP_A_B_DATA    |    18|
-|7     |DSP_C_DATA      |    18|
-|9     |DSP_MULTIPLIER  |    18|
-|11    |DSP_M_DATA      |    18|
-|13    |DSP_OUTPUT      |    18|
-|14    |DSP_PREADD      |    18|
-|15    |DSP_PREADD_DATA |    18|
-|18    |LUT1            |     8|
-|19    |LUT2            |   391|
-|20    |LUT3            |   375|
-|21    |LUT4            |   374|
-|22    |LUT5            |    84|
-|23    |LUT6            |   139|
-|24    |SRL16E          |   146|
-|25    |FDCE            |   194|
-|26    |FDRE            |   621|
+|1     |CARRY8          |  1383|
+|2     |DSP_ALU         |   144|
+|4     |DSP_A_B_DATA    |   144|
+|7     |DSP_C_DATA      |   144|
+|9     |DSP_MULTIPLIER  |   144|
+|11    |DSP_M_DATA      |   144|
+|13    |DSP_OUTPUT      |   144|
+|14    |DSP_PREADD      |   144|
+|15    |DSP_PREADD_DATA |   144|
+|18    |LUT1            |    73|
+|19    |LUT2            |  4316|
+|20    |LUT3            |  6426|
+|21    |LUT4            |  4520|
+|22    |LUT5            |  2944|
+|23    |LUT6            |  1496|
+|24    |SRL16E          |  2944|
+|25    |FDCE            |  3812|
+|26    |FDRE            | 11978|
+|27    |LD              |    23|
 +------+----------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:34 ; elapsed = 00:00:34 . Memory (MB): peak = 3721.949 ; gain = 1011.324 ; free physical = 68800 ; free virtual = 122979
+Finished Writing Synthesis Report : Time (s): cpu = 00:01:14 ; elapsed = 00:01:12 . Memory (MB): peak = 3923.684 ; gain = 1212.902 ; free physical = 114500 ; free virtual = 126643
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 7 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:27 ; elapsed = 00:00:28 . Memory (MB): peak = 3721.949 ; gain = 851.727 ; free physical = 68800 ; free virtual = 122979
-Synthesis Optimization Complete : Time (s): cpu = 00:00:34 ; elapsed = 00:00:34 . Memory (MB): peak = 3721.957 ; gain = 1011.324 ; free physical = 68800 ; free virtual = 122979
+Synthesis finished with 0 errors, 0 critical warnings and 16 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:01:01 ; elapsed = 00:01:02 . Memory (MB): peak = 3923.684 ; gain = 1027.465 ; free physical = 114500 ; free virtual = 126643
+Synthesis Optimization Complete : Time (s): cpu = 00:01:14 ; elapsed = 00:01:12 . Memory (MB): peak = 3923.691 ; gain = 1212.902 ; free physical = 114500 ; free virtual = 126643
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00.03 ; elapsed = 00:00:00.03 . Memory (MB): peak = 3735.887 ; gain = 0.000 ; free physical = 69082 ; free virtual = 123260
-INFO: [Netlist 29-17] Analyzing 146 Unisim elements for replacement
+Netlist sorting complete. Time (s): cpu = 00:00:00.44 ; elapsed = 00:00:00.44 . Memory (MB): peak = 3955.527 ; gain = 0.000 ; free physical = 114776 ; free virtual = 126919
+INFO: [Netlist 29-17] Analyzing 1550 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3829.066 ; gain = 0.000 ; free physical = 69042 ; free virtual = 123221
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 4140.324 ; gain = 0.000 ; free physical = 114629 ; free virtual = 126772
 INFO: [Project 1-111] Unisim Transformation Summary:
-  A total of 18 instances were transformed.
-  DSP48E2 => DSP48E2 (DSP_ALU, DSP_A_B_DATA, DSP_C_DATA, DSP_MULTIPLIER, DSP_M_DATA, DSP_OUTPUT, DSP_PREADD, DSP_PREADD_DATA): 18 instances
+  A total of 167 instances were transformed.
+  DSP48E2 => DSP48E2 (DSP_ALU, DSP_A_B_DATA, DSP_C_DATA, DSP_MULTIPLIER, DSP_M_DATA, DSP_OUTPUT, DSP_PREADD, DSP_PREADD_DATA): 144 instances
+  LD => LDCE: 23 instances
 
-Synth Design complete | Checksum: c09c380e
+Synth Design complete | Checksum: 7466487c
 INFO: [Common 17-83] Releasing license: Synthesis
-51 Infos, 7 Warnings, 0 Critical Warnings and 0 Errors encountered.
+97 Infos, 26 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:45 ; elapsed = 00:00:43 . Memory (MB): peak = 3829.102 ; gain = 2474.133 ; free physical = 69013 ; free virtual = 123189
-INFO: [Common 17-2834] synth_design peak Physical Memory [PSS] (MB): overall = 3317.827; main = 3052.587; forked = 378.870
-INFO: [Common 17-2834] synth_design peak Virtual Memory [VSS] (MB): overall = 4705.469; main = 3829.070; forked = 990.453
-Write ShapeDB Complete: Time (s): cpu = 00:00:00.03 ; elapsed = 00:00:00.02 . Memory (MB): peak = 3853.078 ; gain = 0.000 ; free physical = 69014 ; free virtual = 123190
-INFO: [Common 17-1381] The checkpoint '/home/moginh/Projects/BConv/BConv.runs/synth_1/ModMul.dcp' has been generated.
-INFO: [runtcl-4] Executing : report_utilization -file ModMul_utilization_synth.rpt -pb ModMul_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Thu Dec 18 11:48:19 2025...
+synth_design: Time (s): cpu = 00:01:32 ; elapsed = 00:01:28 . Memory (MB): peak = 4140.359 ; gain = 2785.234 ; free physical = 114629 ; free virtual = 126772
+INFO: [Common 17-2834] synth_design peak Physical Memory [PSS] (MB): overall = 3530.727; main = 3369.360; forked = 381.718
+INFO: [Common 17-2834] synth_design peak Virtual Memory [VSS] (MB): overall = 4912.000; main = 4140.328; forked = 991.453
+Write ShapeDB Complete: Time (s): cpu = 00:00:00.19 ; elapsed = 00:00:00.07 . Memory (MB): peak = 4164.336 ; gain = 0.000 ; free physical = 114622 ; free virtual = 126771
+INFO: [Common 17-1381] The checkpoint '/home/moginh/Projects/BConv/BConv.runs/synth_1/BConvEngine_8PE.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file BConvEngine_8PE_utilization_synth.rpt -pb BConvEngine_8PE_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Sun Dec 21 21:26:58 2025...

@@ -3,9 +3,9 @@
 // Company: 
 // Engineer: 
 // 
-// Create Date: 12/19/2025 07:25:46 PM
+// Create Date: 12/21/2025 09:46:21 PM
 // Design Name: 
-// Module Name: BConvEngine_8PE_tb
+// Module Name: BConvEngine_8PE_V2_tb
 // Project Name: 
 // Target Devices: 
 // Tool Versions: 
@@ -20,13 +20,11 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module BConvEngine_8PE_tb();
-
+module BConvEngine_8PE_V2_tb();
     localparam BW = 48;
     localparam CLK_PERIOD = 4; // 250 MHz
     localparam NUM_TESTS = 4;
 
-    integer logfile;
     integer i;
 
     // Clock and control
@@ -393,7 +391,7 @@ module BConvEngine_8PE_tb();
     end
 
     // Instantiate DUT
-    BConvEngine_8PE #(.BW(BW)) dut (
+    BConvEngine_8PE_V2 #(.BW(BW)) dut (
         .clk(clk),
         .rstn(rstn),
         .clr(clr),
@@ -480,13 +478,6 @@ module BConvEngine_8PE_tb();
     end
 
     initial begin
-        // Open log file
-        logfile = $fopen("bconv_8pe_results.csv", "w");
-        if (logfile == 0) begin
-            $display("ERROR: Cannot open log file.");
-            $finish;
-        end
-        $fdisplay(logfile, "Cycle,Mode,out");
 
         // Initial reset
         rstn = 0;
@@ -607,26 +598,11 @@ module BConvEngine_8PE_tb();
         // Let it run for several cycles
         for (i = 0; i < 20; i++) begin
             #CLK_PERIOD;
-            $fdisplay(logfile, "%0d,%0d,%0d", i+1, mode, out);
-            $display("Cycle %0d: out = %0d (0x%0h)", i+1, out, out);
         end
 
-        // Optional: Test another mode
-        /*
-        mode = 3'b001; // e.g., Add mode
-        replay_restart = 1;
-        #CLK_PERIOD;
-        replay_restart = 0;
-        for (i = 0; i < 10; i++) begin
-            #CLK_PERIOD;
-            $fdisplay(logfile, "%0d,%0d,%0d", i+21, mode, out);
-        end
-        */
-
-        $fclose(logfile);
+      
         $display("Testbench finished.");
         #100;
         $finish;
     end
-
 endmodule
