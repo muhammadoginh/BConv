@@ -80,6 +80,7 @@ module BConvEngine_8PE_V2 #(
     wire [BW-1:0] mux_q_out [0:7];
     
     wire [BW-1:0] p_reg;
+    wire [BW-1:0] p_array   [0:7];
     
     // *** input register ***
     register #(48) r_q0 ( .clk(clk), .rstn(rstn), .en(q_load), .clr(clr), .in(q0), .out(q_array[0]) );
@@ -93,20 +94,30 @@ module BConvEngine_8PE_V2 #(
     
     register #(48) r_p  ( .clk(clk), .rstn(rstn), .en(p_load), .clr(clr), .in(p),  .out(p_reg) );
     
-    mux #(BW) mux_q_0 (.sel(mux_sel), .in1(p_reg), .in0(q_array[0]), .out(mux_q_out[0]));
-    mux #(BW) mux_q_1 (.sel(mux_sel), .in1(p_reg), .in0(q_array[1]), .out(mux_q_out[1]));
-    mux #(BW) mux_q_2 (.sel(mux_sel), .in1(p_reg), .in0(q_array[2]), .out(mux_q_out[2]));
-    mux #(BW) mux_q_3 (.sel(mux_sel), .in1(p_reg), .in0(q_array[3]), .out(mux_q_out[3]));
-    mux #(BW) mux_q_4 (.sel(mux_sel), .in1(p_reg), .in0(q_array[4]), .out(mux_q_out[4]));
-    mux #(BW) mux_q_5 (.sel(mux_sel), .in1(p_reg), .in0(q_array[5]), .out(mux_q_out[5]));
-    mux #(BW) mux_q_6 (.sel(mux_sel), .in1(p_reg), .in0(q_array[6]), .out(mux_q_out[6]));
-    mux #(BW) mux_q_7 (.sel(mux_sel), .in1(p_reg), .in0(q_array[7]), .out(mux_q_out[7]));
+    assign p_array[0] = p_reg;
+    delay #(.BW(48), .N(2))  p_reg_delay0    (.clk(clk), .in(p_array[0]),    .out(p_array[1]));
+    delay #(.BW(48), .N(2))  p_reg_delay1    (.clk(clk), .in(p_array[1]),    .out(p_array[2]));
+    delay #(.BW(48), .N(2))  p_reg_delay2    (.clk(clk), .in(p_array[2]),    .out(p_array[3]));
+    delay #(.BW(48), .N(2))  p_reg_delay3    (.clk(clk), .in(p_array[3]),    .out(p_array[4]));
+    delay #(.BW(48), .N(2))  p_reg_delay4    (.clk(clk), .in(p_array[4]),    .out(p_array[5]));
+    delay #(.BW(48), .N(2))  p_reg_delay5    (.clk(clk), .in(p_array[5]),    .out(p_array[6]));
+    delay #(.BW(48), .N(2))  p_reg_delay6    (.clk(clk), .in(p_array[6]),    .out(p_array[7]));
+    
+    mux #(BW) mux_q_0 (.sel(mux_sel), .in1(p_array[0]), .in0(q_array[0]), .out(mux_q_out[0]));
+    mux #(BW) mux_q_1 (.sel(mux_sel), .in1(p_array[1]), .in0(q_array[1]), .out(mux_q_out[1]));
+    mux #(BW) mux_q_2 (.sel(mux_sel), .in1(p_array[2]), .in0(q_array[2]), .out(mux_q_out[2]));
+    mux #(BW) mux_q_3 (.sel(mux_sel), .in1(p_array[3]), .in0(q_array[3]), .out(mux_q_out[3]));
+    mux #(BW) mux_q_4 (.sel(mux_sel), .in1(p_array[4]), .in0(q_array[4]), .out(mux_q_out[4]));
+    mux #(BW) mux_q_5 (.sel(mux_sel), .in1(p_array[5]), .in0(q_array[5]), .out(mux_q_out[5]));
+    mux #(BW) mux_q_6 (.sel(mux_sel), .in1(p_array[6]), .in0(q_array[6]), .out(mux_q_out[6]));
+    mux #(BW) mux_q_7 (.sel(mux_sel), .in1(p_array[7]), .in0(q_array[7]), .out(mux_q_out[7]));
     
     // *** for mu ***
     wire [BW+1:0] mu_array   [0:7];
     wire [BW+1:0] mux_mu_out [0:7];
     
     wire [BW+1:0] mu_p_reg;
+    wire [BW+1:0] mu_p_array [0:7];
     
     // *** input register ***
     register #(50) r_mu0 ( .clk(clk), .rstn(rstn), .en(mu_load), .clr(clr), .in(mu0), .out(mu_array[0]) );
@@ -120,14 +131,24 @@ module BConvEngine_8PE_V2 #(
     
     register #(50) r_mu_p( .clk(clk), .rstn(rstn), .en(mu_p_load), .clr(clr), .in(mu_p),  .out(mu_p_reg) );
     
-    mux #(BW+2) mux_mu_0 (.sel(mux_sel), .in1(mu_p_reg), .in0(mu_array[0]), .out(mux_mu_out[0]));
-    mux #(BW+2) mux_mu_1 (.sel(mux_sel), .in1(mu_p_reg), .in0(mu_array[1]), .out(mux_mu_out[1]));
-    mux #(BW+2) mux_mu_2 (.sel(mux_sel), .in1(mu_p_reg), .in0(mu_array[2]), .out(mux_mu_out[2]));
-    mux #(BW+2) mux_mu_3 (.sel(mux_sel), .in1(mu_p_reg), .in0(mu_array[3]), .out(mux_mu_out[3]));
-    mux #(BW+2) mux_mu_4 (.sel(mux_sel), .in1(mu_p_reg), .in0(mu_array[4]), .out(mux_mu_out[4]));
-    mux #(BW+2) mux_mu_5 (.sel(mux_sel), .in1(mu_p_reg), .in0(mu_array[5]), .out(mux_mu_out[5]));
-    mux #(BW+2) mux_mu_6 (.sel(mux_sel), .in1(mu_p_reg), .in0(mu_array[6]), .out(mux_mu_out[6]));
-    mux #(BW+2) mux_mu_7 (.sel(mux_sel), .in1(mu_p_reg), .in0(mu_array[7]), .out(mux_mu_out[7]));
+    assign mu_p_array[0] = mu_p_reg;
+    delay #(.BW(50), .N(2))  mu_p_reg_delay0    (.clk(clk), .in(mu_p_array[0]),    .out(mu_p_array[1]));
+    delay #(.BW(50), .N(2))  mu_p_reg_delay1    (.clk(clk), .in(mu_p_array[1]),    .out(mu_p_array[2]));
+    delay #(.BW(50), .N(2))  mu_p_reg_delay2    (.clk(clk), .in(mu_p_array[2]),    .out(mu_p_array[3]));
+    delay #(.BW(50), .N(2))  mu_p_reg_delay3    (.clk(clk), .in(mu_p_array[3]),    .out(mu_p_array[4]));
+    delay #(.BW(50), .N(2))  mu_p_reg_delay4    (.clk(clk), .in(mu_p_array[4]),    .out(mu_p_array[5]));
+    delay #(.BW(50), .N(2))  mu_p_reg_delay5    (.clk(clk), .in(mu_p_array[5]),    .out(mu_p_array[6]));
+    delay #(.BW(50), .N(2))  mu_p_reg_delay6    (.clk(clk), .in(mu_p_array[6]),    .out(mu_p_array[7]));
+    
+    
+    mux #(BW+2) mux_mu_0 (.sel(mux_sel), .in1(mu_p_array[0]), .in0(mu_array[0]), .out(mux_mu_out[0]));
+    mux #(BW+2) mux_mu_1 (.sel(mux_sel), .in1(mu_p_array[1]), .in0(mu_array[1]), .out(mux_mu_out[1]));
+    mux #(BW+2) mux_mu_2 (.sel(mux_sel), .in1(mu_p_array[2]), .in0(mu_array[2]), .out(mux_mu_out[2]));
+    mux #(BW+2) mux_mu_3 (.sel(mux_sel), .in1(mu_p_array[3]), .in0(mu_array[3]), .out(mux_mu_out[3]));
+    mux #(BW+2) mux_mu_4 (.sel(mux_sel), .in1(mu_p_array[4]), .in0(mu_array[4]), .out(mux_mu_out[4]));
+    mux #(BW+2) mux_mu_5 (.sel(mux_sel), .in1(mu_p_array[5]), .in0(mu_array[5]), .out(mux_mu_out[5]));
+    mux #(BW+2) mux_mu_6 (.sel(mux_sel), .in1(mu_p_array[6]), .in0(mu_array[6]), .out(mux_mu_out[6]));
+    mux #(BW+2) mux_mu_7 (.sel(mux_sel), .in1(mu_p_array[7]), .in0(mu_array[7]), .out(mux_mu_out[7]));
     
     // *** for param ***
     wire [BW-1:0] C_array   [0:7];
@@ -152,9 +173,9 @@ module BConvEngine_8PE_V2 #(
     delay #(.BW(48), .N(4))  C_array2_delay    (.clk(clk), .in(C_array[2]),    .out(C_reg[2]));
     delay #(.BW(48), .N(6))  C_array3_delay    (.clk(clk), .in(C_array[3]),    .out(C_reg[3]));
     delay #(.BW(48), .N(8))  C_array4_delay    (.clk(clk), .in(C_array[4]),    .out(C_reg[4]));
-    delay #(.BW(48), .N(12)) C_array5_delay    (.clk(clk), .in(C_array[5]),    .out(C_reg[5]));
-    delay #(.BW(48), .N(14)) C_array6_delay    (.clk(clk), .in(C_array[6]),    .out(C_reg[6]));
-    delay #(.BW(48), .N(16)) C_array7_delay    (.clk(clk), .in(C_array[7]),    .out(C_reg[7]));
+    delay #(.BW(48), .N(10)) C_array5_delay    (.clk(clk), .in(C_array[5]),    .out(C_reg[5]));
+    delay #(.BW(48), .N(12)) C_array6_delay    (.clk(clk), .in(C_array[6]),    .out(C_reg[6]));
+    delay #(.BW(48), .N(14)) C_array7_delay    (.clk(clk), .in(C_array[7]),    .out(C_reg[7]));
     
     mux #(BW) mux_C_0 (.sel(mux_sel), .in1(C_reg[0]), .in0(C_array[0]), .out(mux_C_out[0]));
     mux #(BW) mux_C_1 (.sel(mux_sel), .in1(C_reg[1]), .in0(C_array[1]), .out(mux_C_out[1]));
@@ -178,34 +199,7 @@ module BConvEngine_8PE_V2 #(
     assign A0_array[4] = B0[3];
     assign A0_array[5] = B0[4];
     assign A0_array[6] = B0[5];
-    assign A0_array[7] = B0[6];
-    
-    // Registered feedback for systolic array
-    reg [BW-1:0] A0_array_reg [0:7];
-    
-    always @(posedge clk or negedge rstn) begin
-        if (!rstn) begin
-            A0_array_reg[0] <= 0;
-            A0_array_reg[1] <= 0;
-            A0_array_reg[2] <= 0;
-            A0_array_reg[3] <= 0;
-            A0_array_reg[4] <= 0;
-            A0_array_reg[5] <= 0;
-            A0_array_reg[6] <= 0;
-            A0_array_reg[7] <= 0;
-        end else begin
-            A0_array_reg[0] <= 0;
-            A0_array_reg[1] <= 0;
-            A0_array_reg[2] <= 0;
-            A0_array_reg[3] <= 0;
-            A0_array_reg[4] <= 0;
-            A0_array_reg[5] <= 0;
-            A0_array_reg[6] <= 0;
-            A0_array_reg[7] <= 0;
-        end
-    end
-
-    
+    assign A0_array[7] = B0[6];    
     
     wire in_valid;
     
@@ -233,7 +227,7 @@ module BConvEngine_8PE_V2 #(
         .clk (clk),
         .rstn(rstn),
         .mode(mode),
-        .A0  (A0_array_reg),
+        .A0  (A0_array),
         .A1  (mux_A1_out),  // cefficient or stasioner input
         .C   (mux_C_out),   // param (QHatInvModq or qHat (moving input))
         .q   (mux_q_out),
