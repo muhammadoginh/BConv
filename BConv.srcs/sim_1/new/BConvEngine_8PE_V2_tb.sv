@@ -499,8 +499,8 @@ module BConvEngine_8PE_V2_tb();
         mu_p = '0;
 
         // Apply reset
-        #10 rstn = 1;
-        #10 clr = 0;
+        #CLK_PERIOD; rstn = 1;
+        clr = 0;
 
         // --------------------------------------------------
         // PHASE 1: Load q and mu
@@ -563,30 +563,230 @@ module BConvEngine_8PE_V2_tb();
         
         // second RNS
         #CLK_PERIOD;
-        #CLK_PERIOD;
-        #CLK_PERIOD;
-        #CLK_PERIOD;
-        #CLK_PERIOD;
-        #CLK_PERIOD;
-        #CLK_PERIOD;
-        #CLK_PERIOD;
-        #CLK_PERIOD;
-        #CLK_PERIOD;
-        #CLK_PERIOD;
-        #CLK_PERIOD;
-        #CLK_PERIOD;
-        #CLK_PERIOD;
-        #CLK_PERIOD;
-        #CLK_PERIOD;
-        #CLK_PERIOD;
-        #CLK_PERIOD;
-        param_load = 1;
         {param0,param1,param2,param3,param4,param5,param6,param7} = {Param1_array[0],Param1_array[1],Param1_array[2],Param1_array[3],
                                                                      Param1_array[4],Param1_array[5],Param1_array[6],Param1_array[7]};
 
         p = p_array[1];
         mu_p = p_mu_array[1];
+        
+        // 3rd RNS
+        #CLK_PERIOD;
+        {param0,param1,param2,param3,param4,param5,param6,param7} = {Param2_array[0],Param2_array[1],Param2_array[2],Param2_array[3],
+                                                                     Param2_array[4],Param2_array[5],Param2_array[6],Param2_array[7]};
 
+        p = p_array[2];
+        mu_p = p_mu_array[2];
+        
+        
+        // 4th RNS
+        #CLK_PERIOD;
+        {param0,param1,param2,param3,param4,param5,param6,param7} = {
+            Param3_array[0], Param3_array[1], Param3_array[2], Param3_array[3],
+            Param3_array[4], Param3_array[5], Param3_array[6], Param3_array[7]
+        };
+        p = p_array[3];
+        mu_p = p_mu_array[3];
+        
+    
+        // 5th RNS
+        #CLK_PERIOD;
+        {param0,param1,param2,param3,param4,param5,param6,param7} = {
+            Param4_array[0], Param4_array[1], Param4_array[2], Param4_array[3],
+            Param4_array[4], Param4_array[5], Param4_array[6], Param4_array[7]
+        };
+        p = p_array[4];
+        mu_p = p_mu_array[4];
+        
+    
+        // 6th RNS
+        #CLK_PERIOD;
+        {param0,param1,param2,param3,param4,param5,param6,param7} = {
+            Param5_array[0], Param5_array[1], Param5_array[2], Param5_array[3],
+            Param5_array[4], Param5_array[5], Param5_array[6], Param5_array[7]
+        };
+        p = p_array[5];
+        mu_p = p_mu_array[5];
+        
+    
+        // 7th RNS
+        #CLK_PERIOD;
+        {param0,param1,param2,param3,param4,param5,param6,param7} = {
+            Param6_array[0], Param6_array[1], Param6_array[2], Param6_array[3],
+            Param6_array[4], Param6_array[5], Param6_array[6], Param6_array[7]
+        };
+        p = p_array[6];
+        mu_p = p_mu_array[6];
+        
+    
+        // 8th RNS
+        #CLK_PERIOD;
+        {param0,param1,param2,param3,param4,param5,param6,param7} = {
+            Param7_array[0], Param7_array[1], Param7_array[2], Param7_array[3],
+            Param7_array[4], Param7_array[5], Param7_array[6], Param7_array[7]
+        };
+        p = p_array[7];
+        mu_p = p_mu_array[7];
+        
+    
+        // 9th RNS
+        #CLK_PERIOD;
+        {param0,param1,param2,param3,param4,param5,param6,param7} = {
+            Param8_array[0], Param8_array[1], Param8_array[2], Param8_array[3],
+            Param8_array[4], Param8_array[5], Param8_array[6], Param8_array[7]
+        };
+        p = p_array[8];
+        mu_p = p_mu_array[8];
+        
+    
+        // 10th RNS
+        #CLK_PERIOD;
+        {param0,param1,param2,param3,param4,param5,param6,param7} = {
+            Param9_array[0], Param9_array[1], Param9_array[2], Param9_array[3],
+            Param9_array[4], Param9_array[5], Param9_array[6], Param9_array[7]
+        };
+        p = p_array[9];
+        mu_p = p_mu_array[9];
+        
+    
+        // 11th RNS
+        #CLK_PERIOD;
+        {param0,param1,param2,param3,param4,param5,param6,param7} = {
+            Param10_array[0], Param10_array[1], Param10_array[2], Param10_array[3],
+            Param10_array[4], Param10_array[5], Param10_array[6], Param10_array[7]
+        };
+        p = p_array[10];
+        mu_p = p_mu_array[10];
+        
+    
+        // 12th RNS
+        #CLK_PERIOD;
+        {param0,param1,param2,param3,param4,param5,param6,param7} = {
+            Param11_array[0], Param11_array[1], Param11_array[2], Param11_array[3],
+            Param11_array[4], Param11_array[5], Param11_array[6], Param11_array[7]
+        };
+        p = p_array[11];
+        mu_p = p_mu_array[11];
+        
+    
+        // 13th RNS
+        #CLK_PERIOD;
+        {param0,param1,param2,param3,param4,param5,param6,param7} = {
+            Param12_array[0], Param12_array[1], Param12_array[2], Param12_array[3],
+            Param12_array[4], Param12_array[5], Param12_array[6], Param12_array[7]
+        };
+        p = p_array[12];
+        mu_p = p_mu_array[12];
+        
+    
+        // 14th RNS
+        #CLK_PERIOD;
+        {param0,param1,param2,param3,param4,param5,param6,param7} = {
+            Param13_array[0], Param13_array[1], Param13_array[2], Param13_array[3],
+            Param13_array[4], Param13_array[5], Param13_array[6], Param13_array[7]
+        };
+        p = p_array[13];
+        mu_p = p_mu_array[13];
+        
+    
+        // 15th RNS
+        #CLK_PERIOD;
+        {param0,param1,param2,param3,param4,param5,param6,param7} = {
+            Param14_array[0], Param14_array[1], Param14_array[2], Param14_array[3],
+            Param14_array[4], Param14_array[5], Param14_array[6], Param14_array[7]
+        };
+        p = p_array[14];
+        mu_p = p_mu_array[14];
+        
+    
+        // 16th RNS
+        #CLK_PERIOD;
+        {param0,param1,param2,param3,param4,param5,param6,param7} = {
+            Param15_array[0], Param15_array[1], Param15_array[2], Param15_array[3],
+            Param15_array[4], Param15_array[5], Param15_array[6], Param15_array[7]
+        };
+        p = p_array[15];
+        mu_p = p_mu_array[15];
+        
+    
+        // 17th RNS
+        #CLK_PERIOD;
+        {param0,param1,param2,param3,param4,param5,param6,param7} = {
+            Param16_array[0], Param16_array[1], Param16_array[2], Param16_array[3],
+            Param16_array[4], Param16_array[5], Param16_array[6], Param16_array[7]
+        };
+        p = p_array[16];
+        mu_p = p_mu_array[16];
+        
+    
+        // 18th RNS
+        #CLK_PERIOD;
+        {param0,param1,param2,param3,param4,param5,param6,param7} = {
+            Param17_array[0], Param17_array[1], Param17_array[2], Param17_array[3],
+            Param17_array[4], Param17_array[5], Param17_array[6], Param17_array[7]
+        };
+        p = p_array[17];
+        mu_p = p_mu_array[17];
+        
+    
+        // 19th RNS
+        #CLK_PERIOD;
+        {param0,param1,param2,param3,param4,param5,param6,param7} = {
+            Param18_array[0], Param18_array[1], Param18_array[2], Param18_array[3],
+            Param18_array[4], Param18_array[5], Param18_array[6], Param18_array[7]
+        };
+        p = p_array[18];
+        mu_p = p_mu_array[18];
+        
+    
+        // 20th RNS
+        #CLK_PERIOD;
+        {param0,param1,param2,param3,param4,param5,param6,param7} = {
+            Param19_array[0], Param19_array[1], Param19_array[2], Param19_array[3],
+            Param19_array[4], Param19_array[5], Param19_array[6], Param19_array[7]
+        };
+        p = p_array[19];
+        mu_p = p_mu_array[19];
+        
+    
+        // 21th RNS
+        #CLK_PERIOD;
+        {param0,param1,param2,param3,param4,param5,param6,param7} = {
+            Param20_array[0], Param20_array[1], Param20_array[2], Param20_array[3],
+            Param20_array[4], Param20_array[5], Param20_array[6], Param20_array[7]
+        };
+        p = p_array[20];
+        mu_p = p_mu_array[20];
+        
+    
+        // 22th RNS
+        #CLK_PERIOD;
+        {param0,param1,param2,param3,param4,param5,param6,param7} = {
+            Param21_array[0], Param21_array[1], Param21_array[2], Param21_array[3],
+            Param21_array[4], Param21_array[5], Param21_array[6], Param21_array[7]
+        };
+        p = p_array[21];
+        mu_p = p_mu_array[21];
+        
+    
+        // 23th RNS
+        #CLK_PERIOD;
+        {param0,param1,param2,param3,param4,param5,param6,param7} = {
+            Param22_array[0], Param22_array[1], Param22_array[2], Param22_array[3],
+            Param22_array[4], Param22_array[5], Param22_array[6], Param22_array[7]
+        };
+        p = p_array[22];
+        mu_p = p_mu_array[22];
+        
+    
+        // 24th RNS
+        #CLK_PERIOD;
+        {param0,param1,param2,param3,param4,param5,param6,param7} = {
+            Param23_array[0], Param23_array[1], Param23_array[2], Param23_array[3],
+            Param23_array[4], Param23_array[5], Param23_array[6], Param23_array[7]
+        };
+        p = p_array[23];
+        mu_p = p_mu_array[23];
+    
 
         // --------------------------------------------------
         // PHASE 5: Start computation

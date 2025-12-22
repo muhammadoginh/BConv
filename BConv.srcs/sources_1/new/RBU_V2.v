@@ -193,11 +193,11 @@ module RBU_V2 #(
     end
     
     delay #(.BW(48), .N(13)) A1_delay_2(.clk(clk), .in(A1), .out(A1_d));
-    mux #(BW) mux_0 (.sel(mux_sel[0]), .in1(mul_mod),   .in0(A1),      .out(mux_out[0]));
-    mux #(BW) mux_1 (.sel(mux_sel[1]), .in1(A1),        .in0(sub_mod), .out(mux_out[1]));
+    mux #(BW) mux_0 (.sel(mux_sel[0]), .in1(mul_mod),     .in0(A1),      .out(mux_out[0]));
+    mux #(BW) mux_1 (.sel(mux_sel[1]), .in1(A1),          .in0(sub_mod), .out(mux_out[1]));
     mux #(BW) mux_2 (.sel(mux_sel[2]), .in1(B0_DIV2_d),   .in0(sum_mod), .out(mux_out[2]));
-    mux #(BW) mux_3 (.sel(mux_sel[3]), .in1(B1_DIV2),   .in0(sub_mod), .out(mux_out[3]));
-    mux #(BW) mux_4 (.sel(mux_sel[4]), .in1(A1_d),      .in0(mul_mod), .out(mux_out[4]));
+    mux #(BW) mux_3 (.sel(mux_sel[3]), .in1(B1_DIV2),     .in0(sub_mod), .out(mux_out[3]));
+    mux #(BW) mux_4 (.sel(mux_sel[4]), .in1(A1_d),        .in0(mul_mod), .out(mux_out[4]));
     
     delay #(.BW(48), .N(2)) q_delay_1(.clk(clk), .in(q), .out(q_d));
     delay #(.BW(50), .N(2)) mu_delay_1(.clk(clk), .in(mu), .out(mu_d));
@@ -259,5 +259,6 @@ module RBU_V2 #(
     assign B0 = mux_out[2];
     assign B1 = mux_out[3];
     assign M  = mux_out[4];
+
 
 endmodule

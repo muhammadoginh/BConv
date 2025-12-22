@@ -11,19 +11,15 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="0.000 ns"></ZoomStartTime>
-      <ZoomEndTime time="328.001 ns"></ZoomEndTime>
-      <Cursor1Time time="328.000 ns"></Cursor1Time>
+      <ZoomStartTime time="94.231 ns"></ZoomStartTime>
+      <ZoomEndTime time="141.282 ns"></ZoomEndTime>
+      <Cursor1Time time="332.000 ns"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
       <NameColumnWidth column_width="153"></NameColumnWidth>
-      <ValueColumnWidth column_width="124"></ValueColumnWidth>
+      <ValueColumnWidth column_width="116"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="50" />
-   <wvobject type="array" fp_name="/BConvEngine_8PE_V2_tb/i">
-      <obj_property name="ElementShortName">i[31:0]</obj_property>
-      <obj_property name="ObjectShortName">i[31:0]</obj_property>
-   </wvobject>
+   <WVObjectSize size="73" />
    <wvobject type="logic" fp_name="/BConvEngine_8PE_V2_tb/clk">
       <obj_property name="ElementShortName">clk</obj_property>
       <obj_property name="ObjectShortName">clk</obj_property>
@@ -207,6 +203,102 @@
    <wvobject type="array" fp_name="/BConvEngine_8PE_V2_tb/out">
       <obj_property name="ElementShortName">out[47:0]</obj_property>
       <obj_property name="ObjectShortName">out[47:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/BConvEngine_8PE_V2_tb/dut/mm_valid">
+      <obj_property name="ElementShortName">mm_valid</obj_property>
+      <obj_property name="ObjectShortName">mm_valid</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/BConvEngine_8PE_V2_tb/dut/buffer">
+      <obj_property name="ElementShortName">buffer[0:7][47:0]</obj_property>
+      <obj_property name="ObjectShortName">buffer[0:7][47:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="divider166" type="divider">
+      <obj_property name="label">PE 0</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/BConvEngine_8PE_V2_tb/dut/RBUA_unit/clk">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/BConvEngine_8PE_V2_tb/dut/RBUA_unit/\RBU_inst[7].RBU_i /mul_mod">
+      <obj_property name="ElementShortName">mul_mod[47:0]</obj_property>
+      <obj_property name="ObjectShortName">mul_mod[47:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/BConvEngine_8PE_V2_tb/dut/RBUA_unit/\RBU_inst[7].RBU_i /sum_mod">
+      <obj_property name="ElementShortName">sum_mod[47:0]</obj_property>
+      <obj_property name="ObjectShortName">sum_mod[47:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/BConvEngine_8PE_V2_tb/dut/RBUA_unit/A0">
+      <obj_property name="ElementShortName">A0[0:7][47:0]</obj_property>
+      <obj_property name="ObjectShortName">A0[0:7][47:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/BConvEngine_8PE_V2_tb/dut/A0_array">
+      <obj_property name="ElementShortName">A0_array[0:7][47:0]</obj_property>
+      <obj_property name="ObjectShortName">A0_array[0:7][47:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/BConvEngine_8PE_V2_tb/dut/B0">
+      <obj_property name="ElementShortName">B0[0:7][47:0]</obj_property>
+      <obj_property name="ObjectShortName">B0[0:7][47:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/BConvEngine_8PE_V2_tb/dut/RBUA_unit/A1">
+      <obj_property name="ElementShortName">A1[0:7][47:0]</obj_property>
+      <obj_property name="ObjectShortName">A1[0:7][47:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/BConvEngine_8PE_V2_tb/dut/RBUA_unit/C">
+      <obj_property name="ElementShortName">C[0:7][47:0]</obj_property>
+      <obj_property name="ObjectShortName">C[0:7][47:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/BConvEngine_8PE_V2_tb/dut/RBUA_unit/q">
+      <obj_property name="ElementShortName">q[0:7][47:0]</obj_property>
+      <obj_property name="ObjectShortName">q[0:7][47:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/BConvEngine_8PE_V2_tb/dut/RBUA_unit/mu">
+      <obj_property name="ElementShortName">mu[0:7][49:0]</obj_property>
+      <obj_property name="ObjectShortName">mu[0:7][49:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/BConvEngine_8PE_V2_tb/dut/RBUA_unit/\RBU_inst[0].RBU_i /mul_mod">
+      <obj_property name="ElementShortName">mul_mod[47:0]</obj_property>
+      <obj_property name="ObjectShortName">mul_mod[47:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/BConvEngine_8PE_V2_tb/dut/mode">
+      <obj_property name="ElementShortName">mode[2:0]</obj_property>
+      <obj_property name="ObjectShortName">mode[2:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/BConvEngine_8PE_V2_tb/dut/RBUA_unit/\RBU_inst[0].RBU_i /mux_out[2]">
+      <obj_property name="ElementShortName">[2][47:0]</obj_property>
+      <obj_property name="ObjectShortName">[2][47:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/BConvEngine_8PE_V2_tb/dut/RBUA_unit/\RBU_inst[0].RBU_i /sum_mod">
+      <obj_property name="ElementShortName">sum_mod[47:0]</obj_property>
+      <obj_property name="ObjectShortName">sum_mod[47:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/BConvEngine_8PE_V2_tb/dut/RBUA_unit/\RBU_inst[0].RBU_i /B0_DIV2_d">
+      <obj_property name="ElementShortName">B0_DIV2_d[47:0]</obj_property>
+      <obj_property name="ObjectShortName">B0_DIV2_d[47:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/BConvEngine_8PE_V2_tb/dut/RBUA_unit/\RBU_inst[0].RBU_i /mux_out">
+      <obj_property name="ElementShortName">mux_out[4:0][47:0]</obj_property>
+      <obj_property name="ObjectShortName">mux_out[4:0][47:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/BConvEngine_8PE_V2_tb/dut/RBUA_unit/\RBU_inst[0].RBU_i /A0">
+      <obj_property name="ElementShortName">A0[47:0]</obj_property>
+      <obj_property name="ObjectShortName">A0[47:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/BConvEngine_8PE_V2_tb/dut/RBUA_unit/\RBU_inst[0].RBU_i /A1">
+      <obj_property name="ElementShortName">A1[47:0]</obj_property>
+      <obj_property name="ObjectShortName">A1[47:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/BConvEngine_8PE_V2_tb/dut/RBUA_unit/\RBU_inst[0].RBU_i /q">
+      <obj_property name="ElementShortName">q[47:0]</obj_property>
+      <obj_property name="ObjectShortName">q[47:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/BConvEngine_8PE_V2_tb/dut/RBUA_unit/\RBU_inst[0].RBU_i /mu">
+      <obj_property name="ElementShortName">mu[49:0]</obj_property>
+      <obj_property name="ObjectShortName">mu[49:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/BConvEngine_8PE_V2_tb/dut/RBUA_unit/\RBU_inst[0].RBU_i /C">
+      <obj_property name="ElementShortName">C[47:0]</obj_property>
+      <obj_property name="ObjectShortName">C[47:0]</obj_property>
    </wvobject>
    <wvobject type="array" fp_name="/BConvEngine_8PE_V2_tb/BW">
       <obj_property name="ElementShortName">BW[31:0]</obj_property>

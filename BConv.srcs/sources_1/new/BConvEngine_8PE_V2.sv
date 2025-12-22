@@ -180,6 +180,32 @@ module BConvEngine_8PE_V2 #(
     assign A0_array[6] = B0[5];
     assign A0_array[7] = B0[6];
     
+    // Registered feedback for systolic array
+    reg [BW-1:0] A0_array_reg [0:7];
+    
+    always @(posedge clk or negedge rstn) begin
+        if (!rstn) begin
+            A0_array_reg[0] <= 0;
+            A0_array_reg[1] <= 0;
+            A0_array_reg[2] <= 0;
+            A0_array_reg[3] <= 0;
+            A0_array_reg[4] <= 0;
+            A0_array_reg[5] <= 0;
+            A0_array_reg[6] <= 0;
+            A0_array_reg[7] <= 0;
+        end else begin
+            A0_array_reg[0] <= 0;
+            A0_array_reg[1] <= 0;
+            A0_array_reg[2] <= 0;
+            A0_array_reg[3] <= 0;
+            A0_array_reg[4] <= 0;
+            A0_array_reg[5] <= 0;
+            A0_array_reg[6] <= 0;
+            A0_array_reg[7] <= 0;
+        end
+    end
+
+    
     
     wire in_valid;
     
@@ -207,7 +233,7 @@ module BConvEngine_8PE_V2 #(
         .clk (clk),
         .rstn(rstn),
         .mode(mode),
-        .A0  (A0_array),
+        .A0  (A0_array_reg),
         .A1  (mux_A1_out),  // cefficient or stasioner input
         .C   (mux_C_out),   // param (QHatInvModq or qHat (moving input))
         .q   (mux_q_out),
