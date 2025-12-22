@@ -1,14 +1,14 @@
 #-----------------------------------------------------------
-# Vivado v2023.2_AR000036317 (64-bit)
-# SW Build 4029153 on Fri Oct 13 20:14:34 MDT 2023
+# Vivado v2023.2 (64-bit)
+# SW Build 4029153 on Fri Oct 13 20:13:54 MDT 2023
 # IP Build 4028589 on Sat Oct 14 00:45:43 MDT 2023
 # SharedData Build 4025554 on Tue Oct 10 17:18:54 MDT 2023
-# Start of session at: Mon Dec 22 14:25:01 2025
-# Process ID: 29512
-# Current directory: D:/Projects/BConv/BConv.runs/synth_1
-# Command line: vivado.exe -log BConvEngine_8PE_V2.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source BConvEngine_8PE_V2.tcl
-# Log file: D:/Projects/BConv/BConv.runs/synth_1/BConvEngine_8PE_V2.vds
-# Journal file: D:/Projects/BConv/BConv.runs/synth_1\vivado.jou
-# Running On: DESKTOP-4FM5FN0, OS: Windows, CPU Frequency: 1800 MHz, CPU Physical cores: 4, Host memory: 8473 MB
+# Start of session at: Mon Dec 22 18:40:46 2025
+# Process ID: 335536
+# Current directory: /home/moginh/Projects/BConv/BConv.runs/synth_1
+# Command line: vivado -log CU.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source CU.tcl
+# Log file: /home/moginh/Projects/BConv/BConv.runs/synth_1/CU.vds
+# Journal file: /home/moginh/Projects/BConv/BConv.runs/synth_1/vivado.jou
+# Running On: dis-lab-SYS-7049GP-TRT, OS: Linux, CPU Frequency: 999.991 MHz, CPU Physical cores: 16, Host memory: 134797 MB
 #-----------------------------------------------------------
-source BConvEngine_8PE_V2.tcl -notrace
+source CU.tcl -notrace

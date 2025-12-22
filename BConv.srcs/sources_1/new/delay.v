@@ -10,7 +10,7 @@
 // Target Devices: 
 // Tool Versions: 
 // Description: shift register (a synchronous, resettable, N-stage delay line)
-// 
+// use distributed RAM (LUTs)
 // Dependencies: 
 // 
 // Revision:
